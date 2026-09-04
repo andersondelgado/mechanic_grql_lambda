@@ -416,6 +416,9 @@ export class GestionTallerProdClientHistory {
         const db = 'GestionTallerProd' + envSuffix;
 
         const obj_fk: any[] = [];
+        const vehId = Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id[0] : (event.vehicles_fk_id || '');
+        const empId = Array.isArray(event.employees_fk_id) ? event.employees_fk_id[0] : (event.employees_fk_id || '');
+
         if (event.vehicles_fk_id) {
             const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
             if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
@@ -428,12 +431,14 @@ export class GestionTallerProdClientHistory {
         return {
             db, table: 'client_history',
             attribute: {
+                vehicles_fk_id: vehId,
+                employees_fk_id: empId,
                 service_date: event.service_date || '',
                 work_performed: event.work_performed || '',
                 assigned_mechanic: event.assigned_mechanic || '',
                 time_in_shop: event.time_in_shop || '',
                 observations: event.observations || '',
-                total_cost: event.total_cost || '',
+                total_cost: Number(event.total_cost) || 0,
             },
             obj_fk
         };

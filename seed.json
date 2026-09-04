@@ -1,0 +1,839 @@
+{
+  "request": {
+    "flows": [
+      {
+        "name": "workflow_taller",
+        "description": "Poblar catálogo de estados, marcas y modelos de vehículos en catalogState para Taller Integrale$ 360",
+        "steps": [
+          {
+            "name": "catalog_state",
+            "type": "function",
+            "functionName": "catalog_state",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "name": "vehicle_status",
+                    "metadata": [
+                      {
+                        "statusId": "RECEPCIONADO",
+                        "name": "Recepcionado",
+                        "label": "Recepcionado",
+                        "category": "Recepción",
+                        "color": "#3B82F6",
+                        "badgeClass": "bg-blue-100 text-blue-800 border border-blue-300",
+                        "icon": "fa-car",
+                        "description": "Vehículo recibido en el taller con ficha de ingreso y chequeo inicial.",
+                        "sortOrder": 1,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "INSPECCION",
+                          "CANCELADO"
+                        ],
+                        "requiresTechnician": false,
+                        "requiresMileage": true
+                      },
+                      {
+                        "statusId": "INSPECCION",
+                        "name": "En Inspección / Diagnóstico",
+                        "label": "En Inspección",
+                        "category": "Diagnóstico",
+                        "color": "#8B5CF6",
+                        "badgeClass": "bg-purple-100 text-purple-800 border border-purple-300",
+                        "icon": "fa-stethoscope",
+                        "description": "Revisión técnica inicial, escaneo computarizado de fallas y diagnóstico de averías.",
+                        "sortOrder": 2,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "PRESUPUESTO_PENDIENTE",
+                          "CANCELADO"
+                        ],
+                        "requiresTechnician": true,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "PRESUPUESTO_PENDIENTE",
+                        "name": "Presupuesto Pendiente",
+                        "label": "Presupuesto Pendiente",
+                        "category": "Presupuesto",
+                        "color": "#F59E0B",
+                        "badgeClass": "bg-amber-100 text-amber-800 border border-amber-300",
+                        "icon": "fa-file-invoice-dollar",
+                        "description": "Cotización de mano de obra y repuestos en elaboración o enviada al cliente para aprobación.",
+                        "sortOrder": 3,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "PRESUPUESTO_APROBADO",
+                          "CANCELADO"
+                        ],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "PRESUPUESTO_APROBADO",
+                        "name": "Presupuesto Aprobado",
+                        "label": "Presupuesto Aprobado",
+                        "category": "Presupuesto",
+                        "color": "#10B981",
+                        "badgeClass": "bg-emerald-100 text-emerald-800 border border-emerald-300",
+                        "icon": "fa-check-circle",
+                        "description": "Presupuesto aprobado formalmente por el cliente; listo para asignación técnica.",
+                        "sortOrder": 4,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "ESPERA_REPUESTOS",
+                          "EN_MECANICA",
+                          "LATONERIA_PINTURA"
+                        ],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "ESPERA_REPUESTOS",
+                        "name": "En Espera de Repuestos",
+                        "label": "Espera Repuestos",
+                        "category": "Repuestos",
+                        "color": "#EC4899",
+                        "badgeClass": "bg-pink-100 text-pink-800 border border-pink-300",
+                        "icon": "fa-boxes-packing",
+                        "description": "Trabajo pausado a la espera de recepción y entrega de repuestos por proveedores.",
+                        "sortOrder": 5,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "EN_MECANICA",
+                          "LATONERIA_PINTURA"
+                        ],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "EN_MECANICA",
+                        "name": "En Mecánica General",
+                        "label": "En Mecánica",
+                        "category": "Operaciones",
+                        "color": "#2563EB",
+                        "badgeClass": "bg-indigo-100 text-indigo-800 border border-indigo-300",
+                        "icon": "fa-wrench",
+                        "description": "Reparaciones mecánicas, tren motriz, frenos, suspensión, motor o sistema eléctrico.",
+                        "sortOrder": 6,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "LATONERIA_PINTURA",
+                          "CONTROL_CALIDAD",
+                          "ESPERA_REPUESTOS"
+                        ],
+                        "requiresTechnician": true,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "LATONERIA_PINTURA",
+                        "name": "En Latonería y Pintura",
+                        "label": "Latonería / Pintura",
+                        "category": "Operaciones",
+                        "color": "#EA580C",
+                        "badgeClass": "bg-orange-100 text-orange-800 border border-orange-300",
+                        "icon": "fa-paint-roller",
+                        "description": "Enderezado de carrocería, desabollado, masillado, fondeo y pintura en cabina.",
+                        "sortOrder": 7,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "CONTROL_CALIDAD",
+                          "LAVADO_ALISTAMIENTO",
+                          "ESPERA_REPUESTOS"
+                        ],
+                        "requiresTechnician": true,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "CONTROL_CALIDAD",
+                        "name": "Control de Calidad",
+                        "label": "Control Calidad",
+                        "category": "Calidad",
+                        "color": "#0D9488",
+                        "badgeClass": "bg-teal-100 text-teal-800 border border-teal-300",
+                        "icon": "fa-clipboard-check",
+                        "description": "Prueba de ruta, verificación técnica de trabajos realizados y chequeo de conformidad.",
+                        "sortOrder": 8,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "LAVADO_ALISTAMIENTO",
+                          "EN_MECANICA",
+                          "LATONERIA_PINTURA"
+                        ],
+                        "requiresTechnician": true,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "LAVADO_ALISTAMIENTO",
+                        "name": "Lavado y Alistamiento",
+                        "label": "Lavado / Detallado",
+                        "category": "Alistamiento",
+                        "color": "#06B6D4",
+                        "badgeClass": "bg-cyan-100 text-cyan-800 border border-cyan-300",
+                        "icon": "fa-soap",
+                        "description": "Limpieza integral, aspirado de interiores, detallado cosmético y preparación de entrega.",
+                        "sortOrder": 9,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "LISTO_ENTREGA"
+                        ],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "LISTO_ENTREGA",
+                        "name": "Listo para Entrega",
+                        "label": "Listo Entrega",
+                        "category": "Entrega",
+                        "color": "#059669",
+                        "badgeClass": "bg-green-100 text-green-800 border border-green-300",
+                        "icon": "fa-key",
+                        "description": "Vehículo 100% finalizado. Notificación enviada al cliente para retiro en taller.",
+                        "sortOrder": 10,
+                        "isActive": true,
+                        "allowedNextStatuses": [
+                          "ENTREGADO"
+                        ],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "ENTREGADO",
+                        "name": "Entregado",
+                        "label": "Entregado",
+                        "category": "Cierre",
+                        "color": "#475569",
+                        "badgeClass": "bg-slate-100 text-slate-800 border border-slate-300",
+                        "icon": "fa-check-double",
+                        "description": "Vehículo entregado a satisfacción del cliente con acta y nota de entrega firmada.",
+                        "sortOrder": 11,
+                        "isActive": true,
+                        "allowedNextStatuses": [],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      },
+                      {
+                        "statusId": "CANCELADO",
+                        "name": "Cancelado / Retirado",
+                        "label": "Cancelado",
+                        "category": "Cierre",
+                        "color": "#DC2626",
+                        "badgeClass": "bg-red-100 text-red-800 border border-red-300",
+                        "icon": "fa-ban",
+                        "description": "Orden cancelada o vehículo retirado por el cliente sin reparaciones ejecutadas.",
+                        "sortOrder": 12,
+                        "isActive": true,
+                        "allowedNextStatuses": [],
+                        "requiresTechnician": false,
+                        "requiresMileage": false
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "catalog_state",
+            "type": "function",
+            "functionName": "catalog_state",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "name": "vehicle_brands_models",
+                    "metadata": [
+                      {
+                        "brandId": "toyota",
+                        "brandName": "TOYOTA",
+                        "country": "Japón",
+                        "sortOrder": 1,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "corolla", "modelName": "Corolla", "vehicleType": "Sedán", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "yaris", "modelName": "Yaris", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "hilux", "modelName": "Hilux", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "fortuner", "modelName": "Fortuner", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "4runner", "modelName": "4Runner", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "land_cruiser_prado", "modelName": "Land Cruiser Prado", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "land_cruiser_70", "modelName": "Land Cruiser Serie 70 (Machito)", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "land_cruiser_200", "modelName": "Land Cruiser 200 / 300", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "camry", "modelName": "Camry", "vehicleType": "Sedán", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "rav4", "modelName": "RAV4", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "fj_cruiser", "modelName": "FJ Cruiser", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "meru", "modelName": "Land Cruiser Merú", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "terios", "modelName": "Terios", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "hiace", "modelName": "Hiace", "vehicleType": "Van / Furgón", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "tacoma", "modelName": "Tacoma", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "tundra", "modelName": "Tundra", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "corolla_cross", "modelName": "Corolla Cross", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "sequoia", "modelName": "Sequoia", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "avanza", "modelName": "Avanza", "vehicleType": "Minivan", "fuelType": "Gasolina" },
+                          { "modelId": "sienna", "modelName": "Sienna", "vehicleType": "Minivan", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "starlet", "modelName": "Starlet", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "celica", "modelName": "Celica", "vehicleType": "Coupé", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "chevrolet",
+                        "brandName": "CHEVROLET",
+                        "country": "Estados Unidos",
+                        "sortOrder": 2,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "aveo", "modelName": "Aveo", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "spark", "modelName": "Spark", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "optra", "modelName": "Optra", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "cruze", "modelName": "Cruze", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "corsa", "modelName": "Corsa", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "silverado", "modelName": "Silverado", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "dmax", "modelName": "D-Max / LUV D-Max", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "tahoe", "modelName": "Tahoe", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "trailblazer", "modelName": "Trailblazer", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "grand_vitara", "modelName": "Grand Vitara (Chevrolet)", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "captiva", "modelName": "Captiva", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "tracker", "modelName": "Tracker", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "onix", "modelName": "Onix", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "blazer", "modelName": "Blazer", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "suburban", "modelName": "Suburban", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "cavalier", "modelName": "Cavalier", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "astra", "modelName": "Astra", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "colorado", "modelName": "Colorado", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "malibu", "modelName": "Malibu", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "camaro", "modelName": "Camaro", "vehicleType": "Coupé / Deportivo", "fuelType": "Gasolina" },
+                          { "modelId": "cheyenne", "modelName": "Cheyenne", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "n300", "modelName": "N300 Max", "vehicleType": "Van / Furgón", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "ford",
+                        "brandName": "FORD",
+                        "country": "Estados Unidos",
+                        "sortOrder": 3,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "fiesta", "modelName": "Fiesta", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "focus", "modelName": "Focus", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "fusion", "modelName": "Fusion", "vehicleType": "Sedán", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "explorer", "modelName": "Explorer", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "escape", "modelName": "Escape", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "f150", "modelName": "F-150 / FX4", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "f250", "modelName": "F-250 Super Duty", "vehicleType": "Camioneta / Carga", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "f350", "modelName": "F-350 Tritón", "vehicleType": "Camión Ligero", "fuelType": "Gasolina" },
+                          { "modelId": "ranger", "modelName": "Ranger", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "ecosport", "modelName": "EcoSport", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "expedition", "modelName": "Expedition", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "bronco", "modelName": "Bronco / Bronco Sport", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "mustang", "modelName": "Mustang", "vehicleType": "Coupé / Deportivo", "fuelType": "Gasolina" },
+                          { "modelId": "edge", "modelName": "Edge", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "ka", "modelName": "Ka", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "transit", "modelName": "Transit", "vehicleType": "Van / Furgón", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "laser", "modelName": "Laser", "vehicleType": "Sedán", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "hyundai",
+                        "brandName": "HYUNDAI",
+                        "country": "Corea del Sur",
+                        "sortOrder": 4,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "accent", "modelName": "Accent", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "elantra", "modelName": "Elantra", "vehicleType": "Sedán", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "tucson", "modelName": "Tucson / Tucson IX35", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "santa_fe", "modelName": "Santa Fe", "vehicleType": "SUV Grande", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "getz", "modelName": "Getz", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "creta", "modelName": "Creta", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "sonata", "modelName": "Sonata", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "h1_starex", "modelName": "H-1 / Starex", "vehicleType": "Van / Minivan", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "grand_i10", "modelName": "Grand i10", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "venue", "modelName": "Venue", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "palisade", "modelName": "Palisade", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "matrix", "modelName": "Matrix", "vehicleType": "Monovolumen", "fuelType": "Gasolina" },
+                          { "modelId": "atos", "modelName": "Atos", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "hd78", "modelName": "HD78 / HD65", "vehicleType": "Camión Ligero", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "kia",
+                        "brandName": "KIA",
+                        "country": "Corea del Sur",
+                        "sortOrder": 5,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "rio", "modelName": "Rio / Rio Stylus", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "cerato", "modelName": "Cerato / Forte / K3", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "sportage", "modelName": "Sportage", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "sorento", "modelName": "Sorento", "vehicleType": "SUV Grande", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "picanto", "modelName": "Picanto", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "seltos", "modelName": "Seltos", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "carnival", "modelName": "Carnival / Sedona", "vehicleType": "Minivan", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "soul", "modelName": "Soul", "vehicleType": "Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "k5_optima", "modelName": "K5 / Optima", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "carens", "modelName": "Carens", "vehicleType": "Minivan", "fuelType": "Gasolina" },
+                          { "modelId": "sonet", "modelName": "Sonet", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "pregio", "modelName": "Pregio", "vehicleType": "Van / Furgón", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "nissan",
+                        "brandName": "NISSAN",
+                        "country": "Japón",
+                        "sortOrder": 6,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "sentra", "modelName": "Sentra (B13/B15/B16/B17/B18)", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "tiida", "modelName": "Tiida", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "versa", "modelName": "Versa", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "frontier", "modelName": "Frontier / Navara / NP300", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "patrol", "modelName": "Patrol / Patrol GR", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "xtrail", "modelName": "X-Trail", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "pathfinder", "modelName": "Pathfinder", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "kicks", "modelName": "Kicks", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "march", "modelName": "March", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "qashqai", "modelName": "Qashqai", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "murano", "modelName": "Murano", "vehicleType": "SUV", "fuelType": "Gasolina" },
+                          { "modelId": "armada", "modelName": "Armada", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "urvan", "modelName": "Urvan", "vehicleType": "Van / Furgón", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "almera", "modelName": "Almera", "vehicleType": "Sedán", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "mitsubishi",
+                        "brandName": "MITSUBISHI",
+                        "country": "Japón",
+                        "sortOrder": 7,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "lancer", "modelName": "Lancer (CK/CS/Touring)", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "montero_sport", "modelName": "Montero Sport / Nativa", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "montero_dakar", "modelName": "Montero Dakar / Pajero", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "outlander", "modelName": "Outlander", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "signo", "modelName": "Signo", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "eclipse_cross", "modelName": "Eclipse Cross", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "l200", "modelName": "L200 / Sportero", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "galant", "modelName": "Galant", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "mirage", "modelName": "Mirage", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "canter", "modelName": "Canter", "vehicleType": "Camión Ligero", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "jeep",
+                        "brandName": "JEEP",
+                        "country": "Estados Unidos",
+                        "sortOrder": 8,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "grand_cherokee", "modelName": "Grand Cherokee (WJ/WK/WK2/WL)", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "cherokee", "modelName": "Cherokee (XJ/KJ/KK/KL)", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "wrangler", "modelName": "Wrangler (TJ/JK/JL Rubicon / Sahara)", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "compass", "modelName": "Compass", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "renegade", "modelName": "Renegade", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "commander", "modelName": "Commander", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "gladiator", "modelName": "Gladiator", "vehicleType": "Camioneta / Pickup 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "cj7", "modelName": "CJ-7 / YJ", "vehicleType": "Rústico Clásico", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "renault",
+                        "brandName": "RENAULT",
+                        "country": "Francia",
+                        "sortOrder": 9,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "logan", "modelName": "Logan", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "sandero", "modelName": "Sandero / Stepway", "vehicleType": "Hatchback / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "duster", "modelName": "Duster / Oroch", "vehicleType": "SUV / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "clio", "modelName": "Clio", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "megane", "modelName": "Megane", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "symbol", "modelName": "Symbol", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "kangoo", "modelName": "Kangoo", "vehicleType": "Van / Furgón", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "fluence", "modelName": "Fluence", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "captur", "modelName": "Captur", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "koleos", "modelName": "Koleos", "vehicleType": "SUV", "fuelType": "Gasolina" },
+                          { "modelId": "kwid", "modelName": "Kwid", "vehicleType": "Hatchback Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "master", "modelName": "Master", "vehicleType": "Van / Furgón", "fuelType": "Diésel" },
+                          { "modelId": "twingo", "modelName": "Twingo", "vehicleType": "Hatchback", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "volkswagen",
+                        "brandName": "VOLKSWAGEN",
+                        "country": "Alemania",
+                        "sortOrder": 10,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "gol", "modelName": "Gol", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "golf", "modelName": "Golf / GTI", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "jetta_bora", "modelName": "Jetta / Bora / Vento", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "tiguan", "modelName": "Tiguan", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "amarok", "modelName": "Amarok", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel" },
+                          { "modelId": "fox", "modelName": "Fox / CrossFox", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "polo", "modelName": "Polo / Virtus", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "passat", "modelName": "Passat", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "touareg", "modelName": "Touareg", "vehicleType": "SUV Grande", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "saveiro", "modelName": "Saveiro", "vehicleType": "Pickup Ligera", "fuelType": "Gasolina" },
+                          { "modelId": "taos", "modelName": "Taos", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "tcross", "modelName": "T-Cross", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "beetle", "modelName": "Beetle / Escarabajo", "vehicleType": "Coupé / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "transporter", "modelName": "Transporter / Crafter", "vehicleType": "Van / Furgón", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "chery",
+                        "brandName": "CHERY",
+                        "country": "China",
+                        "sortOrder": 11,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "arauca", "modelName": "Arauca", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "orinoco", "modelName": "Orinoco", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "grand_tiger", "modelName": "Grand Tiger", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "tiggo_2", "modelName": "Tiggo 2 / Tiggo 2 Pro", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "tiggo_4", "modelName": "Tiggo 4 / Tiggo 4 Pro", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "tiggo_7", "modelName": "Tiggo 7 / Tiggo 7 Pro", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "tiggo_8", "modelName": "Tiggo 8 / Tiggo 8 Pro", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "qq", "modelName": "QQ / QQ3 / QQ6", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "x1", "modelName": "X1 (Beat)", "vehicleType": "Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "cowin", "modelName": "Cowin", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "fulwin", "modelName": "Fulwin", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "fiat",
+                        "brandName": "FIAT",
+                        "country": "Italia",
+                        "sortOrder": 12,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "palio", "modelName": "Palio / Palio Weekend / Adventure", "vehicleType": "Hatchback / Station Wagon", "fuelType": "Gasolina" },
+                          { "modelId": "siena", "modelName": "Siena / Grand Siena", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "uno", "modelName": "Uno / Uno Fire / Uno Way", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "punto", "modelName": "Punto", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "strada", "modelName": "Strada", "vehicleType": "Pickup Ligera", "fuelType": "Gasolina" },
+                          { "modelId": "fiorino", "modelName": "Fiorino", "vehicleType": "Furgón", "fuelType": "Gasolina" },
+                          { "modelId": "cronos", "modelName": "Cronos", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "pulse", "modelName": "Pulse / Fastback", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "toro", "modelName": "Toro", "vehicleType": "Pickup Compacta", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "mobi", "modelName": "Mobi", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "idea", "modelName": "Idea / Idea Adventure", "vehicleType": "Monovolumen", "fuelType": "Gasolina" },
+                          { "modelId": "ducato", "modelName": "Ducato", "vehicleType": "Van / Furgón", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "mazda",
+                        "brandName": "MAZDA",
+                        "country": "Japón",
+                        "sortOrder": 13,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "mazda2", "modelName": "Mazda 2 / Demio", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "mazda3", "modelName": "Mazda 3 / Allegro", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "mazda6", "modelName": "Mazda 6", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "cx30", "modelName": "CX-30", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "cx5", "modelName": "CX-5", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "cx9", "modelName": "CX-9 / CX-90", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "bt50", "modelName": "BT-50 / B2600", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "tribute", "modelName": "Tribute", "vehicleType": "SUV", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "peugeot",
+                        "brandName": "PEUGEOT",
+                        "country": "Francia",
+                        "sortOrder": 14,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "p206", "modelName": "206 / 206+", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "p207", "modelName": "207 / 207 Compact", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "p208", "modelName": "208", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "p301", "modelName": "301", "vehicleType": "Sedán", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "p307", "modelName": "307", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "p308", "modelName": "308", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "p2008", "modelName": "2008", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "p3008", "modelName": "3008", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "p5008", "modelName": "5008", "vehicleType": "SUV 7 Pasajeros", "fuelType": "Gasolina" },
+                          { "modelId": "partner", "modelName": "Partner", "vehicleType": "Furgón / Utilitario", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "boxer", "modelName": "Boxer", "vehicleType": "Van / Furgón", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "honda",
+                        "brandName": "HONDA",
+                        "country": "Japón",
+                        "sortOrder": 15,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "civic", "modelName": "Civic", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "accord", "modelName": "Accord", "vehicleType": "Sedán", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "crv", "modelName": "CR-V", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "hrv", "modelName": "HR-V", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "pilot", "modelName": "Pilot", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "fit", "modelName": "Fit", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "odyssey", "modelName": "Odyssey", "vehicleType": "Minivan", "fuelType": "Gasolina" },
+                          { "modelId": "city", "modelName": "City", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "ridgeline", "modelName": "Ridgeline", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "bmw",
+                        "brandName": "BMW",
+                        "country": "Alemania",
+                        "sortOrder": 16,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "serie_1", "modelName": "Serie 1 (116i/118i/120i/135i)", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "serie_3", "modelName": "Serie 3 (320i/325i/328i/330i/335i)", "vehicleType": "Sedán / Coupé", "fuelType": "Gasolina" },
+                          { "modelId": "serie_5", "modelName": "Serie 5 (520i/528i/530i/540i/550i)", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "serie_7", "modelName": "Serie 7 (740i/750i/760i)", "vehicleType": "Sedán Ejecutivo", "fuelType": "Gasolina" },
+                          { "modelId": "x1", "modelName": "X1", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "x3", "modelName": "X3", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "x4", "modelName": "X4", "vehicleType": "SUV Coupé", "fuelType": "Gasolina" },
+                          { "modelId": "x5", "modelName": "X5", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "x6", "modelName": "X6", "vehicleType": "SUV Coupé", "fuelType": "Gasolina" },
+                          { "modelId": "m3_m5", "modelName": "M3 / M4 / M5", "vehicleType": "Deportivo Alta Gama", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "mercedes_benz",
+                        "brandName": "MERCEDES-BENZ",
+                        "country": "Alemania",
+                        "sortOrder": 17,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "clase_a", "modelName": "Clase A (A200/A250/A45 AMG)", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "clase_c", "modelName": "Clase C (C180/C200/C250/C300/C63 AMG)", "vehicleType": "Sedán / Coupé", "fuelType": "Gasolina" },
+                          { "modelId": "clase_e", "modelName": "Clase E (E200/E300/E350/E500)", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "clase_s", "modelName": "Clase S (S400/S500/S600)", "vehicleType": "Sedán Ejecutivo", "fuelType": "Gasolina" },
+                          { "modelId": "cla", "modelName": "CLA", "vehicleType": "Coupé 4 puertas", "fuelType": "Gasolina" },
+                          { "modelId": "gla", "modelName": "GLA", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "glc", "modelName": "GLC", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "gle", "modelName": "GLE / ML (ML320/ML350/ML500)", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "gls", "modelName": "GLS / GL", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "clase_g", "modelName": "Clase G (G500/G63 AMG)", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "sprinter", "modelName": "Sprinter", "vehicleType": "Van / Furgón", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "audi",
+                        "brandName": "AUDI",
+                        "country": "Alemania",
+                        "sortOrder": 18,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "a1", "modelName": "A1", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "a3", "modelName": "A3 / S3 / RS3", "vehicleType": "Sedán / Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "a4", "modelName": "A4 / S4", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "a5", "modelName": "A5 / S5", "vehicleType": "Coupé / Sportback", "fuelType": "Gasolina" },
+                          { "modelId": "a6", "modelName": "A6", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "a8", "modelName": "A8", "vehicleType": "Sedán Ejecutivo", "fuelType": "Gasolina" },
+                          { "modelId": "q3", "modelName": "Q3", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "q5", "modelName": "Q5 / SQ5", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "q7", "modelName": "Q7", "vehicleType": "SUV Grande", "fuelType": "Gasolina / Diésel" },
+                          { "modelId": "q8", "modelName": "Q8", "vehicleType": "SUV Coupé", "fuelType": "Gasolina" },
+                          { "modelId": "tt", "modelName": "TT", "vehicleType": "Deportivo Coupé", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "dodge_ram",
+                        "brandName": "DODGE / RAM",
+                        "country": "Estados Unidos",
+                        "sortOrder": 19,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "ram_1500", "modelName": "RAM 1500 (Hemi / Laramie)", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" },
+                          { "modelId": "ram_2500", "modelName": "RAM 2500 (Heavy Duty / Cummins)", "vehicleType": "Camioneta / Carga", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "durango", "modelName": "Durango", "vehicleType": "SUV Grande", "fuelType": "Gasolina" },
+                          { "modelId": "caliber", "modelName": "Caliber", "vehicleType": "Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "charger", "modelName": "Charger", "vehicleType": "Sedán Deportivo", "fuelType": "Gasolina" },
+                          { "modelId": "challenger", "modelName": "Challenger", "vehicleType": "Coupé Deportivo", "fuelType": "Gasolina" },
+                          { "modelId": "neon", "modelName": "Neon", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "journey", "modelName": "Journey", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "dakota", "modelName": "Dakota", "vehicleType": "Camioneta / Pickup", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "suzuki",
+                        "brandName": "SUZUKI",
+                        "country": "Japón",
+                        "sortOrder": 20,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "swift", "modelName": "Swift", "vehicleType": "Hatchback", "fuelType": "Gasolina" },
+                          { "modelId": "grand_vitara_sz", "modelName": "Grand Vitara / Grand Vitara SZ", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "jimny", "modelName": "Jimny / Samurai", "vehicleType": "Rústico / 4x4", "fuelType": "Gasolina" },
+                          { "modelId": "sx4", "modelName": "SX4", "vehicleType": "Hatchback / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "baleno", "modelName": "Baleno", "vehicleType": "Hatchback / Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "ignis", "modelName": "Ignis", "vehicleType": "Crossover Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "ertiga", "modelName": "Ertiga / XL7", "vehicleType": "Minivan / SUV", "fuelType": "Gasolina" },
+                          { "modelId": "apv", "modelName": "APV", "vehicleType": "Van / Furgón", "fuelType": "Gasolina" },
+                          { "modelId": "celerio", "modelName": "Celerio / Alto", "vehicleType": "Hatchback", "fuelType": "Gasolina" }
+                        ]
+                      },
+                      {
+                        "brandId": "jac",
+                        "brandName": "JAC",
+                        "country": "China",
+                        "sortOrder": 21,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "jac_js2", "modelName": "JS2 / S2", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "jac_js4", "modelName": "JS4 / S4", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "jac_js8", "modelName": "JS8", "vehicleType": "SUV 7 Pasajeros", "fuelType": "Gasolina" },
+                          { "modelId": "jac_t6", "modelName": "T6", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "jac_t8", "modelName": "T8 / T8 Pro", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "jac_j4", "modelName": "J4 / Heyue", "vehicleType": "Sedán", "fuelType": "Gasolina" },
+                          { "modelId": "jac_1040", "modelName": "HFC 1040 / 1061", "vehicleType": "Camión Ligero", "fuelType": "Diésel" }
+                        ]
+                      },
+                      {
+                        "brandId": "great_wall",
+                        "brandName": "GREAT WALL / HAVAL",
+                        "country": "China",
+                        "sortOrder": 22,
+                        "isActive": true,
+                        "models": [
+                          { "modelId": "gw_wingle", "modelName": "Wingle 5 / Wingle 7", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "gw_poer", "modelName": "Poer", "vehicleType": "Camioneta / Pickup", "fuelType": "Diésel / Gasolina" },
+                          { "modelId": "haval_h6", "modelName": "Haval H6", "vehicleType": "SUV / Crossover", "fuelType": "Gasolina / Híbrido" },
+                          { "modelId": "haval_jolion", "modelName": "Haval Jolion", "vehicleType": "SUV Compacto", "fuelType": "Gasolina" },
+                          { "modelId": "haval_m4", "modelName": "Haval M4", "vehicleType": "Crossover", "fuelType": "Gasolina" },
+                          { "modelId": "gw_hover", "modelName": "Hover / H3 / H5", "vehicleType": "SUV / 4x4", "fuelType": "Gasolina" }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "catalog_state",
+            "type": "function",
+            "functionName": "catalog_state",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "name": "vehicle_types",
+                    "metadata": [
+                      {
+                        "typeId": "SEDAN",
+                        "name": "Sedán",
+                        "category": "Turismo",
+                        "doors": 4,
+                        "icon": "fa-car-side",
+                        "description": "Turismo cerrado de tres volúmenes y cuatro puertas.",
+                        "sortOrder": 1,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "HATCHBACK",
+                        "name": "Hatchback",
+                        "category": "Compacto",
+                        "doors": 5,
+                        "icon": "fa-car",
+                        "description": "Automóvil compacto de dos volúmenes con compuerta trasera integrada.",
+                        "sortOrder": 2,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "SUV",
+                        "name": "SUV / Crossover",
+                        "category": "Utilitario",
+                        "doors": 5,
+                        "icon": "fa-truck-monster",
+                        "description": "Vehículo utilitario deportivo con mayor despeje al suelo y habitabilidad.",
+                        "sortOrder": 3,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "PICKUP",
+                        "name": "Camioneta / Pickup",
+                        "category": "Carga Ligera",
+                        "doors": 4,
+                        "icon": "fa-truck-pickup",
+                        "description": "Camioneta utilitaria con tolva o batea de carga posterior.",
+                        "sortOrder": 4,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "RUSTICO_4X4",
+                        "name": "Rústico / 4x4",
+                        "category": "Todo Terreno",
+                        "doors": 3,
+                        "icon": "fa-mountain",
+                        "description": "Vehículo todo terreno con chasis reforzado, reductora y tracción integral.",
+                        "sortOrder": 5,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "COUPE",
+                        "name": "Coupé / Deportivo",
+                        "category": "Deportivo",
+                        "doors": 2,
+                        "icon": "fa-bolt",
+                        "description": "Automóvil deportivo biplaza o 2+2 de dos puertas.",
+                        "sortOrder": 6,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "MINIVAN",
+                        "name": "Minivan / Monovolumen",
+                        "category": "Familiar",
+                        "doors": 5,
+                        "icon": "fa-users",
+                        "description": "Monovolumen familiar con 7 u 8 plazas para pasajeros.",
+                        "sortOrder": 7,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "VAN_FURGON",
+                        "name": "Van / Furgón",
+                        "category": "Comercial",
+                        "doors": 4,
+                        "icon": "fa-van-shuttle",
+                        "description": "Furgoneta comercial para transporte de carga cerrada o pasajeros.",
+                        "sortOrder": 8,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "CAMION_LIGERO",
+                        "name": "Camión Ligero (350 / NHR)",
+                        "category": "Carga Pesada",
+                        "doors": 2,
+                        "icon": "fa-truck",
+                        "description": "Vehículo de carga comercial liviana o plataforma abierta.",
+                        "sortOrder": 9,
+                        "isActive": true
+                      },
+                      {
+                        "typeId": "MOTO",
+                        "name": "Motocicleta",
+                        "category": "Dos Ruedas",
+                        "doors": 0,
+                        "icon": "fa-motorcycle",
+                        "description": "Vehículo motorizado de dos ruedas.",
+                        "sortOrder": 10,
+                        "isActive": true
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

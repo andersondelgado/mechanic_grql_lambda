@@ -1,0 +1,4676 @@
+{
+  "request": {
+    "flows": [
+      {
+        "name": "workflow_taller",
+        "description": "Seed clients, vehicles, receipts, and histories for Taller 360",
+        "steps": [
+          {
+            "name": "GestionTallerProd_clients",
+            "type": "function",
+            "functionName": "GestionTallerProd_clients",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "cell_phone": "0414-4952266",
+                    "home_phone": "",
+                    "email": "argeniscastr@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "cell_phone": "0414-4502196",
+                    "home_phone": "",
+                    "email": "clientetalle@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "AVEO AAH2MK",
+                    "tax_id": "V-17385259",
+                    "cell_phone": "0414-8385259",
+                    "home_phone": "",
+                    "email": "aveoaah2mk@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "AVEO AG872KG",
+                    "tax_id": "V-18463205",
+                    "cell_phone": "0414-9463205",
+                    "home_phone": "",
+                    "email": "aveoag872kg@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MARIA PALACIO",
+                    "tax_id": "V-16739218",
+                    "cell_phone": "0414-7739218",
+                    "home_phone": "",
+                    "email": "mariapalacio@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "JOEL",
+                    "tax_id": "V-11349575",
+                    "cell_phone": "4129818667",
+                    "home_phone": "",
+                    "email": "joel@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "cell_phone": "0414-5093605",
+                    "home_phone": "",
+                    "email": "omaraquino@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "VICTOR HERNANDEZ",
+                    "tax_id": "V-13170087",
+                    "cell_phone": "0414-4170087",
+                    "home_phone": "",
+                    "email": "victorhernan@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "DANNY CONTRERA",
+                    "tax_id": "V-424251830",
+                    "cell_phone": "0414-8851824",
+                    "home_phone": "",
+                    "email": "dannycontrer@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "CHEVROLET OPTRA AA84VG",
+                    "tax_id": "V-12202021",
+                    "cell_phone": "0414-3202021",
+                    "home_phone": "",
+                    "email": "chevroletopt@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "BEATRIZ LUGO",
+                    "tax_id": "V-17150630",
+                    "cell_phone": "0414-8150630",
+                    "home_phone": "",
+                    "email": "beatrizlugo@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MARIA LUGO",
+                    "tax_id": "V-17179342",
+                    "cell_phone": "0414-8179342",
+                    "home_phone": "",
+                    "email": "marialugo@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "IRINA TORTOZA",
+                    "tax_id": "V-18838448",
+                    "cell_phone": "4127118334",
+                    "home_phone": "",
+                    "email": "irinatortoza@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "DAVID MARQUEZ",
+                    "tax_id": "V-18604761",
+                    "cell_phone": "0414-9604761",
+                    "home_phone": "",
+                    "email": "davidmarquez@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "LUIS RIVAS",
+                    "tax_id": "V-12901765",
+                    "cell_phone": "0414-3901765",
+                    "home_phone": "",
+                    "email": "luisrivas@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "JOSE VERA",
+                    "tax_id": "V-4128778464",
+                    "cell_phone": "0414-2057883",
+                    "home_phone": "",
+                    "email": "josevera@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "JOSE RAMON CARLIN",
+                    "tax_id": "V-18330935",
+                    "cell_phone": "4241055613",
+                    "home_phone": "",
+                    "email": "joseramoncar@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "GISELL AYESTON",
+                    "tax_id": "V-18651296",
+                    "cell_phone": "41290101006",
+                    "home_phone": "",
+                    "email": "gisellayesto@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MICHELL MOROS",
+                    "tax_id": "V-16910234",
+                    "cell_phone": "0414-7910234",
+                    "home_phone": "",
+                    "email": "michellmoros@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "EMBAJADA DE BOLIVIA",
+                    "tax_id": "V-15172065",
+                    "cell_phone": "0414-6172065",
+                    "home_phone": "",
+                    "email": "embajadadebo@gmail.com",
+                    "address": "LA FLORIDA",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MITSUBICHI LANCER DCL64G",
+                    "tax_id": "V-15662089",
+                    "cell_phone": "0414-6662089",
+                    "home_phone": "",
+                    "email": "mitsubichila@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "ALIEXCA ROMERO",
+                    "tax_id": "V-13119880",
+                    "cell_phone": "0414-4119880",
+                    "home_phone": "",
+                    "email": "aliexcaromer@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "CIRA BARRETO",
+                    "tax_id": "V-16059624",
+                    "cell_phone": "0414-7059624",
+                    "home_phone": "",
+                    "email": "cirabarreto@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MILAGROS NIETO",
+                    "tax_id": "V-14573347",
+                    "cell_phone": "0414-5573347",
+                    "home_phone": "",
+                    "email": "milagrosniet@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "BRAND MOREJON",
+                    "tax_id": "V-17027958",
+                    "cell_phone": "0414-8027958",
+                    "home_phone": "",
+                    "email": "brandmorejon@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MONICA CARDENAS",
+                    "tax_id": "V-12352941",
+                    "cell_phone": "0414-3352941",
+                    "home_phone": "",
+                    "email": "monicacarden@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "LILIAN MOYETONES",
+                    "tax_id": "V-18436228",
+                    "cell_phone": "4142322112",
+                    "home_phone": "",
+                    "email": "lilianmoyeto@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "RAMIRO VARGAS",
+                    "tax_id": "V-13420735",
+                    "cell_phone": "4149163496",
+                    "home_phone": "",
+                    "email": "ramirovargas@gmail.com",
+                    "address": "LA FLORIDA",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "TERIOR DAYATSU A8442OP",
+                    "tax_id": "V-15761975",
+                    "cell_phone": "0414-6761975",
+                    "home_phone": "",
+                    "email": "teriordayats@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MARIA SOLORZANO",
+                    "tax_id": "V-18019590",
+                    "cell_phone": "0414-9019590",
+                    "home_phone": "",
+                    "email": "mariasolorza@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "TOYOTA CORROLLA AB204FP",
+                    "tax_id": "V-13663496",
+                    "cell_phone": "0414-4663496",
+                    "home_phone": "",
+                    "email": "toyotacorrol@gmail.com",
+                    "address": "BELLO CMPO",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "SAUL MONTILLA",
+                    "tax_id": "V-10273212",
+                    "cell_phone": "0414-1273212",
+                    "home_phone": "",
+                    "email": "saulmontilla@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "WHITNEY TRUJILLO",
+                    "tax_id": "V-13858320",
+                    "cell_phone": "0414-4858320",
+                    "home_phone": "",
+                    "email": "whitneytruji@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "WOLFWAGUEN GOLD MFB32F",
+                    "tax_id": "V-12371641",
+                    "cell_phone": "0414-3371641",
+                    "home_phone": "",
+                    "email": "wolfwaguengo@gmail.com",
+                    "address": "Caracas, Distrito Capital",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "RAUL MONTILLA",
+                    "tax_id": "V-13965685",
+                    "cell_phone": "0414-4965685",
+                    "home_phone": "",
+                    "email": "raulmontilla@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-02-10 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "RONAL MOREJON",
+                    "tax_id": "V-12128395",
+                    "cell_phone": "0414-3128395",
+                    "home_phone": "",
+                    "email": "ronalmorejon@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-01-22 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "LUIS DIAZ",
+                    "tax_id": "V-15587695",
+                    "cell_phone": "0414-6587695",
+                    "home_phone": "",
+                    "email": "luisdiaz@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-01-12 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "MICHWL MOROS",
+                    "tax_id": "V-11197962",
+                    "cell_phone": "0414-2197962",
+                    "home_phone": "",
+                    "email": "michwlmoros@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-02-15 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "CUÑADA DE YEISON",
+                    "tax_id": "V-18625797",
+                    "cell_phone": "0414-9625797",
+                    "home_phone": "",
+                    "email": "cuadadeyeiso@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-01-16 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "DANY CONTRERAS",
+                    "tax_id": "V-13179356",
+                    "cell_phone": "424251930",
+                    "home_phone": "",
+                    "email": "danycontrera@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-03-09 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "TERIOS",
+                    "tax_id": "V-18823826",
+                    "cell_phone": "0414-9823826",
+                    "home_phone": "",
+                    "email": "terios@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-03-11 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "TRINA TORTOZAS",
+                    "tax_id": "V-19203081",
+                    "cell_phone": "0414-4081879",
+                    "home_phone": "",
+                    "email": "trinatortoza@gmail.com",
+                    "address": "EN SITIO",
+                    "registration_date": "2026-03-17 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "LILIAN MOYERLAS",
+                    "tax_id": "V-18160079",
+                    "cell_phone": "4142320112",
+                    "home_phone": "",
+                    "email": "lilianmoyerl@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-03-24 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "JOEL AGUILAR",
+                    "tax_id": "V-10983267",
+                    "cell_phone": "0414-1983267",
+                    "home_phone": "",
+                    "email": "joelaguilar@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-04-26 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "LILIANA MONTONES",
+                    "tax_id": "V-17526830",
+                    "cell_phone": "0414-8526830",
+                    "home_phone": "",
+                    "email": "lilianamonto@gmail.com",
+                    "address": "TALLER",
+                    "registration_date": "2026-04-20 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "ALBERTO CONTRERAS",
+                    "tax_id": "V-24843799",
+                    "cell_phone": "0414-9540027",
+                    "home_phone": "",
+                    "email": "albertocontr@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "OPERADORA PASEO EL HATILLO LA LAGUNITA",
+                    "tax_id": "V-14789902",
+                    "cell_phone": "0414-5789902",
+                    "home_phone": "",
+                    "email": "operadorapas@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "RADAME PEREIRA",
+                    "tax_id": "V-13671361",
+                    "cell_phone": "0414-4671361",
+                    "home_phone": "",
+                    "email": "radamepereir@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "ANGELICA ROSALES",
+                    "tax_id": "V-13963828",
+                    "cell_phone": "0414-4963828",
+                    "home_phone": "",
+                    "email": "angelicarosa@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "2026-02-15 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "LUIS VIVAS",
+                    "tax_id": "V-12546408",
+                    "cell_phone": "0414-3546408",
+                    "home_phone": "",
+                    "email": "luisvivas@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "TANIA PAZ CASTILLO",
+                    "tax_id": "V-17884532",
+                    "cell_phone": "0414-8884532",
+                    "home_phone": "",
+                    "email": "taniapazcast@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "OPERADORA PASEO EL ATILLO LA LAGUNITA",
+                    "tax_id": "V-10525125",
+                    "cell_phone": "0414-1525125",
+                    "home_phone": "",
+                    "email": "operadorapas5@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "EMBAJADA DE BOLIVIA (SR: RAMIRO  LIZONDO)",
+                    "tax_id": "V-16703684",
+                    "cell_phone": "0414-7703684",
+                    "home_phone": "",
+                    "email": "embajadadebo8@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "CLIENTE:"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "GABRIEL CAMPOS",
+                    "tax_id": "V-16407407",
+                    "cell_phone": "0414-7407407",
+                    "home_phone": "",
+                    "email": "gabrielcampo@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO Y SERVICIO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "ALIESKA ROMERO",
+                    "tax_id": "V-13817004",
+                    "cell_phone": "0414-4817004",
+                    "home_phone": "",
+                    "email": "alieskaromer@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "SIRAIDY BARRETO",
+                    "tax_id": "V-16210197",
+                    "cell_phone": "0414-7210197",
+                    "home_phone": "",
+                    "email": "siraidybarre@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE REPUESTO  Y SERVICIOS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "client_name": "TWINGO ACO34RD",
+                    "tax_id": "V-15717582",
+                    "cell_phone": "0414-6717582",
+                    "home_phone": "",
+                    "email": "twingoaco34r@gmail.com",
+                    "address": "Caracas",
+                    "registration_date": "PRESUPUESTO DE MANO DE OBRA"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_vehicles",
+            "type": "function",
+            "functionName": "GestionTallerProd_vehicles",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MAP99W",
+                    "brand": "TOYOTA",
+                    "model": "BBCAMRRY",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952266"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AE486XK",
+                    "brand": "CHERY",
+                    "model": "TIGGO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952267"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AFY42Z",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952268"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MED84X",
+                    "brand": "RENAULT",
+                    "model": "MEGAN",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952269"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A36AYZI",
+                    "brand": "CHEBROLET",
+                    "model": "LUDMAX",
+                    "year": 2015,
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952270"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AAHZ2MK",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "year": 2015,
+                    "color": "BLANCO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "AVEO AAH2MK",
+                    "owner_tax_id": "V-17385263"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AG872KG",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "year": 2015,
+                    "color": "DORADO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "AVEO AG872KG",
+                    "owner_tax_id": "V-18463209"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A724IXA",
+                    "brand": "CENTAURO",
+                    "model": "IAKA",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MARIA PALACIO",
+                    "owner_tax_id": "V-16739222"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA1974P",
+                    "brand": "CHERRY",
+                    "model": "TIGGO",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "JOEL",
+                    "owner_tax_id": "V-11349579"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AF265PM",
+                    "brand": "CHERRY",
+                    "model": "X1",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "OMAR AQUINO",
+                    "owner_tax_id": "V-14093609"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AC152LV",
+                    "brand": "CHEVROLET",
+                    "model": "CRUZE",
+                    "year": 2015,
+                    "color": "DORADO VIEJO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "DANNY CONTRERA",
+                    "owner_tax_id": "V-17851827"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA841VG",
+                    "brand": "CHEVROLET",
+                    "model": "OPTRA",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "CHEVROLET OPTRA AA84VG",
+                    "owner_tax_id": "V-12202025"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AC541BK",
+                    "brand": "KIA",
+                    "model": "ESPORTAGE",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "BEATRIZ LUGO",
+                    "owner_tax_id": "V-17150634"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AB434MB",
+                    "brand": "FORD",
+                    "model": "EXPLORER",
+                    "year": 2015,
+                    "color": "BLANCA",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MARIA LUGO",
+                    "owner_tax_id": "V-17179346"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MEI883I",
+                    "brand": "FIAT",
+                    "model": "PALIO",
+                    "year": 2015,
+                    "color": "ROJO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "IRINA TORTOZA",
+                    "owner_tax_id": "V-18838452"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AF473LA",
+                    "brand": "VEHICULO",
+                    "model": "GRANDTWIGER",
+                    "year": 2015,
+                    "color": "BLANCA",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "DAVID MARQUEZ",
+                    "owner_tax_id": "V-18604765"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A76AOH",
+                    "brand": "CHERRY",
+                    "model": "GRAND TIGUER",
+                    "year": 2015,
+                    "color": "VINO TINTO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "LUIS RIVAS",
+                    "owner_tax_id": "V-12901769"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AFD2610",
+                    "brand": "HONDA",
+                    "model": "CVR",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "JOSE VERA",
+                    "owner_tax_id": "V-11057886"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AD172FM",
+                    "brand": "JEEP",
+                    "model": "CHEROQUE",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "JOSE RAMON CARLIN",
+                    "owner_tax_id": "V-18330939"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AB302HK",
+                    "brand": "JEEP",
+                    "model": "LIMITED",
+                    "year": 2015,
+                    "color": "NEGRA",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "GISELL AYESTON",
+                    "owner_tax_id": "V-18651300"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A62AO2J",
+                    "brand": "CHEBROLET",
+                    "model": "LUDMAX",
+                    "year": 2015,
+                    "color": "BLANCA",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952275"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AB005AD",
+                    "brand": "MAZDA",
+                    "model": "3",
+                    "year": 2015,
+                    "color": "BLANCO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MICHELL MOROS",
+                    "owner_tax_id": "V-16910238"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "1001",
+                    "brand": "MAZDA",
+                    "model": "5",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "EMBAJADA DE BOLIVIA",
+                    "owner_tax_id": "V-15172069"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "DCL64G",
+                    "brand": "MITUBICHI",
+                    "model": "LANCR",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MITSUBICHI LANCER DCL64G",
+                    "owner_tax_id": "V-15662093"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA987CR",
+                    "brand": "RENAULT",
+                    "model": "LOGAN",
+                    "year": 2015,
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ALIEXCA ROMERO",
+                    "owner_tax_id": "V-13119884"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA558RS",
+                    "brand": "RENAULT",
+                    "model": "RIO",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MILAGROS NIETO",
+                    "owner_tax_id": "V-14573351"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AC034RD",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "year": 2015,
+                    "color": "ROJO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MICHELL MOROS",
+                    "owner_tax_id": "V-16910243"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AF442Z",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "BRAND MOREJON",
+                    "owner_tax_id": "V-17027962"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MEA8B",
+                    "brand": "RENAULT",
+                    "model": "TEINGO",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MONICA CARDENAS",
+                    "owner_tax_id": "V-12352945"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA572BV",
+                    "brand": "SUZUKY",
+                    "model": "GRAND VITARA",
+                    "year": 2015,
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "LILIAN MOYETONES",
+                    "owner_tax_id": "V-18436232"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AD805PK",
+                    "brand": "TERIRIO",
+                    "model": "MODELO",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "RAMIRO VARGAS",
+                    "owner_tax_id": "V-13420739"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AB442OP",
+                    "brand": "TERIRIO",
+                    "model": "DAYATSU",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "TERIOR DAYATSU A8442OP",
+                    "owner_tax_id": "V-15761979"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AC111BB",
+                    "brand": "TOYOTA",
+                    "model": "COROLLA",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MARIA SOLORZANO",
+                    "owner_tax_id": "V-18019594"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AB204FP",
+                    "brand": "TOYOTA",
+                    "model": "CORROLLA",
+                    "year": 2015,
+                    "color": "BLANCO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "TOYOTA CORROLLA AB204FP",
+                    "owner_tax_id": "V-13663500"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AG814SK",
+                    "brand": "WOLFWAGUEN",
+                    "model": "GOLD",
+                    "year": 2015,
+                    "color": "NEGRO",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "WHITNEY TRUJILLO",
+                    "owner_tax_id": "V-13858324"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MFB32F",
+                    "brand": "WOLWAGUEN",
+                    "model": "GOLD",
+                    "year": 2015,
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "WOLFWAGUEN GOLD MFB32F",
+                    "owner_tax_id": "V-12371645"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A6432A",
+                    "brand": "AUDY",
+                    "model": "A6",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-10959462"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA12ANR",
+                    "brand": "FIAT",
+                    "model": "SIENNA",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-10700294"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "JAW24H",
+                    "brand": "FORD",
+                    "model": "FOCUS",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-13581767"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A76AD8H",
+                    "brand": "SEAT",
+                    "model": "GRANDTIGGER",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "LUIS DIAZ",
+                    "owner_tax_id": "V-15587695"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AF479W",
+                    "brand": "CHERY",
+                    "model": "ORINOCO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "CUÑADA DE YEISON",
+                    "owner_tax_id": "V-18625797"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "PLACASENPROCESO",
+                    "brand": "MAZDA",
+                    "model": "VEHICULO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-18180138"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA987ER",
+                    "brand": "RENAULT",
+                    "model": "LOGAN",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ALIEXCA ROMERO",
+                    "owner_tax_id": "V-13119885"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA172MK",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-16434529"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "1010",
+                    "brand": "MAZDA",
+                    "model": "5",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "EMBAJADA DE BOLIVIA",
+                    "owner_tax_id": "V-15172071"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MEC83I",
+                    "brand": "FIAT",
+                    "model": "PALIO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "TRINA TORTOZAS",
+                    "owner_tax_id": "V-19203081"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA076WJ",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-16401703"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AG877HG",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-10317039"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A63A02J",
+                    "brand": "CHEVROLET",
+                    "model": "LUDYMAX",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-18518890"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AC841",
+                    "brand": "KIA ESPORTAGE",
+                    "model": "VEHICULO",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "Cliente Taller",
+                    "owner_tax_id": "V-15070439"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AD096VG",
+                    "brand": "FORD",
+                    "model": "EXPLORER 2013",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "JOEL AGUILAR",
+                    "owner_tax_id": "V-10983267"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA572RV",
+                    "brand": "SUZUKY",
+                    "model": "GRAND VITARA",
+                    "year": 2015,
+                    "color": "Blanco",
+                    "mileage": "120000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "LILIANA MONTONES",
+                    "owner_tax_id": "V-17526830"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "FORMATO",
+                    "brand": "RENAULT",
+                    "model": "MEGAN",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ALBERTO CONTRERAS",
+                    "owner_tax_id": "V-24843799"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA197AP",
+                    "brand": "CHERY",
+                    "model": "GRANDTIGO",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "JOEL",
+                    "owner_tax_id": "V-11349580"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA670BJ",
+                    "brand": "TOYOTA",
+                    "model": "HEICE",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "OPERADORA PASEO EL HATILLO LA LAGUNITA",
+                    "owner_tax_id": "V-14789902"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "CHEVROL",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "RADAME PEREIRA",
+                    "owner_tax_id": "V-13671361"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "DONGFAN",
+                    "brand": "DONGFENG",
+                    "model": "MINIBUS",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ANGELICA ROSALES",
+                    "owner_tax_id": "V-13963828"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "EXPLORE",
+                    "brand": "EXPLORER",
+                    "model": "203",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MARIA LUGO",
+                    "owner_tax_id": "V-17179348"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "ADO98VG",
+                    "brand": "EXPLORER",
+                    "model": "203",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "JOEL AGUILAR",
+                    "owner_tax_id": "V-10983268"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MEC831I",
+                    "brand": "FIAT",
+                    "model": "AVENTURE",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "IRINA TORTOZA",
+                    "owner_tax_id": "V-18838453"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "A76ADH",
+                    "brand": "CHERY",
+                    "model": "GRANTWIGER",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "LUIS DIAZ",
+                    "owner_tax_id": "V-15587696"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "PART-1033",
+                    "brand": "HONDA",
+                    "model": "FIT LX AT",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "TANIA PAZ CASTILLO",
+                    "owner_tax_id": "V-17884532"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "LUDMAX",
+                    "brand": "CHEVROLET",
+                    "model": "LUV DMAX",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952276"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "ARMADA",
+                    "brand": "NISAN",
+                    "model": "ARMADA",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "GABRIEL CAMPOS",
+                    "owner_tax_id": "V-16407407"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MEA68B",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "MONICA CARDENAS",
+                    "owner_tax_id": "V-12352946"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MEB32F",
+                    "brand": "WOKLWAGUEN",
+                    "model": "GOLD",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "BRAND MOREJON",
+                    "owner_tax_id": "V-17027966"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA611CP",
+                    "brand": "ZUSUKI",
+                    "model": "GRAND VITARA",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "TWINGO ACO34RD",
+                    "owner_tax_id": "V-15717582"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "AA640AR",
+                    "brand": "CHEVROLET",
+                    "model": "SPARK",
+                    "year": 2012,
+                    "color": "Blanco",
+                    "mileage": "135000",
+                    "vehicle_type": "Sedán",
+                    "owner_name": "RAMIRO VARGAS",
+                    "owner_tax_id": "V-13420740"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_vehicle_receipts",
+            "type": "function",
+            "functionName": "GestionTallerProd_vehicle_receipts",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-10 00:00:00",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952266",
+                    "phone": "0414-4952266",
+                    "brand": "TOYOTA",
+                    "model": "BBCAMRRY",
+                    "license_plate": "MAP99W",
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "exit_date": "2026-02-14 00:00:00",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ARGENIS CASTRO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "6 DIAS",
+                    "reason_for_entry": "REVISION GENERAL AMORTIGUACION TREN DELANTERO FRENOS OTROS",
+                    "work_performed": "ACEITE DIRECCION CAJETIN EN PROCESO DE REVISION",
+                    "must_return": true,
+                    "pending_issues": "BASES DE MOTOR FRENOS DELANTERO Y GUAYA DE FRENO DE MANO KM 362058 AIRE ACONDICIONADO VALVULA DE TEMPERATURA",
+                    "delivery_date": "2026-02-14 00:00:00",
+                    "expected_return_date": "2026-05-14 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-01-20 00:00:00",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952267",
+                    "phone": "0414-4952267",
+                    "brand": "CHERY",
+                    "model": "TIGGO",
+                    "license_plate": "AE486XK",
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "exit_date": "2022-03-06 00:00:00",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ARGENIS CASTRO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "YEISON TORRES",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "PERDIDA DE POTENCIA Y REVISION GENERAL",
+                    "work_performed": "SE LE HIZO EL MOTOR EN GENERAL , EN PROCESO DE EN PRUEBA FALLA COMPUTADORA, ENCONTRADA FALLA",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "2022-03-06 00:00:00",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-01-22 00:00:00",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952268",
+                    "phone": "0414-4952268",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "license_plate": "AFY42Z",
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "exit_date": "2026-03-14 00:00:00",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ARGENIS CASTRO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "WILLIANS ORTEGA",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "HUMO AZUL POR EL ESCAPE ROLINERA COMPRESOR BAQUETEO RADIADOR LUZ RETROCESO",
+                    "work_performed": "SE ENTREGO CON EL MOTOR ECHO, MAS CAJETIN DE DIRECCION",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "2026-03-14 00:00:00",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-11 00:00:00",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952269",
+                    "phone": "0414-4952269",
+                    "brand": "RENAULT",
+                    "model": "MEGAN",
+                    "license_plate": "MED84X",
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "exit_date": "2026-02-14 00:00:00",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ARGENIS CASTRO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "6 DIAS",
+                    "reason_for_entry": "REVISION TREN DELANTERO Y FALLA DE ACELERACION",
+                    "work_performed": "REPARACION MOZO LADO IZQUIERDO SE LLEVO AL TORNERO  MANTENIMIENTO TREN DELANTERO Y FALLA DE ACELERACION",
+                    "must_return": true,
+                    "pending_issues": "CAMBIO DISCOS FRENOS DELANTERO, TAQUETES,BOMBA DE GASOLINA",
+                    "delivery_date": "2026-02-14 00:00:00",
+                    "expected_return_date": "2026-02-21 00:00:00"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-30 00:00:00",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952270",
+                    "phone": "0414-4952270",
+                    "brand": "CHEBROLET",
+                    "model": "LUDMAX",
+                    "license_plate": "A36AYZI",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ARGENIS CASTRO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "FALLA DE MOTOR",
+                    "work_performed": "SEVICIO COMPLETO, FASLLA DE MOTOR  LATONERIA Y PINTURA",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-27 00:00:00",
+                    "owner_name": "AVEO AAH2MK",
+                    "owner_tax_id": "V-17385263",
+                    "phone": "0414-8385263",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "license_plate": "AAHZ2MK",
+                    "color": "BLANCO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "AVEO AAH2MK",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REVISION Y CAMBIO DE PASTILLA DE FRENOS RECTIFICACION DE DISCO Y GOMAS, MANGUERA",
+                    "work_performed": "REPARADO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "30/0382026",
+                    "owner_name": "AVEO AG872KG",
+                    "owner_tax_id": "V-18463209",
+                    "phone": "0414-9463209",
+                    "brand": "CHEVROLET",
+                    "model": "AVEO",
+                    "license_plate": "AG872KG",
+                    "color": "DORADO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "AVEO AG872KG",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "PROBLEMAS DE AMORTIGUACION LATONERIA Y PINTURA",
+                    "work_performed": "SE CAMBIARON LOS AMMORTIGUADORES Y SE PINTO EN GENERAL",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-05-22 00:00:00",
+                    "owner_name": "MARIA PALACIO",
+                    "owner_tax_id": "V-16739222",
+                    "phone": "0414-7739222",
+                    "brand": "CENTAURO",
+                    "model": "IAKA",
+                    "license_plate": "A724IXA",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MARIA PALACIO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "TREN TRASERO CAMBIO DE PIEZAS",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-07-24 00:00:00",
+                    "owner_name": "JOEL",
+                    "owner_tax_id": "V-11349579",
+                    "phone": "0414-2349578",
+                    "brand": "CHERRY",
+                    "model": "TIGGO",
+                    "license_plate": "AA1974P",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "JOEL",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "BOTE DE AGUA LADO IZQUIERDO Y PRESUPUSTO DE PINTURA PARACHOWUE LADO U¡IZQ Y RAYADURA EN PUERTA 156377KM",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-07-20 00:00:00",
+                    "owner_name": "OMAR AQUINO",
+                    "owner_tax_id": "V-14093609",
+                    "phone": "0414-5093609",
+                    "brand": "CHERRY",
+                    "model": "X1",
+                    "license_plate": "AF265PM",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "OMAR AQUINO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "MOTPR FUNDIDO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-01-04 00:00:00",
+                    "owner_name": "VICTOR HERNANDEZ",
+                    "owner_tax_id": "V-13170091",
+                    "phone": "0414-4170091",
+                    "brand": "CHERRY",
+                    "model": "TIGGO",
+                    "license_plate": "AE486XK",
+                    "color": "MARRON",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "VICTOR HERNANDEZ",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "PERDIDA DE POTENCIA REVISION GENERA",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-15 00:00:00",
+                    "owner_name": "VICTOR HERNANDEZ",
+                    "owner_tax_id": "V-13170092",
+                    "phone": "0414-4170092",
+                    "brand": "CHERRY",
+                    "model": "TIGGO",
+                    "license_plate": "AE486XK",
+                    "color": "MARRON",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "VICTOR HERNANDEZ",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "Revisión general",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-06-19 00:00:00",
+                    "owner_name": "VICTOR HERNANDEZ",
+                    "owner_tax_id": "V-13170093",
+                    "phone": "0414-4170093",
+                    "brand": "CHERRY",
+                    "model": "TIGGO",
+                    "license_plate": "AE486XK",
+                    "color": "MARRON",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "VICTOR HERNANDEZ",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CAMBIO DE ACEITE Y FILTRO REVISION DE FRENO BOTE DE AGUA  REF ROJO ELECTRO VENTILADOR",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-09 00:00:00",
+                    "owner_name": "DANNY CONTRERA",
+                    "owner_tax_id": "V-17851827",
+                    "phone": "0414-8851828",
+                    "brand": "CHEVROLET",
+                    "model": "CRUZE",
+                    "license_plate": "AC152LV",
+                    "color": "DORADO VIEJO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "DANNY CONTRERA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "DIAGNOSTICO DE MOTOR",
+                    "work_performed": "SE REALIZO HACR EL MOTOR COMPLETO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-15 00:00:00",
+                    "owner_name": "DANNY CONTRERA",
+                    "owner_tax_id": "V-17851828",
+                    "phone": "0414-8851829",
+                    "brand": "CHEVROLET",
+                    "model": "CRUZE",
+                    "license_plate": "AC152LV",
+                    "color": "DORADO VIEJO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "DANNY CONTRERA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "Revisión general",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-04-25 00:00:00",
+                    "owner_name": "DANNY CONTRERA",
+                    "owner_tax_id": "V-17851829",
+                    "phone": "0414-8851830",
+                    "brand": "CHEVROLET",
+                    "model": "CRUZE",
+                    "license_plate": "AC152LV",
+                    "color": "DORADO VIEJO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "DANNY CONTRERA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REGRESO POR VOTE DE ACEITE",
+                    "work_performed": "SE CORRIGIO LA FALLA",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-06-02 00:00:00",
+                    "owner_name": "DANNY CONTRERA",
+                    "owner_tax_id": "V-17851830",
+                    "phone": "0414-8851831",
+                    "brand": "CHEVROLET",
+                    "model": "CRUZE",
+                    "license_plate": "AC152LV",
+                    "color": "DORADO VIEJO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "DANNY CONTRERA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REGRESO POR VOTE DE ACEITE",
+                    "work_performed": "SE CAMBIO EL TAPA VALVULA",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-25 00:00:00",
+                    "owner_name": "CHEVROLET OPTRA AA84VG",
+                    "owner_tax_id": "V-12202025",
+                    "phone": "0414-3202025",
+                    "brand": "CHEVROLET",
+                    "model": "OPTRA",
+                    "license_plate": "AA841VG",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "CHEVROLET OPTRA AA84VG",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "Revisión general",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-10 00:00:00",
+                    "owner_name": "BEATRIZ LUGO",
+                    "owner_tax_id": "V-17150634",
+                    "phone": "0414-8150634",
+                    "brand": "KIA",
+                    "model": "ESPORTAGE",
+                    "license_plate": "AC541BK",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "BEATRIZ LUGO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "BOTE DE ACEITE TREN DLANTERO",
+                    "work_performed": "SE LE HIZO EL CAMBIO DE ACEITE",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-05-08 00:00:00",
+                    "owner_name": "MARIA LUGO",
+                    "owner_tax_id": "V-17179346",
+                    "phone": "0414-8179346",
+                    "brand": "FORD",
+                    "model": "EXPLORER",
+                    "license_plate": "AB434MB",
+                    "color": "BLANCA",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MARIA LUGO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CAJETIN DE DIRECCION MANUALN TREN DELANTERO KIT DE TIEMPO",
+                    "work_performed": "SOLO SE LE HIZO EL VAJETIN DE DIRECCIN",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-20 00:00:00",
+                    "owner_name": "IRINA TORTOZA",
+                    "owner_tax_id": "V-18838452",
+                    "phone": "0414-9838451",
+                    "brand": "FIAT",
+                    "model": "PALIO",
+                    "license_plate": "MEI883I",
+                    "color": "ROJO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "IRINA TORTOZA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "RUIDO RUWDA IZQUIERDA Y CAMBIO DE ACEITE",
+                    "work_performed": "REALIZADO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-16 00:00:00",
+                    "owner_name": "DAVID MARQUEZ",
+                    "owner_tax_id": "V-18604765",
+                    "phone": "0414-9604765",
+                    "brand": "VEHICULO",
+                    "model": "GRANDTWIGER",
+                    "license_plate": "AF473LA",
+                    "color": "BLANCA",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "DAVID MARQUEZ",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CAMBIO DE BOMBA DE AGUA SNSOR MAP CAMBIO DE ANILLO GARANTIA",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-12-20 00:00:00",
+                    "owner_name": "LUIS RIVAS",
+                    "owner_tax_id": "V-12901769",
+                    "phone": "0414-3901769",
+                    "brand": "CHERRY",
+                    "model": "GRAND TIGUER",
+                    "license_plate": "A76AOH",
+                    "color": "VINO TINTO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LUIS RIVAS",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "RECTIFICACIN DE MOTOR  CAMBIO DE ACEITE Y FILTRO Y MSNTENIMIENTO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-15 00:00:00",
+                    "owner_name": "LUIS RIVAS",
+                    "owner_tax_id": "V-12901770",
+                    "phone": "0414-3901770",
+                    "brand": "CHERRY",
+                    "model": "GRAND TIGUER",
+                    "license_plate": "A76AOH",
+                    "color": "VINO TINTO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LUIS RIVAS",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "Revisión general",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-28 00:00:00",
+                    "owner_name": "LUIS RIVAS",
+                    "owner_tax_id": "V-12901771",
+                    "phone": "0414-3901771",
+                    "brand": "CHERRY",
+                    "model": "GRAND TIGUER",
+                    "license_plate": "A76AOH",
+                    "color": "VINO TINTO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LUIS RIVAS",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "BASES DE MOTOR RELEX DE TEMPERATURA ROLINERAQA DEL LADO DERECHO CAMBIO DE CLABLE DE BUJIAS Y MANTENIMIENTO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-15 00:00:00",
+                    "owner_name": "JOSE VERA",
+                    "owner_tax_id": "V-11057886",
+                    "phone": "0414-2057887",
+                    "brand": "HONDA",
+                    "model": "CVR",
+                    "license_plate": "AFD2610",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "JOSE VERA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "2026-04-12 00:00:00",
+                    "reason_for_entry": "CAMBIO DE BOMBA HIDRAULICA  PRESUPUESTO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-07-24 00:00:00",
+                    "owner_name": "JOSE RAMON CARLIN",
+                    "owner_tax_id": "V-18330939",
+                    "phone": "0414-9330938",
+                    "brand": "JEEP",
+                    "model": "CHEROQUE",
+                    "license_plate": "AD172FM",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "JOSE RAMON CARLIN",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CAMBIO DE GOMAS DE VALVULA Y TAPA VALVULA, FALLA DE AIRE ACONDICIONADO",
+                    "work_performed": "LISTO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-07-20 00:00:00",
+                    "owner_name": "GISELL AYESTON",
+                    "owner_tax_id": "V-18651300",
+                    "phone": "0414-9651299",
+                    "brand": "JEEP",
+                    "model": "LIMITED",
+                    "license_plate": "AB302HK",
+                    "color": "NEGRA",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "GISELL AYESTON",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CAMBIO DE SENSOR DE ABS RUEDA TRASERA",
+                    "work_performed": "LISTO , QUEDO CON FALLA DEL SENSOR DELANTERO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-30 00:00:00",
+                    "owner_name": "ARGENIS CASTRO",
+                    "owner_tax_id": "V-13952275",
+                    "phone": "0414-4952275",
+                    "brand": "CHEBROLET",
+                    "model": "LUDMAX",
+                    "license_plate": "A62AO2J",
+                    "color": "BLANCA",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ARGENIS CASTRO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REPARACION DE CAJETIN MUÑON SUPERIOR MARCA 555",
+                    "work_performed": "SE REPARO TODO LO ANTERIOR",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-05-18 00:00:00",
+                    "owner_name": "MICHELL MOROS",
+                    "owner_tax_id": "V-16910238",
+                    "phone": "0414-7910238",
+                    "brand": "MAZDA",
+                    "model": "3",
+                    "license_plate": "AB005AD",
+                    "color": "BLANCO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MICHELL MOROS",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "FALLA DE MOTOR UN CILINDRO REVISION DE CAJA",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-25 00:00:00",
+                    "owner_name": "EMBAJADA DE BOLIVIA",
+                    "owner_tax_id": "V-15172069",
+                    "phone": "0414-6172069",
+                    "brand": "MAZDA",
+                    "model": "5",
+                    "license_plate": "1001",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "LA FLORIDA",
+                    "received_by": "Taller 360",
+                    "delivered_by": "EMBAJADA DE BOLIVIA",
+                    "delivery_address": "LA FLORIDA",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "RUIDO DE FRENOS, PROBLEMAS DE LUCES , AIRE ACONDICIONADO CAMBIO DE CINTA CAMBIO DE AMORTIGUADOR",
+                    "work_performed": "SE LES HIZO TODAS ESAS REPARACIONE",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-10 00:00:00",
+                    "owner_name": "EMBAJADA DE BOLIVIA",
+                    "owner_tax_id": "V-15172070",
+                    "phone": "0414-6172070",
+                    "brand": "MITSUBICHI",
+                    "model": "MONTERO",
+                    "license_plate": "1001",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "LA FLORIDA",
+                    "received_by": "Taller 360",
+                    "delivered_by": "EMBAJADA DE BOLIVIA",
+                    "delivery_address": "LA FLORIDA",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "BOTE DE ACEITEPOR EL TAPA VAALVULA, PASTILLAS DELANTERA DE FRENOS ENTONACION CAMBIOS DE GOMA ANTIGOLPE SOLDADURA Y SILENCIADO",
+                    "work_performed": "SE LES HIZO TODO ESTAS",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-04-20 00:00:00",
+                    "owner_name": "MITSUBICHI LANCER DCL64G",
+                    "owner_tax_id": "V-15662093",
+                    "phone": "0414-6662093",
+                    "brand": "MITUBICHI",
+                    "model": "LANCR",
+                    "license_plate": "DCL64G",
+                    "color": "Blanco",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MITSUBICHI LANCER DCL64G",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "FALLA DE UN CILINDRO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-26 00:00:00",
+                    "owner_name": "ALIEXCA ROMERO",
+                    "owner_tax_id": "V-13119884",
+                    "phone": "0414-4119884",
+                    "brand": "RENAULT",
+                    "model": "LOGAN",
+                    "license_plate": "AA987CR",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "ALIEXCA ROMERO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "SERVICIO DE CAMARA Y MANTENIMIENTO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-11 00:00:00",
+                    "owner_name": "CIRA BARRETO",
+                    "owner_tax_id": "V-16059628",
+                    "phone": "0414-7059628",
+                    "brand": "RENAULT",
+                    "model": "MEGAN",
+                    "license_plate": "MED84X",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "CIRA BARRETO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REVISION TREN DELANTERO Y FALLA DE ACELERACION",
+                    "work_performed": "REALIZADO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "18/0482026",
+                    "owner_name": "MILAGROS NIETO",
+                    "owner_tax_id": "V-14573351",
+                    "phone": "0414-5573351",
+                    "brand": "RENAULT",
+                    "model": "RIO",
+                    "license_plate": "AA558RS",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MILAGROS NIETO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CALENTAMIENTO POR CAMARA",
+                    "work_performed": "REPARA LA CAMARADA",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-15 00:00:00",
+                    "owner_name": "MICHELL MOROS",
+                    "owner_tax_id": "V-16910243",
+                    "phone": "0414-7910243",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "license_plate": "AC034RD",
+                    "color": "ROJO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MICHELL MOROS",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "SER Y MANRENIMIENTO DE FRENOS REPARACION TAPA DE GASOLINA REPACION DE VARRILLAJE PALANCA BASES DE MOTOR REV AIRE ACOND",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-01-22 00:00:00",
+                    "owner_name": "BRAND MOREJON",
+                    "owner_tax_id": "V-17027962",
+                    "phone": "0414-8027962",
+                    "brand": "RENAULT",
+                    "model": "TWINGO",
+                    "license_plate": "AF442Z",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "BRAND MOREJON",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "HUMO AZUL  ROLINERA DEL COMPRESOS BAQUETEO DEL RADIADOR LUZ DE RETROCESO",
+                    "work_performed": "REPARADO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-06-02 00:00:00",
+                    "owner_name": "MONICA CARDENAS",
+                    "owner_tax_id": "V-12352945",
+                    "phone": "0414-3352945",
+                    "brand": "RENAULT",
+                    "model": "TEINGO",
+                    "license_plate": "MEA8B",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MONICA CARDENAS",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "SOSTITUCION DE CAJETIN , CAMBIO DE BASES DE MOTOR BOTE D LIGA POR EL ABS, CNABIO DE ACWEITE Y FILTRO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-20 00:00:00",
+                    "owner_name": "LILIAN MOYETONES",
+                    "owner_tax_id": "V-18436232",
+                    "phone": "0414-9436231",
+                    "brand": "SUZUKY",
+                    "model": "GRAND VITARA",
+                    "license_plate": "AA572BV",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LILIAN MOYETONES",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "MANTENIMIENTO REPARACION DE AIRE  ACON-",
+                    "work_performed": "SE L HIZO NATENIMIENTO DEL AIRE ACONDICIONAO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-02-15 00:00:00",
+                    "owner_name": "LILIAN MOYETONES",
+                    "owner_tax_id": "V-18436233",
+                    "phone": "0414-9436232",
+                    "brand": "SUZUKY",
+                    "model": "GRAND VITARA",
+                    "license_plate": "AA572BV",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LILIAN MOYETONES",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "DICIONADO, LIMPIEZA DE TUBERIA, SUMINIS-",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-05-20 00:00:00",
+                    "owner_name": "LILIAN MOYETONES",
+                    "owner_tax_id": "V-18436234",
+                    "phone": "0414-9436233",
+                    "brand": "SUZUKY",
+                    "model": "GRAND VITARA",
+                    "license_plate": "AA572BV",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LILIAN MOYETONES",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "TRO DE GAS Y REPARACION DE COMPRESOR",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-06-01 00:00:00",
+                    "owner_name": "LILIAN MOYETONES",
+                    "owner_tax_id": "V-18436235",
+                    "phone": "0414-9436234",
+                    "brand": "SUZUKY",
+                    "model": "GRAND VITARA",
+                    "license_plate": "AA572BV",
+                    "color": "AZUL",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "LILIAN MOYETONES",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "BAQUETEO DE RADIADOR REPARACION DE TRANSFER, MANTENIMIENTO DE CAMARA POR RECALENTAMIENTO, MAS REPARACION DE LATONERIA Y PINTURA 3 PIEZAS",
+                    "work_performed": "SE REPARO EL RADIADO Y LLEGO LA CAMARA FUNDIDA LO CUAL SE LE ESTA HACIEN REFERNTE AL TRANFER SE MANDO A REPARA LA PIEZA Y QUEDO MAL, SE COMPRO TRANSFER USADO Y SE CAMBIO POR OTRO SIN EMBARGO TIENE RUIDO  EN LA CAJA Y TRANSFER DELANTERO PROBLEMAS CON EL CLIENTE",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-06-09 00:00:00",
+                    "owner_name": "RAMIRO VARGAS",
+                    "owner_tax_id": "V-13420739",
+                    "phone": "0414-4420738",
+                    "brand": "TERIRIO",
+                    "model": "MODELO",
+                    "license_plate": "AD805PK",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "LA FLORIDA",
+                    "received_by": "Taller 360",
+                    "delivered_by": "RAMIRO VARGAS",
+                    "delivery_address": "LA FLORIDA",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "SONIDO TREN DDELANTERO, BASES DEL MOTOR, BASE DE LA TRASMISIO, CAJETIN NIVEL DE FLUIDO  HACER PRESUPUESTO DE LATONERISA Y PINTURA",
+                    "work_performed": "SOLUCIONADO",
+                    "must_return": true,
+                    "pending_issues": "TRASNSMISION",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-11 00:00:00",
+                    "owner_name": "TERIOR DAYATSU A8442OP",
+                    "owner_tax_id": "V-15761979",
+                    "phone": "0414-6761979",
+                    "brand": "TERIRIO",
+                    "model": "DAYATSU",
+                    "license_plate": "AB442OP",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "TERIOR DAYATSU A8442OP",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "BOTE DE AGUA Y REFRIGERNTE",
+                    "work_performed": "SOLUCIONADO",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-05-13 00:00:00",
+                    "owner_name": "MARIA SOLORZANO",
+                    "owner_tax_id": "V-18019594",
+                    "phone": "0414-9019594",
+                    "brand": "TOYOTA",
+                    "model": "COROLLA",
+                    "license_plate": "AC111BB",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "MARIA SOLORZANO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIC JR",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REVISION DE TREN DELANTERO CAMBIO DE AMORTIGUADORES, LATONERIA Y PINTURA DE TRES PIEZAS",
+                    "work_performed": "SE REVISO EL TREN DELANTERO Y SE CAMBIARON LOS AMORTIGUADORES DELANTEROS",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-01-13 00:00:00",
+                    "owner_name": "TOYOTA CORROLLA AB204FP",
+                    "owner_tax_id": "V-13663500",
+                    "phone": "0414-4663500",
+                    "brand": "TOYOTA",
+                    "model": "CORROLLA",
+                    "license_plate": "AB204FP",
+                    "color": "BLANCO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "BELLO CMPO",
+                    "received_by": "Taller 360",
+                    "delivered_by": "TOYOTA CORROLLA AB204FP",
+                    "delivery_address": "BELLO CMPO",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "CAMBIO DE PASTILLA DE FRENOS TRASERA, CAMBIO DE COPA CAJA, CAMBIO DE ROLINERA DELANTERA CAMBIO DE PUNT A TRIPOIDE LIMPIEZA DE INYECTORES",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "10/0/2026",
+                    "owner_name": "SAUL MONTILLA",
+                    "owner_tax_id": "V-10273216",
+                    "phone": "0414-1273216",
+                    "brand": "TOYOTA",
+                    "model": "MODELO",
+                    "license_plate": "MAP99W",
+                    "color": "AZUL OSCURO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "SAUL MONTILLA",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "REVISION GENERAL RUIDO VARIOS AMORTIGUACION RODAMIENTOS SUSPENSION MANTENIMIENTO PREVENTIVO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2202-12-01 00:00:00",
+                    "owner_name": "WHITNEY TRUJILLO",
+                    "owner_tax_id": "V-13858324",
+                    "phone": "0414-4858324",
+                    "brand": "WOLFWAGUEN",
+                    "model": "GOLD",
+                    "license_plate": "AG814SK",
+                    "color": "NEGRO",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "WHITNEY TRUJILLO",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "RESISION COMPLETA REPARACION DE CAMARA PLANO Y MANTENIMIENTO",
+                    "work_performed": "Mantenimiento preventivo",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "entry_date": "2026-03-17 00:00:00",
+                    "owner_name": "WOLFWAGUEN GOLD MFB32F",
+                    "owner_tax_id": "V-12371645",
+                    "phone": "0414-3371645",
+                    "brand": "WOLWAGUEN",
+                    "model": "GOLD",
+                    "license_plate": "MFB32F",
+                    "color": "GRIS",
+                    "mileage": "125000",
+                    "exit_date": "",
+                    "receiving_technician": "MARWIN DIAZ",
+                    "reception_service": "Mantenimiento y Reparación",
+                    "address": "Caracas",
+                    "received_by": "Taller 360",
+                    "delivered_by": "WOLFWAGUEN GOLD MFB32F",
+                    "delivery_address": "Caracas",
+                    "assigned_technician": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "reason_for_entry": "AIRE ACONDICIONADO, TRIPOIDE",
+                    "work_performed": "REPARA DON",
+                    "must_return": false,
+                    "pending_issues": "",
+                    "delivery_date": "",
+                    "expected_return_date": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_client_history",
+            "type": "function",
+            "functionName": "GestionTallerProd_client_history",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-10 00:00:00",
+                    "work_performed": "ACEITE DIRECCION CAJETIN EN PROCESO DE REVISION",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "6 DIAS",
+                    "observations": "Motivo: REVISION GENERAL AMORTIGUACION TREN DELANTERO FRENOS OTROS. Pendientes: BASES DE MOTOR FRENOS DELANTERO Y GUAYA DE FRENO DE MANO KM 362058 AIRE ACONDICIONADO VALVULA DE TEMPERATURA",
+                    "total_cost": 250.0,
+                    "license_plate": "MAP99W",
+                    "owner_name": "ARGENIS CASTRO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-01-20 00:00:00",
+                    "work_performed": "SE LE HIZO EL MOTOR EN GENERAL , EN PROCESO DE EN PRUEBA FALLA COMPUTADORA, ENCONTRADA FALLA",
+                    "assigned_mechanic": "YEISON TORRES",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: PERDIDA DE POTENCIA Y REVISION GENERAL. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AE486XK",
+                    "owner_name": "ARGENIS CASTRO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-01-22 00:00:00",
+                    "work_performed": "SE ENTREGO CON EL MOTOR ECHO, MAS CAJETIN DE DIRECCION",
+                    "assigned_mechanic": "WILLIANS ORTEGA",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: HUMO AZUL POR EL ESCAPE ROLINERA COMPRESOR BAQUETEO RADIADOR LUZ RETROCESO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AFY42Z",
+                    "owner_name": "ARGENIS CASTRO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-11 00:00:00",
+                    "work_performed": "REPARACION MOZO LADO IZQUIERDO SE LLEVO AL TORNERO  MANTENIMIENTO TREN DELANTERO Y FALLA DE ACELERACION",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "6 DIAS",
+                    "observations": "Motivo: REVISION TREN DELANTERO Y FALLA DE ACELERACION. Pendientes: CAMBIO DISCOS FRENOS DELANTERO, TAQUETES,BOMBA DE GASOLINA",
+                    "total_cost": 250.0,
+                    "license_plate": "MED84X",
+                    "owner_name": "ARGENIS CASTRO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-30 00:00:00",
+                    "work_performed": "SEVICIO COMPLETO, FASLLA DE MOTOR  LATONERIA Y PINTURA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: FALLA DE MOTOR. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "A36AYZI",
+                    "owner_name": "ARGENIS CASTRO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-27 00:00:00",
+                    "work_performed": "REPARADO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REVISION Y CAMBIO DE PASTILLA DE FRENOS RECTIFICACION DE DISCO Y GOMAS, MANGUERA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AAHZ2MK",
+                    "owner_name": "AVEO AAH2MK"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "30/0382026",
+                    "work_performed": "SE CAMBIARON LOS AMMORTIGUADORES Y SE PINTO EN GENERAL",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: PROBLEMAS DE AMORTIGUACION LATONERIA Y PINTURA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AG872KG",
+                    "owner_name": "AVEO AG872KG"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-05-22 00:00:00",
+                    "work_performed": "TREN TRASERO CAMBIO DE PIEZAS",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: TREN TRASERO CAMBIO DE PIEZAS. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "A724IXA",
+                    "owner_name": "MARIA PALACIO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-07-24 00:00:00",
+                    "work_performed": "BOTE DE AGUA LADO IZQUIERDO Y PRESUPUSTO DE PINTURA PARACHOWUE LADO U¡IZQ Y RAYADURA EN PUERTA 156377KM",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: BOTE DE AGUA LADO IZQUIERDO Y PRESUPUSTO DE PINTURA PARACHOWUE LADO U¡IZQ Y RAYADURA EN PUERTA 156377KM. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA1974P",
+                    "owner_name": "JOEL"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-07-20 00:00:00",
+                    "work_performed": "MOTPR FUNDIDO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: MOTPR FUNDIDO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AF265PM",
+                    "owner_name": "OMAR AQUINO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-01-04 00:00:00",
+                    "work_performed": "PERDIDA DE POTENCIA REVISION GENERA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: PERDIDA DE POTENCIA REVISION GENERA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AE486XK",
+                    "owner_name": "VICTOR HERNANDEZ"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-15 00:00:00",
+                    "work_performed": "Mantenimiento General",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: . Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AE486XK",
+                    "owner_name": "VICTOR HERNANDEZ"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-06-19 00:00:00",
+                    "work_performed": "CAMBIO DE ACEITE Y FILTRO REVISION DE FRENO BOTE DE AGUA  REF ROJO ELECTRO VENTILADOR",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CAMBIO DE ACEITE Y FILTRO REVISION DE FRENO BOTE DE AGUA  REF ROJO ELECTRO VENTILADOR. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AE486XK",
+                    "owner_name": "VICTOR HERNANDEZ"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-09 00:00:00",
+                    "work_performed": "SE REALIZO HACR EL MOTOR COMPLETO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: DIAGNOSTICO DE MOTOR. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC152LV",
+                    "owner_name": "DANNY CONTRERA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-15 00:00:00",
+                    "work_performed": "Mantenimiento General",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: . Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC152LV",
+                    "owner_name": "DANNY CONTRERA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-04-25 00:00:00",
+                    "work_performed": "SE CORRIGIO LA FALLA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REGRESO POR VOTE DE ACEITE. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC152LV",
+                    "owner_name": "DANNY CONTRERA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-06-02 00:00:00",
+                    "work_performed": "SE CAMBIO EL TAPA VALVULA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REGRESO POR VOTE DE ACEITE. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC152LV",
+                    "owner_name": "DANNY CONTRERA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-25 00:00:00",
+                    "work_performed": "Mantenimiento General",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: . Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA841VG",
+                    "owner_name": "CHEVROLET OPTRA AA84VG"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-10 00:00:00",
+                    "work_performed": "SE LE HIZO EL CAMBIO DE ACEITE",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: BOTE DE ACEITE TREN DLANTERO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC541BK",
+                    "owner_name": "BEATRIZ LUGO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-05-08 00:00:00",
+                    "work_performed": "SOLO SE LE HIZO EL VAJETIN DE DIRECCIN",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CAJETIN DE DIRECCION MANUALN TREN DELANTERO KIT DE TIEMPO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AB434MB",
+                    "owner_name": "MARIA LUGO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-20 00:00:00",
+                    "work_performed": "REALIZADO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: RUIDO RUWDA IZQUIERDA Y CAMBIO DE ACEITE. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "MEI883I",
+                    "owner_name": "IRINA TORTOZA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-16 00:00:00",
+                    "work_performed": "CAMBIO DE BOMBA DE AGUA SNSOR MAP CAMBIO DE ANILLO GARANTIA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CAMBIO DE BOMBA DE AGUA SNSOR MAP CAMBIO DE ANILLO GARANTIA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AF473LA",
+                    "owner_name": "DAVID MARQUEZ"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-12-20 00:00:00",
+                    "work_performed": "RECTIFICACIN DE MOTOR  CAMBIO DE ACEITE Y FILTRO Y MSNTENIMIENTO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: RECTIFICACIN DE MOTOR  CAMBIO DE ACEITE Y FILTRO Y MSNTENIMIENTO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "A76AOH",
+                    "owner_name": "LUIS RIVAS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-15 00:00:00",
+                    "work_performed": "Mantenimiento General",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: . Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "A76AOH",
+                    "owner_name": "LUIS RIVAS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-28 00:00:00",
+                    "work_performed": "BASES DE MOTOR RELEX DE TEMPERATURA ROLINERAQA DEL LADO DERECHO CAMBIO DE CLABLE DE BUJIAS Y MANTENIMIENTO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: BASES DE MOTOR RELEX DE TEMPERATURA ROLINERAQA DEL LADO DERECHO CAMBIO DE CLABLE DE BUJIAS Y MANTENIMIENTO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "A76AOH",
+                    "owner_name": "LUIS RIVAS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-15 00:00:00",
+                    "work_performed": "CAMBIO DE BOMBA HIDRAULICA  PRESUPUESTO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "2026-04-12 00:00:00",
+                    "observations": "Motivo: CAMBIO DE BOMBA HIDRAULICA  PRESUPUESTO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AFD2610",
+                    "owner_name": "JOSE VERA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-07-24 00:00:00",
+                    "work_performed": "LISTO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CAMBIO DE GOMAS DE VALVULA Y TAPA VALVULA, FALLA DE AIRE ACONDICIONADO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AD172FM",
+                    "owner_name": "JOSE RAMON CARLIN"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-07-20 00:00:00",
+                    "work_performed": "LISTO , QUEDO CON FALLA DEL SENSOR DELANTERO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CAMBIO DE SENSOR DE ABS RUEDA TRASERA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AB302HK",
+                    "owner_name": "GISELL AYESTON"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-30 00:00:00",
+                    "work_performed": "SE REPARO TODO LO ANTERIOR",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REPARACION DE CAJETIN MUÑON SUPERIOR MARCA 555. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "A62AO2J",
+                    "owner_name": "ARGENIS CASTRO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-05-18 00:00:00",
+                    "work_performed": "FALLA DE MOTOR UN CILINDRO REVISION DE CAJA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: FALLA DE MOTOR UN CILINDRO REVISION DE CAJA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AB005AD",
+                    "owner_name": "MICHELL MOROS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-25 00:00:00",
+                    "work_performed": "SE LES HIZO TODAS ESAS REPARACIONE",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: RUIDO DE FRENOS, PROBLEMAS DE LUCES , AIRE ACONDICIONADO CAMBIO DE CINTA CAMBIO DE AMORTIGUADOR. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "1001",
+                    "owner_name": "EMBAJADA DE BOLIVIA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-10 00:00:00",
+                    "work_performed": "SE LES HIZO TODO ESTAS",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: BOTE DE ACEITEPOR EL TAPA VAALVULA, PASTILLAS DELANTERA DE FRENOS ENTONACION CAMBIOS DE GOMA ANTIGOLPE SOLDADURA Y SILENCIADO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "1001",
+                    "owner_name": "EMBAJADA DE BOLIVIA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-04-20 00:00:00",
+                    "work_performed": "FALLA DE UN CILINDRO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: FALLA DE UN CILINDRO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "DCL64G",
+                    "owner_name": "MITSUBICHI LANCER DCL64G"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-26 00:00:00",
+                    "work_performed": "SERVICIO DE CAMARA Y MANTENIMIENTO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: SERVICIO DE CAMARA Y MANTENIMIENTO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA987CR",
+                    "owner_name": "ALIEXCA ROMERO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-11 00:00:00",
+                    "work_performed": "REALIZADO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REVISION TREN DELANTERO Y FALLA DE ACELERACION. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "MED84X",
+                    "owner_name": "CIRA BARRETO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "18/0482026",
+                    "work_performed": "REPARA LA CAMARADA",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CALENTAMIENTO POR CAMARA. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA558RS",
+                    "owner_name": "MILAGROS NIETO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-15 00:00:00",
+                    "work_performed": "SER Y MANRENIMIENTO DE FRENOS REPARACION TAPA DE GASOLINA REPACION DE VARRILLAJE PALANCA BASES DE MOTOR REV AIRE ACOND",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: SER Y MANRENIMIENTO DE FRENOS REPARACION TAPA DE GASOLINA REPACION DE VARRILLAJE PALANCA BASES DE MOTOR REV AIRE ACOND. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC034RD",
+                    "owner_name": "MICHELL MOROS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-01-22 00:00:00",
+                    "work_performed": "REPARADO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: HUMO AZUL  ROLINERA DEL COMPRESOS BAQUETEO DEL RADIADOR LUZ DE RETROCESO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AF442Z",
+                    "owner_name": "BRAND MOREJON"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-06-02 00:00:00",
+                    "work_performed": "SOSTITUCION DE CAJETIN , CAMBIO DE BASES DE MOTOR BOTE D LIGA POR EL ABS, CNABIO DE ACWEITE Y FILTRO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: SOSTITUCION DE CAJETIN , CAMBIO DE BASES DE MOTOR BOTE D LIGA POR EL ABS, CNABIO DE ACWEITE Y FILTRO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "MEA8B",
+                    "owner_name": "MONICA CARDENAS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-20 00:00:00",
+                    "work_performed": "SE L HIZO NATENIMIENTO DEL AIRE ACONDICIONAO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: MANTENIMIENTO REPARACION DE AIRE  ACON-. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA572BV",
+                    "owner_name": "LILIAN MOYETONES"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-02-15 00:00:00",
+                    "work_performed": "DICIONADO, LIMPIEZA DE TUBERIA, SUMINIS-",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: DICIONADO, LIMPIEZA DE TUBERIA, SUMINIS-. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA572BV",
+                    "owner_name": "LILIAN MOYETONES"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-05-20 00:00:00",
+                    "work_performed": "TRO DE GAS Y REPARACION DE COMPRESOR",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: TRO DE GAS Y REPARACION DE COMPRESOR. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA572BV",
+                    "owner_name": "LILIAN MOYETONES"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-06-01 00:00:00",
+                    "work_performed": "SE REPARO EL RADIADO Y LLEGO LA CAMARA FUNDIDA LO CUAL SE LE ESTA HACIEN REFERNTE AL TRANFER SE MANDO A REPARA LA PIEZA Y QUEDO MAL, SE COMPRO TRANSFER USADO Y SE CAMBIO POR OTRO SIN EMBARGO TIENE RUIDO  EN LA CAJA Y TRANSFER DELANTERO PROBLEMAS CON EL CLIENTE",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: BAQUETEO DE RADIADOR REPARACION DE TRANSFER, MANTENIMIENTO DE CAMARA POR RECALENTAMIENTO, MAS REPARACION DE LATONERIA Y PINTURA 3 PIEZAS. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AA572BV",
+                    "owner_name": "LILIAN MOYETONES"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-06-09 00:00:00",
+                    "work_performed": "SOLUCIONADO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: SONIDO TREN DDELANTERO, BASES DEL MOTOR, BASE DE LA TRASMISIO, CAJETIN NIVEL DE FLUIDO  HACER PRESUPUESTO DE LATONERISA Y PINTURA. Pendientes: TRASNSMISION",
+                    "total_cost": 250.0,
+                    "license_plate": "AD805PK",
+                    "owner_name": "RAMIRO VARGAS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-11 00:00:00",
+                    "work_performed": "SOLUCIONADO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: BOTE DE AGUA Y REFRIGERNTE. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AB442OP",
+                    "owner_name": "TERIOR DAYATSU A8442OP"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-05-13 00:00:00",
+                    "work_performed": "SE REVISO EL TREN DELANTERO Y SE CAMBIARON LOS AMORTIGUADORES DELANTEROS",
+                    "assigned_mechanic": "ERIC JR",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REVISION DE TREN DELANTERO CAMBIO DE AMORTIGUADORES, LATONERIA Y PINTURA DE TRES PIEZAS. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AC111BB",
+                    "owner_name": "MARIA SOLORZANO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-01-13 00:00:00",
+                    "work_performed": "CAMBIO DE PASTILLA DE FRENOS TRASERA, CAMBIO DE COPA CAJA, CAMBIO DE ROLINERA DELANTERA CAMBIO DE PUNT A TRIPOIDE LIMPIEZA DE INYECTORES",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: CAMBIO DE PASTILLA DE FRENOS TRASERA, CAMBIO DE COPA CAJA, CAMBIO DE ROLINERA DELANTERA CAMBIO DE PUNT A TRIPOIDE LIMPIEZA DE INYECTORES. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AB204FP",
+                    "owner_name": "TOYOTA CORROLLA AB204FP"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "10/0/2026",
+                    "work_performed": "REVISION GENERAL RUIDO VARIOS AMORTIGUACION RODAMIENTOS SUSPENSION MANTENIMIENTO PREVENTIVO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: REVISION GENERAL RUIDO VARIOS AMORTIGUACION RODAMIENTOS SUSPENSION MANTENIMIENTO PREVENTIVO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "MAP99W",
+                    "owner_name": "SAUL MONTILLA"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2202-12-01 00:00:00",
+                    "work_performed": "RESISION COMPLETA REPARACION DE CAMARA PLANO Y MANTENIMIENTO",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: RESISION COMPLETA REPARACION DE CAMARA PLANO Y MANTENIMIENTO. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "AG814SK",
+                    "owner_name": "WHITNEY TRUJILLO"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "service_date": "2026-03-17 00:00:00",
+                    "work_performed": "REPARA DON",
+                    "assigned_mechanic": "ERIK MUÑOZ",
+                    "time_in_shop": "3 días",
+                    "observations": "Motivo: AIRE ACONDICIONADO, TRIPOIDE. Pendientes: ",
+                    "total_cost": 250.0,
+                    "license_plate": "MFB32F",
+                    "owner_name": "WOLFWAGUEN GOLD MFB32F"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

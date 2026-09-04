@@ -1,0 +1,273 @@
+{
+  "request": {
+    "flows": [
+      {
+        "name": "workflow_taller",
+        "description": "Seed employees, delivery notes, inspection cards, contracts and communications for Taller 360",
+        "steps": [
+          {
+            "name": "GestionTallerProd_employees",
+            "type": "function",
+            "functionName": "GestionTallerProd_employees",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "ERIK MUÑOZ",
+                    "tax_id": "V-18452101",
+                    "phone": "0414-2391823",
+                    "position": "Mecánico Principal",
+                    "is_mechanic": true,
+                    "salary": 400.0,
+                    "employee_type": "mecanico",
+                    "contract_type": "tiempo_indeterminado",
+                    "hire_date": "2025-01-15 00:00:00",
+                    "address": "Caracas, San Bernardino",
+                    "email": "erik.munoz@taller360.com"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "WILLIANS ORTEGA",
+                    "tax_id": "V-16982451",
+                    "phone": "0424-1849201",
+                    "position": "Mecánico de Motor y Frenos",
+                    "is_mechanic": true,
+                    "salary": 400.0,
+                    "employee_type": "mecanico",
+                    "contract_type": "tiempo_indeterminado",
+                    "hire_date": "2025-02-01 00:00:00",
+                    "address": "Caracas, El Valle",
+                    "email": "willians.ortega@taller360.com"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "YEISON TORRES",
+                    "tax_id": "V-20184592",
+                    "phone": "0412-9928192",
+                    "position": "Mecánico y Electricista",
+                    "is_mechanic": true,
+                    "salary": 400.0,
+                    "employee_type": "mecanico",
+                    "contract_type": "tiempo_indeterminado",
+                    "hire_date": "2025-01-20 00:00:00",
+                    "address": "Caracas, Catia",
+                    "email": "yeison.torres@taller360.com"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "SAMIR EL SOUKI",
+                    "tax_id": "V-19842104",
+                    "phone": "0414-3829102",
+                    "position": "Asistente Mecánico",
+                    "is_mechanic": true,
+                    "salary": 200.0,
+                    "employee_type": "asistente",
+                    "contract_type": "tiempo_determinado",
+                    "hire_date": "2026-01-10 00:00:00",
+                    "address": "Caracas, La Candelaria",
+                    "email": "samir.elsouki@taller360.com"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "AUGUSTO PEREZ",
+                    "tax_id": "V-15748291",
+                    "phone": "0424-9182391",
+                    "position": "Latonero y Pintor",
+                    "is_mechanic": true,
+                    "salary": 450.0,
+                    "employee_type": "latonero",
+                    "contract_type": "tiempo_indeterminado",
+                    "hire_date": "2025-03-01 00:00:00",
+                    "address": "Caracas, Maripérez",
+                    "email": "augusto.perez@taller360.com"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "MARWIN DIAZ",
+                    "tax_id": "V-17382910",
+                    "phone": "0416-8192019",
+                    "position": "Jefe de Taller / Peritaje",
+                    "is_mechanic": true,
+                    "salary": 600.0,
+                    "employee_type": "supervisor",
+                    "contract_type": "tiempo_indeterminado",
+                    "hire_date": "2024-11-01 00:00:00",
+                    "address": "Caracas, Bello Monte",
+                    "email": "marwin.diaz@taller360.com"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_delivery_notes",
+            "type": "function",
+            "functionName": "GestionTallerProd_delivery_notes",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "note_number": "NE-2026-001",
+                    "note_date": "2026-02-28 00:00:00",
+                    "client_name": "MARWIN DIAZ / TALLER 360",
+                    "tax_id": "V-17382910",
+                    "vehicle_type": "Sedán",
+                    "brand": "TOYOTA",
+                    "model": "COROLLA",
+                    "license_plate": "MAP99W",
+                    "subtotal": 180.0,
+                    "total": 180.0
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_delivery_note_items",
+            "type": "function",
+            "functionName": "GestionTallerProd_delivery_note_items",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "note_number": "NE-2026-001",
+                    "item_number": 1,
+                    "description": "Entrega de vehículo reparado motor y tren delantero",
+                    "quantity": 1,
+                    "unit_price": 180.0,
+                    "labor_cost": 80.0,
+                    "total_price": 180.0
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_inspection_cards",
+            "type": "function",
+            "functionName": "GestionTallerProd_inspection_cards",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MAP99W",
+                    "employee_name": "MARWIN DIAZ",
+                    "inspection_type": "Inspección Externa",
+                    "inspection_date": "2026-02-10 00:00:00",
+                    "item_name": "Parachoque delantero, luces, capot, carrocería",
+                    "check_yes": true,
+                    "check_no": false,
+                    "observations": "Rayón leve en guardafango derecho; parabrisas en buen estado"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "license_plate": "MAP99W",
+                    "employee_name": "MARWIN DIAZ",
+                    "inspection_type": "Inspección Interna",
+                    "inspection_date": "2026-02-10 00:00:00",
+                    "item_name": "Tablero, tapicería, nivel combustible, kilometraje",
+                    "check_yes": true,
+                    "check_no": false,
+                    "observations": "Nivel de combustible 1/2 tanque; kilometraje 120.500 km"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_work_contracts",
+            "type": "function",
+            "functionName": "GestionTallerProd_work_contracts",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "ERIK MUÑOZ",
+                    "tax_id": "V-18452101",
+                    "issue_date": "2026-01-15 00:00:00",
+                    "reason": "Contrato de Prestación de Servicios Mecánicos",
+                    "destination": "Taller Integrale 360 Garage",
+                    "notes": "Técnico especialista en motores a gasolina y suspensión automotriz"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_communications",
+            "type": "function",
+            "functionName": "GestionTallerProd_communications",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "employee_name": "MARWIN DIAZ",
+                    "tax_id": "V-17382910",
+                    "communication_date": "2026-02-01 00:00:00",
+                    "subject": "Normas de Seguridad y Uso de Equipos en Taller",
+                    "communication_type": "Memorándum Interno",
+                    "content": "Uso obligatorio de botas de seguridad, lentes y orden en puestos de trabajo."
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

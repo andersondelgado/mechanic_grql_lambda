@@ -1,0 +1,825 @@
+{
+  "request": {
+    "flows": [
+      {
+        "name": "workflow_taller",
+        "description": "Seed suppliers and pending purchases for Taller 360",
+        "steps": [
+          {
+            "name": "GestionTallerProd_suppliers",
+            "type": "function",
+            "functionName": "GestionTallerProd_suppliers",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO ASIA PARTS",
+                    "contact_person": "",
+                    "address": "EL JUNQUITO",
+                    "cell_phone": "0412-6138801",
+                    "office_phone": "",
+                    "email": "repuestoasia@proveedor.com",
+                    "distributes_parts": "TOYOTA, HONDA, MITSUBICHI CARROS JAPONESES",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "FUTURE·S CARS",
+                    "contact_person": "",
+                    "address": "SABANA GRANDE",
+                    "cell_phone": "0424-1450832",
+                    "office_phone": "",
+                    "email": "futurescars@proveedor.com",
+                    "distributes_parts": "SOLO TOYOTA",
+                    "transport": "DELEVYRY GRATIS"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "COMERCIALIZADORA  CABA",
+                    "contact_person": "",
+                    "address": "BELLO MONTE",
+                    "cell_phone": "0412-3994872",
+                    "office_phone": "",
+                    "email": "comercializa@proveedor.com",
+                    "distributes_parts": "TOYOTA",
+                    "transport": "COSTO ADICIONAL"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO RHINO",
+                    "contact_person": "",
+                    "address": "LOS CHAGUARAMOS",
+                    "cell_phone": "0424-2374723",
+                    "office_phone": "",
+                    "email": "repuestorhin@proveedor.com",
+                    "distributes_parts": "TOYOTA",
+                    "transport": "DELEVYRY"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "TOYOMEN",
+                    "contact_person": "RAFAEL",
+                    "address": "MARIPEREZ",
+                    "cell_phone": "0414-2189418",
+                    "office_phone": "",
+                    "email": "toyomen@proveedor.com",
+                    "distributes_parts": "TOYOTA",
+                    "transport": "DELEVYRY"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO RM",
+                    "contact_person": "",
+                    "address": "ESQ PALO BLANCO A PALO NEGRO AV PANTEON RES ROSA MARIA AV PANTEON",
+                    "cell_phone": "0412-2054406",
+                    "office_phone": "0212-5513262",
+                    "email": "repuesto1000mar@hotmail.com",
+                    "distributes_parts": "TOYOTA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "TOYOTAPARTES L II C.A.",
+                    "contact_person": "",
+                    "address": "AV PANTEON QTA TIOBER SAN BERNANDINO",
+                    "cell_phone": "0424-2017693",
+                    "office_phone": "02125513134/3251090/7147516",
+                    "email": "eduardoinfante28@hotmail.com",
+                    "distributes_parts": "TOYOTA FORD",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "ZONA PARTS",
+                    "contact_person": "",
+                    "address": "AV PRINCIPAL DE MARIPEREZ QTA KIANA PB ALTURA DE COTA MIL",
+                    "cell_phone": "0424-2222991",
+                    "office_phone": "0212-7939162",
+                    "email": "zonaparts@hotmail.com",
+                    "distributes_parts": "TOYOTA MYTSUBICHI NISAN HONDA MAZDA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "TOYOCENTERCARS, C.A",
+                    "contact_person": "",
+                    "address": "AV FUERZAS ARMADAS CON PANTEON",
+                    "cell_phone": "0412-2409083",
+                    "office_phone": "0212-5510250",
+                    "email": "toyocentercars@gmail.com",
+                    "distributes_parts": "TOYOTA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "AUTO REPUESTO LA ARBOLEDA",
+                    "contact_person": "",
+                    "address": "SAN  BERNANDINO",
+                    "cell_phone": "0424-1903736",
+                    "office_phone": "0212-5616009",
+                    "email": "autorepuesto@proveedor.com",
+                    "distributes_parts": "HYUNDAI GM TOYOTA KIA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "VENERUESTO YJJ",
+                    "contact_person": "",
+                    "address": "",
+                    "cell_phone": "0412-8274412",
+                    "office_phone": "0212-4849864",
+                    "email": "veneruestoyj@proveedor.com",
+                    "distributes_parts": "KIA HYUNDAI",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "DR CHERRY",
+                    "contact_person": "",
+                    "address": "AV PPAL DE MARIPERES QTA KIANA FRENTE A LA FORD",
+                    "cell_phone": "0412-9884087",
+                    "office_phone": "",
+                    "email": "drcheryvzla@gmail.com",
+                    "distributes_parts": "CHERY",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO EDENZER",
+                    "contact_person": "",
+                    "address": "PRESIDENTE MEDINA EDIF CIMAROSA LAS ACACIAS",
+                    "cell_phone": "0412-2556092",
+                    "office_phone": "0212-6900669",
+                    "email": "ebenezerrepuestos@gmail.com",
+                    "distributes_parts": "FORD TOYOTA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "SUPER JURIN",
+                    "contact_person": "",
+                    "address": "AV SUR 11 EDF JUNIN SAN AGUSTIN DEL NORTE",
+                    "cell_phone": "0424-1693837",
+                    "office_phone": "0212-5753411",
+                    "email": "repuestojunin1212@gmail.com",
+                    "distributes_parts": "MAZDA KIA FORD HUYDAI ZEAT",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "SUPER PANTEON",
+                    "contact_person": "",
+                    "address": "CALLE LAS BRISAS BAJANDO POR EL TRIBUNAL",
+                    "cell_phone": "0412-2154038",
+                    "office_phone": "0212-8634290",
+                    "email": "superpanteon@proveedor.com",
+                    "distributes_parts": "FORD MAZDA TOYOTA KIA CHERY JAC CHEVROLET HUYDAI",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO Y ACCESORIO WCMA",
+                    "contact_person": "",
+                    "address": "CALLE SANTA ROSA GATO NEGRO",
+                    "cell_phone": "0424-1405309",
+                    "office_phone": "",
+                    "email": "repuestoyacc@proveedor.com",
+                    "distributes_parts": "CHEVROLET HUYNDAY CRYSLER MITSUBICHI TOYOTA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "AUTOPARTES POPATRIA",
+                    "contact_person": "JOSE FERRANTE",
+                    "address": "AV EL CUARTEL CATIA AL LADO EST SERV BRASIL",
+                    "cell_phone": "0212-8707442",
+                    "office_phone": "",
+                    "email": "autopartepopatria2007@gmail.com",
+                    "distributes_parts": "AUTOPARTES",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO UNIVERSO 888",
+                    "contact_person": "",
+                    "address": "",
+                    "cell_phone": "0424-2739591",
+                    "office_phone": "0212-6324022",
+                    "email": "repuestouniverso888@gmail.com",
+                    "distributes_parts": "FORD TOYOTA CHERY HYUNDAI CHEVROLET",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO DON TRINO",
+                    "contact_person": "",
+                    "address": "ESQUINA DR GONZALEZ EDF 85",
+                    "cell_phone": "0412-0941906",
+                    "office_phone": "0212-8627827",
+                    "email": "repuestodont@proveedor.com",
+                    "distributes_parts": "REPUESTO DE MOTOR SUSPENSION PARTES ELECTRICAS CAJA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "ACCESORIOS Y OTROS",
+                    "contact_person": "",
+                    "address": "",
+                    "cell_phone": "0414-5899989",
+                    "office_phone": "",
+                    "email": "accesoriosyo@proveedor.com",
+                    "distributes_parts": "",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO TIA MARIA",
+                    "contact_person": "",
+                    "address": "CALLE COMERCIO VIA MAKRO LA YAGUARA BELLA VISTA",
+                    "cell_phone": "0414-7332923",
+                    "office_phone": "0212-4720683",
+                    "email": "hidrotiamaria@gmail.com",
+                    "distributes_parts": "REPUESTOS USADOS",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "ACCESORIO CARACAL",
+                    "contact_person": "",
+                    "address": "CALLE EL MUÑECO CHACAO",
+                    "cell_phone": "0414-3762416",
+                    "office_phone": "0212-2662954",
+                    "email": "accesoriocar@proveedor.com",
+                    "distributes_parts": "ACCESORIO MANILLAS SUICHE GOMAS CILINDROS CLIP MECANISMO",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPUESTO LUNACAR",
+                    "contact_person": "",
+                    "address": "AV LECUNA DIAGONAL PARQUE CENTRAL",
+                    "cell_phone": "0424-1382430",
+                    "office_phone": "0212-5740698",
+                    "email": "repuestoluna@proveedor.com",
+                    "distributes_parts": "TREN DELANTERO MOTOR LUBRICANTES Y SELLOS",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "ACRILICOS PLANETA",
+                    "contact_person": "",
+                    "address": "AV FRANCISCO DE MIRANDA DIAGONAL A LA ESTACIONN DEL METRO",
+                    "cell_phone": "0424-1873613",
+                    "office_phone": "",
+                    "email": "acrilicospla@proveedor.com",
+                    "distributes_parts": "",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "RECTIFICADORA DE MOTORES",
+                    "contact_person": "CARLOS CORREA",
+                    "address": "EL CEMENTERIO FINAL AV EL CARMENES CC LOS MANGUITOS",
+                    "cell_phone": "0414-3248190",
+                    "office_phone": "0212-6313791",
+                    "email": "rectificador@proveedor.com",
+                    "distributes_parts": "RECTIFICADORA DE MOTORES",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "FRENOS AQUÍ BLUE BRAKE",
+                    "contact_person": "",
+                    "address": "AV SUR 4 DE PILITAS A MAMEY EDIF DON AGUSTIN SECTOR QUINTA CRESPO",
+                    "cell_phone": "0424-1218085",
+                    "office_phone": "0212-4828016",
+                    "email": "frenosaqui@hotmail.com",
+                    "distributes_parts": "FRENOS",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "DOBLE INTOCABLE",
+                    "contact_person": "",
+                    "address": "",
+                    "cell_phone": "0414-2446544",
+                    "office_phone": "0212-5431754",
+                    "email": "dobleintocab@proveedor.com",
+                    "distributes_parts": "EMBRAGUES",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "DG AUTO PARTES",
+                    "contact_person": "",
+                    "address": "",
+                    "cell_phone": "0414-0106936",
+                    "office_phone": "0412-8476544",
+                    "email": "autoparteselectricasdg@",
+                    "distributes_parts": "AUTOPARTES EELECTRICAS",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "REPRESENTANTE NISSAN",
+                    "contact_person": "EDUARDO ARENAS",
+                    "address": "AV PRINCIPAL DE MARIPERS",
+                    "cell_phone": "0412-9371899",
+                    "office_phone": "",
+                    "email": "representant@proveedor.com",
+                    "distributes_parts": "NISSAN",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "DVINXI",
+                    "contact_person": "DAVID ALVAREZ",
+                    "address": "BABANA GRANDE AV SANTOS",
+                    "cell_phone": "0412-7618366",
+                    "office_phone": "0212-7618366",
+                    "email": "davixis06@gmail.com",
+                    "distributes_parts": "SONIDO",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "GOMAS CENTRO",
+                    "contact_person": "",
+                    "address": "AV SUR PILITAS A MAMEY EDIF DON AGUSTIN QTQ CRESPO",
+                    "cell_phone": "0414-3606580",
+                    "office_phone": "",
+                    "email": "gomascentroca@gmail.com",
+                    "distributes_parts": "GOMAS",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "MULTISERVICIO TJE CARS",
+                    "contact_person": "",
+                    "address": "AV LOS CLAVELES PUENTE HIERRO QTA MARIANTONIA",
+                    "cell_phone": "0416-5300953",
+                    "office_phone": "0212-5430066",
+                    "email": "multiservici@proveedor.com",
+                    "distributes_parts": "FRENOS TREN DELANTERO SUSPENSION HIDROVAC REPAR BOMBAS VULCANIZACION DE BANDAS AMORTIG",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "FERRETERIA CREOLE 2011",
+                    "contact_person": "",
+                    "address": "AV LEONARDO DAVINCI BELLO MONTE",
+                    "cell_phone": "0412-9887581",
+                    "office_phone": "0212-7531660",
+                    "email": "ferreteriacreole@hotmail.com",
+                    "distributes_parts": "FERRETERIA",
+                    "transport": ""
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "supplier_name": "INVERSIONES HMOND RUN",
+                    "contact_person": "JUNIOR",
+                    "address": "",
+                    "cell_phone": "0424-1630259",
+                    "office_phone": "",
+                    "email": "inversionesh@proveedor.com",
+                    "distributes_parts": "",
+                    "transport": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "GestionTallerProd_pending_purchases",
+            "type": "function",
+            "functionName": "GestionTallerProd_pending_purchases",
+            "actions": [
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-09-03 23:38:41",
+                    "purchase_date": "",
+                    "product_name": "RELACION PENDIENTES DE COMPRA",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "FECHA DE LA INFROMACION",
+                    "purchase_date": "FECHA DE COMPRA",
+                    "product_name": "NOMBRE DEL PRODUCTO",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-16 00:00:00",
+                    "purchase_date": "2026-02-23 00:00:00",
+                    "product_name": "SILICON",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": true,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-16 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "LAMPARAS",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-23 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "TANQUE DE AGUA",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-23 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "TUBERIAS",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-23 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "CONECCIONES",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-25 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "COMPRA DE JABON",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "25-0202026",
+                    "purchase_date": "",
+                    "product_name": "TEIPE",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-25 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "CUCHILLA DE EXACTO",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-25 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "TEFLON",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-08-25 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "TIJERA",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              },
+              {
+                "name": "create",
+                "type": "api",
+                "action": "mutation",
+                "params": {
+                  "body": {
+                    "info_date": "2026-02-26 00:00:00",
+                    "purchase_date": "",
+                    "product_name": "AGUA",
+                    "supplier_name": "PROVEEDOR REPUESTOS",
+                    "purchased": false,
+                    "quantity": 1,
+                    "unit_price": 0.0,
+                    "notes": "Registro histórico de compra"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

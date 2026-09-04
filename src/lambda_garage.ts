@@ -47,7 +47,70 @@ let middlewareSecurity = new MiddlewareSecurity({
     dbName: DB_VAR
 });
 
+// --- Helpers ---
+async function storeWithDeduplication(
+    table: string,
+    payload: any,
+    searchField: string,
+    searchValue: any,
+    event: any,
+    helpers: BaseEntityHelpers
+): Promise<any> {
+    const val = String(searchValue || '').trim();
+    if (val) {
+        try {
+            const existing = await helpers.data_filter(table, {
+                filter: { field: searchField, value: val },
+                headerLambda: event?.headerLambda,
+                headerLambdaObject: event?.headerLambdaObject
+            });
+            const items = existing?.content || (Array.isArray(existing) ? existing : []);
+            if (items && items.length > 0) {
+                const primaryRecord = items[0];
+                for (let i = 1; i < items.length; i++) {
+                    if (items[i]?.id) {
+                        try { await helpers.delete(table, items[i].id, event); } catch { }
+                    }
+                }
+                const updateRes = await helpers.update(table, primaryRecord.id, payload);
+                return updateRes?.id ? updateRes : { ...payload.attribute, id: primaryRecord.id, updated: true };
+            }
+        } catch { }
+    }
+    return helpers.store(table, payload);
+}
+
+const fkCache: Record<string, string> = {};
+
+async function resolveId(
+    table: string,
+    field: string,
+    value: any,
+    event: any,
+    helpers: BaseEntityHelpers
+): Promise<string | null> {
+    const val = String(value || '').trim();
+    if (!val) return null;
+    const cacheKey = `${table}:${field}:${val.toUpperCase()}`;
+    if (fkCache[cacheKey]) return fkCache[cacheKey];
+
+    try {
+        const res = await helpers.data_filter(table, {
+            filter: { field, value: val },
+            headerLambda: event?.headerLambda,
+            headerLambdaObject: event?.headerLambdaObject
+        });
+        const items = res?.content || (Array.isArray(res) ? res : []);
+        if (items && items.length > 0 && items[0]?.id) {
+            fkCache[cacheKey] = items[0].id;
+            return items[0].id;
+        }
+    } catch { }
+    return null;
+}
+
 // --- Entities ---
+
 
 export class GestionTallerProdClients {
     static table = 'clients';
@@ -76,8 +139,14 @@ export class GestionTallerProdClients {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdClients.build_payload(event);
-        return h.store('clients', payload);
+        const res = await storeWithDeduplication('clients', payload, event.tax_id ? 'tax_id' : 'client_name', event.tax_id || event.client_name, event, h);
+        if (res?.id) {
+            if (event.tax_id) fkCache[`clients:tax_id:${String(event.tax_id).trim().toUpperCase()}`] = res.id;
+            if (event.client_name) fkCache[`clients:client_name:${String(event.client_name).trim().toUpperCase()}`] = res.id;
+        }
+        return res;
     }
+
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
         const h = helpers || baseEntityHelpers;
@@ -133,7 +202,11 @@ export class GestionTallerProdSuppliers {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdSuppliers.build_payload(event);
-        return h.store('suppliers', payload);
+        const res = await storeWithDeduplication('suppliers', payload, 'supplier_name', event.supplier_name, event, h);
+        if (res?.id && event.supplier_name) {
+            fkCache[`suppliers:supplier_name:${String(event.supplier_name).trim().toUpperCase()}`] = res.id;
+        }
+        return res;
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -169,11 +242,11 @@ export class GestionTallerProdVehicles {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                clients: event.clients_fk_id ? (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.clients_fk_id) {
+            const cArr = (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]).filter(Boolean);
+            if (cArr.length > 0) obj_fk.push({ clients: cArr });
+        }
 
         return {
             db, table: 'vehicles',
@@ -192,8 +265,27 @@ export class GestionTallerProdVehicles {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.clients_fk_id || (Array.isArray(event.clients_fk_id) && event.clients_fk_id.length === 0)) {
+            let cId = event.owner_tax_id ? await resolveId('clients', 'tax_id', event.owner_tax_id, event, h) : null;
+            if (!cId && event.tax_id) {
+                cId = await resolveId('clients', 'tax_id', event.tax_id, event, h);
+            }
+            if (!cId && (event.owner_name || event.client_name)) {
+                cId = await resolveId('clients', 'client_name', event.owner_name || event.client_name, event, h);
+            }
+            if (cId) {
+                event.clients_fk_id = [cId];
+                if (event.license_plate) {
+                    fkCache[`vehicle_to_client:${String(event.license_plate).trim().toUpperCase()}`] = cId;
+                }
+            }
+        }
         let payload = GestionTallerProdVehicles.build_payload(event);
-        return h.store('vehicles', payload);
+        const res = await storeWithDeduplication('vehicles', payload, 'license_plate', event.license_plate, event, h);
+        if (res?.id && event.license_plate) {
+            fkCache[`vehicles:license_plate:${String(event.license_plate).trim().toUpperCase()}`] = res.id;
+        }
+        return res;
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -229,14 +321,15 @@ export class GestionTallerProdVehicleReceipts {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                vehicles: event.vehicles_fk_id ? (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]) : []
-            },
-            {
-                employees: event.employees_fk_id ? (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.vehicles_fk_id) {
+            const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
+            if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
+        }
+        if (event.employees_fk_id) {
+            const eArr = (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]).filter(Boolean);
+            if (eArr.length > 0) obj_fk.push({ employees: eArr });
+        }
 
         return {
             db, table: 'vehicle_receipts',
@@ -272,8 +365,21 @@ export class GestionTallerProdVehicleReceipts {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.vehicles_fk_id || (Array.isArray(event.vehicles_fk_id) && event.vehicles_fk_id.length === 0)) {
+            if (event.license_plate) {
+                const vId = await resolveId('vehicles', 'license_plate', event.license_plate, event, h);
+                if (vId) event.vehicles_fk_id = [vId];
+            }
+        }
+        if (!event.employees_fk_id || (Array.isArray(event.employees_fk_id) && event.employees_fk_id.length === 0)) {
+            const empName = event.assigned_technician || event.receiving_technician || event.received_by;
+            if (empName) {
+                const eId = await resolveId('employees', 'employee_name', empName, event, h);
+                if (eId) event.employees_fk_id = [eId];
+            }
+        }
         let payload = GestionTallerProdVehicleReceipts.build_payload(event);
-        return h.store('vehicle_receipts', payload);
+        return storeWithDeduplication('vehicle_receipts', payload, 'license_plate', event.license_plate, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -309,14 +415,15 @@ export class GestionTallerProdClientHistory {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                vehicles: event.vehicles_fk_id ? (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]) : []
-            },
-            {
-                employees: event.employees_fk_id ? (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.vehicles_fk_id) {
+            const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
+            if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
+        }
+        if (event.employees_fk_id) {
+            const eArr = (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]).filter(Boolean);
+            if (eArr.length > 0) obj_fk.push({ employees: eArr });
+        }
 
         return {
             db, table: 'client_history',
@@ -334,8 +441,20 @@ export class GestionTallerProdClientHistory {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.vehicles_fk_id || (Array.isArray(event.vehicles_fk_id) && event.vehicles_fk_id.length === 0)) {
+            if (event.license_plate) {
+                const vId = await resolveId('vehicles', 'license_plate', event.license_plate, event, h);
+                if (vId) event.vehicles_fk_id = [vId];
+            }
+        }
+        if (!event.employees_fk_id || (Array.isArray(event.employees_fk_id) && event.employees_fk_id.length === 0)) {
+            if (event.assigned_mechanic) {
+                const eId = await resolveId('employees', 'employee_name', event.assigned_mechanic, event, h);
+                if (eId) event.employees_fk_id = [eId];
+            }
+        }
         let payload = GestionTallerProdClientHistory.build_payload(event);
-        return h.store('client_history', payload);
+        return storeWithDeduplication('client_history', payload, 'work_performed', event.work_performed, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -371,14 +490,15 @@ export class GestionTallerProdQuotes {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                vehicles: event.vehicles_fk_id ? (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]) : []
-            },
-            {
-                clients: event.clients_fk_id ? (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.vehicles_fk_id) {
+            const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
+            if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
+        }
+        if (event.clients_fk_id) {
+            const cArr = (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]).filter(Boolean);
+            if (cArr.length > 0) obj_fk.push({ clients: cArr });
+        }
 
         return {
             db, table: 'quotes',
@@ -403,9 +523,33 @@ export class GestionTallerProdQuotes {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.clients_fk_id || (Array.isArray(event.clients_fk_id) && event.clients_fk_id.length === 0)) {
+            let cId = event.tax_id ? await resolveId('clients', 'tax_id', event.tax_id, event, h) : null;
+            if (!cId && event.client_name) {
+                cId = await resolveId('clients', 'client_name', event.client_name, event, h);
+            }
+            if (!cId && event.license_plate) {
+                const plateKey = `vehicle_to_client:${String(event.license_plate).trim().toUpperCase()}`;
+                if (fkCache[plateKey]) {
+                    cId = fkCache[plateKey];
+                }
+            }
+            if (cId) event.clients_fk_id = [cId];
+        }
+        if (!event.vehicles_fk_id || (Array.isArray(event.vehicles_fk_id) && event.vehicles_fk_id.length === 0)) {
+            if (event.license_plate) {
+                const vId = await resolveId('vehicles', 'license_plate', event.license_plate, event, h);
+                if (vId) event.vehicles_fk_id = [vId];
+            }
+        }
         let payload = GestionTallerProdQuotes.build_payload(event);
-        return h.store('quotes', payload);
+        const res = await storeWithDeduplication('quotes', payload, 'quote_number', event.quote_number, event, h);
+        if (res?.id && event.quote_number) {
+            fkCache[`quotes:quote_number:${String(event.quote_number).trim().toUpperCase()}`] = res.id;
+        }
+        return res;
     }
+
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
         const h = helpers || baseEntityHelpers;
@@ -440,11 +584,11 @@ export class GestionTallerProdQuoteItems {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                quotes: event.quotes_fk_id ? (Array.isArray(event.quotes_fk_id) ? event.quotes_fk_id : [event.quotes_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.quotes_fk_id) {
+            const qArr = (Array.isArray(event.quotes_fk_id) ? event.quotes_fk_id : [event.quotes_fk_id]).filter(Boolean);
+            if (qArr.length > 0) obj_fk.push({ quotes: qArr });
+        }
 
         return {
             db, table: 'quote_items',
@@ -465,8 +609,19 @@ export class GestionTallerProdQuoteItems {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.quotes_fk_id || (Array.isArray(event.quotes_fk_id) && event.quotes_fk_id.length === 0)) {
+            let qNum = event.quote_number;
+            if (!qNum && typeof event.description === 'string') {
+                const m = event.description.match(/COT-\d+/i);
+                if (m) qNum = m[0];
+            }
+            if (qNum) {
+                const qId = await resolveId('quotes', 'quote_number', qNum, event, h);
+                if (qId) event.quotes_fk_id = [qId];
+            }
+        }
         let payload = GestionTallerProdQuoteItems.build_payload(event);
-        return h.store('quote_items', payload);
+        return storeWithDeduplication('quote_items', payload, 'description', event.description, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -502,11 +657,11 @@ export class GestionTallerProdAccountsReceivable {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                clients: event.clients_fk_id ? (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.clients_fk_id) {
+            const cArr = (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]).filter(Boolean);
+            if (cArr.length > 0) obj_fk.push({ clients: cArr });
+        }
 
         return {
             db, table: 'accounts_receivable',
@@ -524,8 +679,15 @@ export class GestionTallerProdAccountsReceivable {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.clients_fk_id || (Array.isArray(event.clients_fk_id) && event.clients_fk_id.length === 0)) {
+            let cId = event.tax_id ? await resolveId('clients', 'tax_id', event.tax_id, event, h) : null;
+            if (!cId && event.client_name) {
+                cId = await resolveId('clients', 'client_name', event.client_name, event, h);
+            }
+            if (cId) event.clients_fk_id = [cId];
+        }
         let payload = GestionTallerProdAccountsReceivable.build_payload(event);
-        return h.store('accounts_receivable', payload);
+        return storeWithDeduplication('accounts_receivable', payload, 'description', event.description, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -561,11 +723,11 @@ export class GestionTallerProdAccountsPayable {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                suppliers: event.suppliers_fk_id ? (Array.isArray(event.suppliers_fk_id) ? event.suppliers_fk_id : [event.suppliers_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.suppliers_fk_id) {
+            const sArr = (Array.isArray(event.suppliers_fk_id) ? event.suppliers_fk_id : [event.suppliers_fk_id]).filter(Boolean);
+            if (sArr.length > 0) obj_fk.push({ suppliers: sArr });
+        }
 
         return {
             db, table: 'accounts_payable',
@@ -583,8 +745,14 @@ export class GestionTallerProdAccountsPayable {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.suppliers_fk_id || (Array.isArray(event.suppliers_fk_id) && event.suppliers_fk_id.length === 0)) {
+            if (event.supplier_name) {
+                const sId = await resolveId('suppliers', 'supplier_name', event.supplier_name, event, h);
+                if (sId) event.suppliers_fk_id = [sId];
+            }
+        }
         let payload = GestionTallerProdAccountsPayable.build_payload(event);
-        return h.store('accounts_payable', payload);
+        return storeWithDeduplication('accounts_payable', payload, 'description', event.description, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -628,17 +796,17 @@ export class GestionTallerProdFinancialTransactions {
                 month: event.month || '',
                 transaction_date: event.transaction_date || '',
                 description: event.description || '',
-                minor_rep_income: event.minor_rep_income || '',
-                major_rep_income: event.major_rep_income || '',
-                other_income: event.other_income || '',
-                salary_expense: event.salary_expense || '',
-                rent_expense: event.rent_expense || '',
-                supplies_expense: event.supplies_expense || '',
-                tools_equipment_expense: event.tools_equipment_expense || '',
-                other_expenses: event.other_expenses || '',
-                total_expenses: event.total_expenses || '',
-                total_amount: event.total_amount || '',
-                exchange_rate: event.exchange_rate || '',
+                minor_rep_income: event.minor_rep_income || 0,
+                major_rep_income: event.major_rep_income || 0,
+                other_income: event.other_income || 0,
+                salary_expense: event.salary_expense || 0,
+                rent_expense: event.rent_expense || 0,
+                supplies_expense: event.supplies_expense || 0,
+                tools_equipment_expense: event.tools_equipment_expense || 0,
+                other_expenses: event.other_expenses || 0,
+                total_expenses: event.total_expenses || 0,
+                total_amount: event.total_amount || 0,
+                exchange_rate: event.exchange_rate || 0,
             },
             obj_fk
         };
@@ -647,7 +815,7 @@ export class GestionTallerProdFinancialTransactions {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdFinancialTransactions.build_payload(event);
-        return h.store('financial_transactions', payload);
+        return storeWithDeduplication('financial_transactions', payload, 'description', event.description, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -710,7 +878,7 @@ export class GestionTallerProdPartsCatalog {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdPartsCatalog.build_payload(event);
-        return h.store('parts_catalog', payload);
+        return storeWithDeduplication('parts_catalog', payload, 'part_code', event.part_code || event.code, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -746,11 +914,11 @@ export class GestionTallerProdPendingPurchases {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                suppliers: event.suppliers_fk_id ? (Array.isArray(event.suppliers_fk_id) ? event.suppliers_fk_id : [event.suppliers_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.suppliers_fk_id) {
+            const sArr = (Array.isArray(event.suppliers_fk_id) ? event.suppliers_fk_id : [event.suppliers_fk_id]).filter(Boolean);
+            if (sArr.length > 0) obj_fk.push({ suppliers: sArr });
+        }
 
         return {
             db, table: 'pending_purchases',
@@ -770,8 +938,14 @@ export class GestionTallerProdPendingPurchases {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.suppliers_fk_id || (Array.isArray(event.suppliers_fk_id) && event.suppliers_fk_id.length === 0)) {
+            if (event.supplier_name) {
+                const sId = await resolveId('suppliers', 'supplier_name', event.supplier_name, event, h);
+                if (sId) event.suppliers_fk_id = [sId];
+            }
+        }
         let payload = GestionTallerProdPendingPurchases.build_payload(event);
-        return h.store('pending_purchases', payload);
+        return storeWithDeduplication('pending_purchases', payload, 'product_name', event.product_name, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -831,7 +1005,12 @@ export class GestionTallerProdEmployees {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdEmployees.build_payload(event);
-        return h.store('employees', payload);
+        const res = await storeWithDeduplication('employees', payload, event.tax_id ? 'tax_id' : 'employee_name', event.tax_id || event.employee_name, event, h);
+        if (res?.id) {
+            if (event.tax_id) fkCache[`employees:tax_id:${String(event.tax_id).trim().toUpperCase()}`] = res.id;
+            if (event.employee_name) fkCache[`employees:employee_name:${String(event.employee_name).trim().toUpperCase()}`] = res.id;
+        }
+        return res;
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -867,14 +1046,15 @@ export class GestionTallerProdDeliveryNotes {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                vehicles: event.vehicles_fk_id ? (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]) : []
-            },
-            {
-                clients: event.clients_fk_id ? (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.vehicles_fk_id) {
+            const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
+            if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
+        }
+        if (event.clients_fk_id) {
+            const cArr = (Array.isArray(event.clients_fk_id) ? event.clients_fk_id : [event.clients_fk_id]).filter(Boolean);
+            if (cArr.length > 0) obj_fk.push({ clients: cArr });
+        }
 
         return {
             db, table: 'delivery_notes',
@@ -896,8 +1076,31 @@ export class GestionTallerProdDeliveryNotes {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.clients_fk_id || (Array.isArray(event.clients_fk_id) && event.clients_fk_id.length === 0)) {
+            let cId = event.tax_id ? await resolveId('clients', 'tax_id', event.tax_id, event, h) : null;
+            if (!cId && event.client_name) {
+                cId = await resolveId('clients', 'client_name', event.client_name, event, h);
+            }
+            if (!cId && event.license_plate) {
+                const plateKey = `vehicle_to_client:${String(event.license_plate).trim().toUpperCase()}`;
+                if (fkCache[plateKey]) {
+                    cId = fkCache[plateKey];
+                }
+            }
+            if (cId) event.clients_fk_id = [cId];
+        }
+        if (!event.vehicles_fk_id || (Array.isArray(event.vehicles_fk_id) && event.vehicles_fk_id.length === 0)) {
+            if (event.license_plate) {
+                const vId = await resolveId('vehicles', 'license_plate', event.license_plate, event, h);
+                if (vId) event.vehicles_fk_id = [vId];
+            }
+        }
         let payload = GestionTallerProdDeliveryNotes.build_payload(event);
-        return h.store('delivery_notes', payload);
+        const res = await storeWithDeduplication('delivery_notes', payload, 'note_number', event.note_number, event, h);
+        if (res?.id && event.note_number) {
+            fkCache[`delivery_notes:note_number:${String(event.note_number).trim().toUpperCase()}`] = res.id;
+        }
+        return res;
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -933,11 +1136,11 @@ export class GestionTallerProdDeliveryNoteItems {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                delivery_notes: event.delivery_notes_fk_id ? (Array.isArray(event.delivery_notes_fk_id) ? event.delivery_notes_fk_id : [event.delivery_notes_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.delivery_notes_fk_id) {
+            const dArr = (Array.isArray(event.delivery_notes_fk_id) ? event.delivery_notes_fk_id : [event.delivery_notes_fk_id]).filter(Boolean);
+            if (dArr.length > 0) obj_fk.push({ delivery_notes: dArr });
+        }
 
         return {
             db, table: 'delivery_note_items',
@@ -955,8 +1158,14 @@ export class GestionTallerProdDeliveryNoteItems {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.delivery_notes_fk_id || (Array.isArray(event.delivery_notes_fk_id) && event.delivery_notes_fk_id.length === 0)) {
+            if (event.note_number) {
+                const nId = await resolveId('delivery_notes', 'note_number', event.note_number, event, h);
+                if (nId) event.delivery_notes_fk_id = [nId];
+            }
+        }
         let payload = GestionTallerProdDeliveryNoteItems.build_payload(event);
-        return h.store('delivery_note_items', payload);
+        return storeWithDeduplication('delivery_note_items', payload, 'description', event.description, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -992,11 +1201,15 @@ export class GestionTallerProdInspectionCards {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                vehicles: event.vehicles_fk_id ? (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.vehicles_fk_id) {
+            const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
+            if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
+        }
+        if (event.employees_fk_id) {
+            const eArr = (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]).filter(Boolean);
+            if (eArr.length > 0) obj_fk.push({ employees: eArr });
+        }
 
         return {
             db, table: 'inspection_cards',
@@ -1014,8 +1227,21 @@ export class GestionTallerProdInspectionCards {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.vehicles_fk_id || (Array.isArray(event.vehicles_fk_id) && event.vehicles_fk_id.length === 0)) {
+            if (event.license_plate) {
+                const vId = await resolveId('vehicles', 'license_plate', event.license_plate, event, h);
+                if (vId) event.vehicles_fk_id = [vId];
+            }
+        }
+        if (!event.employees_fk_id || (Array.isArray(event.employees_fk_id) && event.employees_fk_id.length === 0)) {
+            const empName = event.employee_name || event.inspector_name;
+            if (empName) {
+                const eId = await resolveId('employees', 'employee_name', empName, event, h);
+                if (eId) event.employees_fk_id = [eId];
+            }
+        }
         let payload = GestionTallerProdInspectionCards.build_payload(event);
-        return h.store('inspection_cards', payload);
+        return storeWithDeduplication('inspection_cards', payload, 'item_name', event.item_name, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -1086,7 +1312,7 @@ export class GestionTallerProdBodyShopMaterials {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdBodyShopMaterials.build_payload(event);
-        return h.store('body_shop_materials', payload);
+        return storeWithDeduplication('body_shop_materials', payload, 'piece_name', event.piece_name, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -1122,11 +1348,15 @@ export class GestionTallerProdBodyShopOrders {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                vehicles: event.vehicles_fk_id ? (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.vehicles_fk_id) {
+            const vArr = (Array.isArray(event.vehicles_fk_id) ? event.vehicles_fk_id : [event.vehicles_fk_id]).filter(Boolean);
+            if (vArr.length > 0) obj_fk.push({ vehicles: vArr });
+        }
+        if (event.employees_fk_id) {
+            const eArr = (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]).filter(Boolean);
+            if (eArr.length > 0) obj_fk.push({ employees: eArr });
+        }
 
         return {
             db, table: 'body_shop_orders',
@@ -1149,8 +1379,20 @@ export class GestionTallerProdBodyShopOrders {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.vehicles_fk_id || (Array.isArray(event.vehicles_fk_id) && event.vehicles_fk_id.length === 0)) {
+            if (event.license_plate) {
+                const vId = await resolveId('vehicles', 'license_plate', event.license_plate, event, h);
+                if (vId) event.vehicles_fk_id = [vId];
+            }
+        }
+        if (!event.employees_fk_id || (Array.isArray(event.employees_fk_id) && event.employees_fk_id.length === 0)) {
+            if (event.assigned_mechanic) {
+                const eId = await resolveId('employees', 'employee_name', event.assigned_mechanic, event, h);
+                if (eId) event.employees_fk_id = [eId];
+            }
+        }
         let payload = GestionTallerProdBodyShopOrders.build_payload(event);
-        return h.store('body_shop_orders', payload);
+        return storeWithDeduplication('body_shop_orders', payload, 'order_number', event.order_number, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -1180,6 +1422,7 @@ export class GestionTallerProdBodyShopOrders {
 }
 
 export class GestionTallerProdMonthlyControl {
+
     static table = 'monthly_control';
 
     static build_payload(event: any): any {
@@ -1194,17 +1437,17 @@ export class GestionTallerProdMonthlyControl {
                 month: event.month || '',
                 transaction_date: event.transaction_date || '',
                 description: event.description || '',
-                minor_rep_income: event.minor_rep_income || '',
-                major_rep_income: event.major_rep_income || '',
-                other_income: event.other_income || '',
-                salary_expense: event.salary_expense || '',
-                rent_expense: event.rent_expense || '',
+                minor_rep_income: event.minor_rep_income || 0,
+                major_rep_income: event.major_rep_income || 0,
+                other_income: event.other_income || 0,
+                salary_expense: event.salary_expense || 0,
+                rent_expense: event.rent_expense || 0,
                 supplies_expense: event.supplies_expense || '',
                 tools_equipment_expense: event.tools_equipment_expense || '',
-                other_expenses: event.other_expenses || '',
-                total_expenses: event.total_expenses || '',
-                total_amount: event.total_amount || '',
-                exchange_rate: event.exchange_rate || '',
+                other_expenses: event.other_expenses || 0,
+                total_expenses: event.total_expenses || 0,
+                total_amount: event.total_amount || 0,
+                exchange_rate: event.exchange_rate || 0,
             },
             obj_fk
         };
@@ -1213,7 +1456,7 @@ export class GestionTallerProdMonthlyControl {
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
         let payload = GestionTallerProdMonthlyControl.build_payload(event);
-        return h.store('monthly_control', payload);
+        return storeWithDeduplication('monthly_control', payload, 'description', event.description, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -1249,11 +1492,11 @@ export class GestionTallerProdWorkContracts {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                employees: event.employees_fk_id ? (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.employees_fk_id) {
+            const eArr = (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]).filter(Boolean);
+            if (eArr.length > 0) obj_fk.push({ employees: eArr });
+        }
 
         return {
             db, table: 'work_contracts',
@@ -1269,9 +1512,17 @@ export class GestionTallerProdWorkContracts {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.employees_fk_id || (Array.isArray(event.employees_fk_id) && event.employees_fk_id.length === 0)) {
+            let eId = event.tax_id ? await resolveId('employees', 'tax_id', event.tax_id, event, h) : null;
+            if (!eId && event.employee_name) {
+                eId = await resolveId('employees', 'employee_name', event.employee_name, event, h);
+            }
+            if (eId) event.employees_fk_id = [eId];
+        }
         let payload = GestionTallerProdWorkContracts.build_payload(event);
-        return h.store('work_contracts', payload);
+        return storeWithDeduplication('work_contracts', payload, 'reason', event.reason, event, h);
     }
+
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
         const h = helpers || baseEntityHelpers;
@@ -1306,11 +1557,11 @@ export class GestionTallerProdCommunications {
         const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
         const db = 'GestionTallerProd' + envSuffix;
 
-        let obj_fk: any[] = [
-            {
-                employees: event.employees_fk_id ? (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]) : []
-            }
-        ];
+        const obj_fk: any[] = [];
+        if (event.employees_fk_id) {
+            const eArr = (Array.isArray(event.employees_fk_id) ? event.employees_fk_id : [event.employees_fk_id]).filter(Boolean);
+            if (eArr.length > 0) obj_fk.push({ employees: eArr });
+        }
 
         return {
             db, table: 'communications',
@@ -1326,8 +1577,15 @@ export class GestionTallerProdCommunications {
 
     static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
         const h = helpers || baseEntityHelpers;
+        if (!event.employees_fk_id || (Array.isArray(event.employees_fk_id) && event.employees_fk_id.length === 0)) {
+            let eId = event.tax_id ? await resolveId('employees', 'tax_id', event.tax_id, event, h) : null;
+            if (!eId && event.employee_name) {
+                eId = await resolveId('employees', 'employee_name', event.employee_name, event, h);
+            }
+            if (eId) event.employees_fk_id = [eId];
+        }
         let payload = GestionTallerProdCommunications.build_payload(event);
-        return h.store('communications', payload);
+        return storeWithDeduplication('communications', payload, 'subject', event.subject, event, h);
     }
 
     static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
@@ -1521,6 +1779,104 @@ export class GestionTallerProdInspectionAnalysis {
     }
 }
 
+export class GestionTallerProdCatalogState {
+    static table = 'catalogState';
+
+    static build_payload(event: any): any {
+        const envSuffix = DB_VAR.includes('-') ? '-' + DB_VAR.split('-')[1] : '';
+        const db = 'GestionTallerProd' + envSuffix;
+
+        return {
+            db,
+            table: GestionTallerProdCatalogState.table,
+            attribute: {
+                name: event.name || '',
+                metadata: event.metadata || []
+            },
+            obj_fk: []
+        };
+    }
+
+    static async store(event: any, helpers?: BaseEntityHelpers, sec?: MiddlewareSecurity): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        const payload = GestionTallerProdCatalogState.build_payload(event);
+        const catalogName = event.name || event.attribute?.name || '';
+
+        if (catalogName) {
+            try {
+                const existing = await h.data_filter('catalogState', {
+                    filter: { field: 'name', value: catalogName },
+                    headerLambda: event.headerLambda,
+                    headerLambdaObject: event.headerLambdaObject
+                });
+                const items = existing?.content || (Array.isArray(existing) ? existing : []);
+                if (items && items.length > 0) {
+                    const primaryRecord = items[0];
+                    // Clean up extra duplicate records
+                    for (let i = 1; i < items.length; i++) {
+                        if (items[i]?.id) {
+                            try { await h.delete('catalogState', items[i].id, event); } catch { }
+                        }
+                    }
+                    // Update the primary record with the latest metadata
+                    const updateRes = await h.update('catalogState', primaryRecord.id, payload);
+                    return updateRes?.id ? updateRes : { ...payload.attribute, id: primaryRecord.id, updated: true };
+                }
+            } catch {
+                // Fallback to store if search fails
+            }
+        }
+
+        return h.store('catalogState', payload);
+    }
+
+    static async update(id: string, event: any, helpers?: BaseEntityHelpers): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        return h.update('catalogState', id, GestionTallerProdCatalogState.build_payload(event));
+    }
+
+    static async delete(event: any, id: string, helpers?: BaseEntityHelpers): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        return h.delete('catalogState', id, event);
+    }
+
+    static async data_filter(event: any, helpers?: BaseEntityHelpers): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        return h.data_filter('catalogState', event);
+    }
+
+    static async paginate(event: any, helpers?: BaseEntityHelpers): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        return h.paginate('catalogState', event);
+    }
+
+    static async count(event: any, helpers?: BaseEntityHelpers): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        return h.count('catalogState', event);
+    }
+
+    static async custom_function(event: any, helpers?: BaseEntityHelpers): Promise<any> {
+        const h = helpers || baseEntityHelpers;
+        try {
+            let bulkStore = event.bulkStore || [];
+            let response = [];
+            for (let i = 0; i < bulkStore.length; i++) {
+                let item = bulkStore[i];
+                let storeItem = await h.store('catalogState', GestionTallerProdCatalogState.build_payload(item));
+                response.push(storeItem);
+            }
+            return { success: true, data: response };
+        } catch (error: any) {
+            return {
+                error: {
+                    message: error?.message,
+                    stack: error?.stack
+                }
+            };
+        }
+    }
+}
+
 export const ENTITY_REGISTRY: Record<string, any> = {
     'GestionTallerProd_clients': GestionTallerProdClients,
     'GestionTallerProd_suppliers': GestionTallerProdSuppliers,
@@ -1544,7 +1900,14 @@ export const ENTITY_REGISTRY: Record<string, any> = {
     'GestionTallerProd_work_contracts': GestionTallerProdWorkContracts,
     'GestionTallerProd_communications': GestionTallerProdCommunications,
     'GestionTallerProd_inspection_video': GestionTallerProdInspectionVideo,
-    'GestionTallerProd_inspection_analysis': GestionTallerProdInspectionAnalysis
+    'GestionTallerProd_inspection_analysis': GestionTallerProdInspectionAnalysis,
+    'GestionTallerProd_catalog_state': GestionTallerProdCatalogState,
+    'GestionTallerProd_catalogState': GestionTallerProdCatalogState,
+    'catalog_state': GestionTallerProdCatalogState,
+    'catalogState': GestionTallerProdCatalogState,
+    'vehicle_status': GestionTallerProdCatalogState,
+    'vehicle_brands_models': GestionTallerProdCatalogState,
+    'vehicle_types': GestionTallerProdCatalogState
 };
 
 async function main() {
@@ -1565,25 +1928,57 @@ async function main() {
         });
 
         const flows = event.request?.flows || [];
-        const flow = flows.find((f: any) => f.name === "workflow_taller");
+        const flow = flows.find((f: any) => f.name === "workflow_taller")
+            || flows.find((f: any) => f.name === "workflow_taller")
+            || flows[0];
         const output: Record<string, any> = {};
 
         if (flow) {
+            const context = {
+                header: event.headerLambda,
+                decodeBase64: event.headerLambdaObject
+                    ? Buffer.from(event.headerLambdaObject, 'base64').toString('utf-8')
+                    : null,
+                fileMeta: event.fileMeta,
+                fileMetas: event.fileMetas,
+            };
+
             for (const step of flow.steps || []) {
-                const EntityClass = ENTITY_REGISTRY[step.name];
+                const stepKey = step.name || step.functionName || 'step';
+                const EntityClass = ENTITY_REGISTRY[step.name]
+                    || ENTITY_REGISTRY[step.functionName]
+                    || (String(step.name).toLowerCase().includes('catalog') ? GestionTallerProdCatalogState : null);
+
                 if (EntityClass) {
-                    output[step.name] = await dispatchFlowStep(
-                        step.name, EntityClass, step,
-                        {
-                            header: event.headerLambda,
-                            decodeBase64: event.headerLambdaObject
-                                ? Buffer.from(event.headerLambdaObject, 'base64').toString('utf-8')
-                                : null,
-                            fileMeta: event.fileMeta,
-                            fileMetas: event.fileMetas,
-                        },
-                        SECRET_KEY
-                    );
+                    const actions = step.actions || [];
+                    if (actions.length > 1) {
+                        const stepResults: any[] = [];
+                        for (const act of actions) {
+                            const singleActionStep = { ...step, actions: [act] };
+                            const res = await dispatchFlowStep(stepKey, EntityClass, singleActionStep, context, SECRET_KEY);
+                            stepResults.push(res);
+                        }
+                        if (output[stepKey] !== undefined) {
+                            if (Array.isArray(output[stepKey])) {
+                                output[stepKey].push(...stepResults);
+                            } else {
+                                output[stepKey] = [output[stepKey], ...stepResults];
+                            }
+                        } else {
+                            output[stepKey] = stepResults.length === 1 ? stepResults[0] : stepResults;
+                        }
+                    } else {
+                        const res = await dispatchFlowStep(stepKey, EntityClass, step, context, SECRET_KEY);
+                        if (output[stepKey] !== undefined) {
+                            if (Array.isArray(output[stepKey])) {
+                                output[stepKey].push(res);
+                            } else {
+                                output[stepKey] = [output[stepKey], res];
+                            }
+                        } else {
+                            output[stepKey] = res;
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,22 @@
+{
+  "name": "taller360-lambda",
+  "version": "1.0.0",
+  "description": "Taller Integrale$ 360 Garage - GRQL Lambda (skd-grql pattern)",
+  "main": "src/lambda_garage.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "skd-grql": "^1.1.5",
+    "socket.io-client": "^4.7.4",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "22.15.1",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.3"
+  }
+}

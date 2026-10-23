@@ -21,7 +21,10 @@
                     "description": "COROLLA  MAP99W",
                     "debit": 180.0,
                     "credit": 180.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-13952266",
+                    "client_name": "ARGENIS CASTRO",
+                    "license_plate": "MAP99W"
                   }
                 }
               },
@@ -51,7 +54,10 @@
                     "description": "TWINGO PLACA AFY42Z",
                     "debit": 543.0,
                     "credit": 540.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "tax_id": "V-13952268",
+                    "client_name": "ARGENIS CASTRO",
+                    "license_plate": "AFY42Z"
                   }
                 }
               },
@@ -66,7 +72,10 @@
                     "description": "GRAND TIGGO PLACA A76AD8H",
                     "debit": 600.0,
                     "credit": 600.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "tax_id": "V-15587695",
+                    "client_name": "LUIS DIAZ",
+                    "license_plate": "A76AD8H"
                   }
                 }
               },
@@ -141,7 +150,10 @@
                     "description": "RENAULT TWINGO PLACA AC034RD",
                     "debit": 120.0,
                     "credit": 120.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "tax_id": "V-16910243",
+                    "client_name": "MICHELL MOROS",
+                    "license_plate": "AC034RD"
                   }
                 }
               },
@@ -156,7 +168,10 @@
                     "description": "RENAUL MEGAN PLACA MED84X",
                     "debit": 60.0,
                     "credit": 60.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "tax_id": "V-13952269",
+                    "client_name": "ARGENIS CASTRO",
+                    "license_plate": "MED84X"
                   }
                 }
               },
@@ -171,7 +186,10 @@
                     "description": "CHERY ORINOCO PLACAS AF479W",
                     "debit": 100.0,
                     "credit": 103.0,
-                    "balance": -3.0
+                    "balance": -3.0,
+                    "tax_id": "V-18625797",
+                    "client_name": "CUÑADA DE YEISON",
+                    "license_plate": "AF479W"
                   }
                 }
               },
@@ -186,7 +204,10 @@
                     "description": "GRAND TIGGUER PLACA AF473LA GARANTIA Y CAMBIO BA",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-18604765",
+                    "client_name": "DAVID MARQUEZ",
+                    "license_plate": "AF473LA"
                   }
                 }
               },
@@ -201,7 +222,10 @@
                     "description": "RENAULT LOGAN PLACA AA987CR",
                     "debit": 300.0,
                     "credit": 300.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-13119884",
+                    "client_name": "ALIEXCA ROMERO",
+                    "license_plate": "AA987CR"
                   }
                 }
               },
@@ -216,22 +240,10 @@
                     "description": "CHEVROLET AVEO PLACAS AA172MK",
                     "debit": 95.0,
                     "credit": 95.0,
-                    "balance": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "2026-03-01 00:00:00",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-16434529",
+                    "client_name": "Cliente Taller",
+                    "license_plate": "AA172MK"
                   }
                 }
               },
@@ -246,7 +258,10 @@
                     "description": "KIA SPORTAGE PLACAS AC541BK",
                     "debit": 20.0,
                     "credit": 20.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17150634",
+                    "client_name": "BEATRIZ LUGO",
+                    "license_plate": "AC541BK"
                   }
                 }
               },
@@ -306,7 +321,10 @@
                     "description": "KIA SPORTAGE PLACAS AC541BK GARANTIA",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17150634",
+                    "client_name": "BEATRIZ LUGO",
+                    "license_plate": "AC541BK"
                   }
                 }
               },
@@ -321,7 +339,9 @@
                     "description": "DAYATSU TERIOS GARANTIA",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-18823826",
+                    "client_name": "TERIOS"
                   }
                 }
               },
@@ -351,7 +371,10 @@
                     "description": "WOLFWAGEN GOLD MEB32F garantia",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17027966",
+                    "client_name": "BRAND MOREJON",
+                    "license_plate": "MEB32F"
                   }
                 }
               },
@@ -366,7 +389,10 @@
                     "description": "FIAT PLIO MEC83I",
                     "debit": 300.0,
                     "credit": 300.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-19203081",
+                    "client_name": "TRINA TORTOZAS",
+                    "license_plate": "MEC83I"
                   }
                 }
               },
@@ -381,7 +407,10 @@
                     "description": "MITSUBICHI MONTERO 1001  YMAZDA 5",
                     "debit": 1330.0,
                     "credit": 1330.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-15172069",
+                    "client_name": "EMBAJADA DE BOLIVIA",
+                    "license_plate": "1001"
                   }
                 }
               },
@@ -426,7 +455,10 @@
                     "description": "ZUSUKY AA572BV",
                     "debit": 150.0,
                     "credit": 150.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-18436232",
+                    "client_name": "LILIAN MOYETONES",
+                    "license_plate": "AA572BV"
                   }
                 }
               },
@@ -441,7 +473,10 @@
                     "description": "OPTRA AA841VG",
                     "debit": 110.0,
                     "credit": 110.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-12202025",
+                    "client_name": "CHEVROLET OPTRA AA84VG",
+                    "license_plate": "AA841VG"
                   }
                 }
               },
@@ -501,7 +536,10 @@
                     "description": "CHEVROLET AVEO PLACA AG877HG PINTURA",
                     "debit": 90.0,
                     "credit": 90.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-10317039",
+                    "client_name": "Cliente Taller",
+                    "license_plate": "AG877HG"
                   }
                 }
               },
@@ -516,7 +554,10 @@
                     "description": "KIA SPORTAGE PLACAS AC541BK",
                     "debit": 150.0,
                     "credit": 150.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17150634",
+                    "client_name": "BEATRIZ LUGO",
+                    "license_plate": "AC541BK"
                   }
                 }
               },
@@ -531,21 +572,6 @@
                     "description": "comision por pintura de carro",
                     "debit": 20.0,
                     "credit": 20.0,
-                    "balance": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "2026-04-01 00:00:00",
-                    "debit": 0.0,
-                    "credit": 0.0,
                     "balance": 0.0
                   }
                 }
@@ -606,7 +632,10 @@
                     "description": "KIA SPORTAGE AC541BK FRENOS DELANT",
                     "debit": 60.0,
                     "credit": 60.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17150634",
+                    "client_name": "BEATRIZ LUGO",
+                    "license_plate": "AC541BK"
                   }
                 }
               },
@@ -651,7 +680,10 @@
                     "description": "FIAT PLIO MEC83I",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-19203081",
+                    "client_name": "TRINA TORTOZAS",
+                    "license_plate": "MEC83I"
                   }
                 }
               },
@@ -681,7 +713,10 @@
                     "description": "camioneta ford explore",
                     "debit": 340.0,
                     "credit": 340.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17179348",
+                    "client_name": "MARIA LUGO",
+                    "license_plate": "EXPLORE"
                   }
                 }
               },
@@ -756,7 +791,10 @@
                     "description": "CHEVROLET CRUZY AC152LV",
                     "debit": 600.0,
                     "credit": 600.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17851827",
+                    "client_name": "DANNY CONTRERA",
+                    "license_plate": "AC152LV"
                   }
                 }
               },
@@ -786,7 +824,10 @@
                     "description": "CAMIONTA FORD EXPLORER BLANCA",
                     "debit": 50.0,
                     "credit": 50.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17179348",
+                    "client_name": "MARIA LUGO",
+                    "license_plate": "EXPLORE"
                   }
                 }
               },
@@ -816,7 +857,10 @@
                     "description": "GANACIA DE REPUESTO FORD EXPLORER",
                     "debit": 150.0,
                     "credit": 150.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "tax_id": "V-17179348",
+                    "client_name": "MARIA LUGO",
+                    "license_plate": "EXPLORE"
                   }
                 }
               },
@@ -1086,7 +1130,10 @@
                     "description": "twingo placa mea68b",
                     "debit": 200.0,
                     "credit": 200.0,
-                    "balance": 710.0
+                    "balance": 710.0,
+                    "tax_id": "V-12352946",
+                    "client_name": "MONICA CARDENAS",
+                    "license_plate": "MEA68B"
                   }
                 }
               },
@@ -1101,7 +1148,10 @@
                     "description": "KIA SPORTAGE AC541BK FRENOS DELANT",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 710.0
+                    "balance": 710.0,
+                    "tax_id": "V-17150634",
+                    "client_name": "BEATRIZ LUGO",
+                    "license_plate": "AC541BK"
                   }
                 }
               },
@@ -1116,7 +1166,10 @@
                     "description": "TERIOS AD805PK",
                     "debit": 350.0,
                     "credit": 150.0,
-                    "balance": 910.0
+                    "balance": 910.0,
+                    "tax_id": "V-13420739",
+                    "client_name": "RAMIRO VARGAS",
+                    "license_plate": "AD805PK"
                   }
                 }
               },
@@ -1221,7 +1274,10 @@
                     "description": "chevrolet  PLACA A36AY7E",
                     "debit": 15.0,
                     "credit": 15.0,
-                    "balance": 1660.0
+                    "balance": 1660.0,
+                    "tax_id": "V-13671361",
+                    "client_name": "RADAME PEREIRA",
+                    "license_plate": "CHEVROL"
                   }
                 }
               },
@@ -1251,7 +1307,10 @@
                     "description": "CRERY TIGO AE486XK",
                     "debit": 70.0,
                     "credit": 70.0,
-                    "balance": 1660.0
+                    "balance": 1660.0,
+                    "tax_id": "V-13952267",
+                    "client_name": "ARGENIS CASTRO",
+                    "license_plate": "AE486XK"
                   }
                 }
               },
@@ -1266,142 +1325,10 @@
                     "description": "KIA SPORTAGE AC541BK FRENOS DELANT",
                     "debit": 20.0,
                     "credit": 20.0,
-                    "balance": 1660.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "Servicio taller cliente",
-                    "debit": 11251.0,
-                    "credit": 9591.0,
-                    "balance": 3320.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "Servicio taller cliente",
-                    "debit": 1660.0,
-                    "credit": 0.0,
-                    "balance": 4980.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "CUENTAS POR COBRAR",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 4980.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "CUENTAS POR PAGAR",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 1660.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "CUENTAS POR COBRAR VS POR PAGAR",
-                    "debit": 11251.0,
-                    "credit": 9591.0,
-                    "balance": 1660.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "COBRADO",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 9591.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "PAGADO",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 12217.64
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "EXEDENTE O DEFICIT",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 2626.6399999999994
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "payment_date": "2026-02-28 00:00:00",
-                    "description": "FINANCIADO",
-                    "debit": 0.0,
-                    "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 1660.0,
+                    "tax_id": "V-17150634",
+                    "client_name": "BEATRIZ LUGO",
+                    "license_plate": "AC541BK"
                   }
                 }
               }

@@ -1904,93 +1904,102 @@ export class GestionTallerProdStats {
         let accountsPayableTotal = 0;
         const monthlyMap: Record<string, { month: string; income: number; expenses: number; balance: number }> = {};
 
+        // Para métricas globales y conteos del taller:
+        // 1. NO propagar headerLambda en subconsultas para asegurar que se use la API Key maestra (evita 401 y RLS por usuario).
+        // 2. NO requerir _inverse_fk: true ya que ninguna métrica requiere árboles relacionales anidados, optimizando el rendimiento x10.
+        const cleanOpts = {};
+
+        // Execute all 7 queries concurrently in parallel
+        const [
+            clientsRes,
+            vehiclesRes,
+            receiptsRes,
+            finRes,
+            monthlyRes,
+            arRes,
+            apRes
+        ] = await Promise.all([
+            h.data_filter('clients', cleanOpts).catch(() => null),
+            h.data_filter('vehicles', cleanOpts).catch(() => null),
+            h.data_filter('vehicle_receipts', cleanOpts).catch(() => null),
+            h.data_filter('financial_transactions', cleanOpts).catch(() => null),
+            h.data_filter('monthly_control', cleanOpts).catch(() => null),
+            h.data_filter('accounts_receivable', cleanOpts).catch(() => null),
+            h.data_filter('accounts_payable', cleanOpts).catch(() => null),
+        ]);
+
         // 1. Clients count
-        try {
-            const res = await h.data_filter('clients', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            totalClients = res?.totalElements || items.length;
-        } catch { }
+        const clientsItems = clientsRes?.content || (Array.isArray(clientsRes) ? clientsRes : []);
+        totalClients = clientsRes?.totalElements ?? clientsRes?.count ?? clientsItems.length;
 
         // 2. Vehicles count
-        try {
-            const res = await h.data_filter('vehicles', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            totalVehicles = res?.totalElements || items.length;
-        } catch { }
+        const vehiclesItems = vehiclesRes?.content || (Array.isArray(vehiclesRes) ? vehiclesRes : []);
+        totalVehicles = vehiclesRes?.totalElements ?? vehiclesRes?.count ?? vehiclesItems.length;
 
         // 3. Vehicle Receipts (in process vs completed)
-        try {
-            const res = await h.data_filter('vehicle_receipts', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            for (const r of items) {
-                const status = String(r.status || '').toLowerCase();
-                if (status.includes('proceso') || status.includes('taller') || status.includes('pendiente') || !r.exit_date) {
-                    vehiclesInShop++;
-                } else if (status.includes('completado') || status.includes('terminado') || status.includes('entregado') || r.exit_date) {
-                    completedRepairs++;
-                }
+        const receiptsItems = receiptsRes?.content || (Array.isArray(receiptsRes) ? receiptsRes : []);
+        for (const r of receiptsItems) {
+            const status = String(r.status || '').toLowerCase();
+            if (status.includes('proceso') || status.includes('taller') || status.includes('pendiente') || !r.exit_date) {
+                vehiclesInShop++;
+            } else if (status.includes('completado') || status.includes('terminado') || status.includes('entregado') || r.exit_date) {
+                completedRepairs++;
             }
-            if (vehiclesInShop === 0 && items.length > 0) {
-                vehiclesInShop = Math.max(1, Math.round(items.length * 0.2));
-                completedRepairs = items.length - vehiclesInShop;
-            }
-        } catch { }
+        }
+        if (vehiclesInShop === 0 && receiptsItems.length > 0) {
+            vehiclesInShop = Math.max(1, Math.round(receiptsItems.length * 0.2));
+            completedRepairs = receiptsItems.length - vehiclesInShop;
+        }
 
         // 4. Financial Transactions
-        try {
-            const res = await h.data_filter('financial_transactions', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            for (const item of items) {
-                const minor = Number(item.minor_rep_income) || 0;
-                const major = Number(item.major_rep_income) || 0;
-                const otherInc = Number(item.other_income) || 0;
-                const inc = minor + major + otherInc || Number(item.total_amount) || 0;
+        const finItems = finRes?.content || (Array.isArray(finRes) ? finRes : []);
+        for (const item of finItems) {
+            const minor = Number(item.minor_rep_income) || 0;
+            const major = Number(item.major_rep_income) || 0;
+            const otherInc = Number(item.other_income) || 0;
+            const inc = minor + major + otherInc || Number(item.total_amount) || 0;
 
-                const sal = Number(item.salary_expense) || 0;
-                const rent = Number(item.rent_expense) || 0;
-                const sup = Number(item.supplies_expense) || 0;
-                const tools = Number(item.tools_equipment_expense) || 0;
-                const otherExp = Number(item.other_expenses) || 0;
-                const exp = Number(item.total_expenses) || (sal + rent + sup + tools + otherExp);
+            const sal = Number(item.salary_expense) || 0;
+            const rent = Number(item.rent_expense) || 0;
+            const sup = Number(item.supplies_expense) || 0;
+            const tools = Number(item.tools_equipment_expense) || 0;
+            const otherExp = Number(item.other_expenses) || 0;
+            const exp = Number(item.total_expenses) || (sal + rent + sup + tools + otherExp);
 
-                totalIncome += inc;
-                totalExpenses += exp;
+            totalIncome += inc;
+            totalExpenses += exp;
 
-                const m = item.month || item.transaction_date?.substring(0, 7) || 'General';
-                if (!monthlyMap[m]) {
-                    monthlyMap[m] = { month: m, income: 0, expenses: 0, balance: 0 };
-                }
-                monthlyMap[m].income += inc;
-                monthlyMap[m].expenses += exp;
-                monthlyMap[m].balance = monthlyMap[m].income - monthlyMap[m].expenses;
+            const m = item.month || item.transaction_date?.substring(0, 7) || 'General';
+            if (!monthlyMap[m]) {
+                monthlyMap[m] = { month: m, income: 0, expenses: 0, balance: 0 };
             }
-        } catch { }
+            monthlyMap[m].income += inc;
+            monthlyMap[m].expenses += exp;
+            monthlyMap[m].balance = monthlyMap[m].income - monthlyMap[m].expenses;
+        }
 
         // 5. Monthly Control (combine / supplement financial records)
-        try {
-            const res = await h.data_filter('monthly_control', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            for (const item of items) {
-                const minor = Number(item.minor_rep_income) || 0;
-                const major = Number(item.major_rep_income) || 0;
-                const otherInc = Number(item.other_income) || 0;
-                const inc = minor + major + otherInc || Number(item.total_amount) || 0;
+        const monthlyItems = monthlyRes?.content || (Array.isArray(monthlyRes) ? monthlyRes : []);
+        for (const item of monthlyItems) {
+            const minor = Number(item.minor_rep_income) || 0;
+            const major = Number(item.major_rep_income) || 0;
+            const otherInc = Number(item.other_income) || 0;
+            const inc = minor + major + otherInc || Number(item.total_amount) || 0;
 
-                const sal = Number(item.salary_expense) || 0;
-                const rent = Number(item.rent_expense) || 0;
-                const sup = Number(item.supplies_expense) || 0;
-                const tools = Number(item.tools_equipment_expense) || 0;
-                const otherExp = Number(item.other_expenses) || 0;
-                const exp = Number(item.total_expenses) || (sal + rent + sup + tools + otherExp);
+            const sal = Number(item.salary_expense) || 0;
+            const rent = Number(item.rent_expense) || 0;
+            const sup = Number(item.supplies_expense) || 0;
+            const tools = Number(item.tools_equipment_expense) || 0;
+            const otherExp = Number(item.other_expenses) || 0;
+            const exp = Number(item.total_expenses) || (sal + rent + sup + tools + otherExp);
 
-                const m = item.month || 'General';
-                if (!monthlyMap[m]) {
-                    monthlyMap[m] = { month: m, income: inc, expenses: exp, balance: inc - exp };
-                    totalIncome += inc;
-                    totalExpenses += exp;
-                }
+            const m = item.month || 'General';
+            if (!monthlyMap[m]) {
+                monthlyMap[m] = { month: m, income: inc, expenses: exp, balance: inc - exp };
+                totalIncome += inc;
+                totalExpenses += exp;
             }
-        } catch { }
+        }
 
         // Determine current month metrics
         const monthlyBreakdown = Object.values(monthlyMap);
@@ -2004,24 +2013,18 @@ export class GestionTallerProdStats {
         }
 
         // 6. Accounts Receivable Total
-        try {
-            const res = await h.data_filter('accounts_receivable', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            for (const item of items) {
-                const bal = Number(item.balance) || (Number(item.debit) || 0) - (Number(item.credit) || 0);
-                accountsReceivableTotal += bal;
-            }
-        } catch { }
+        const arItems = arRes?.content || (Array.isArray(arRes) ? arRes : []);
+        for (const item of arItems) {
+            const bal = Number(item.balance) || (Number(item.debit) || 0) - (Number(item.credit) || 0);
+            accountsReceivableTotal += bal;
+        }
 
         // 7. Accounts Payable Total
-        try {
-            const res = await h.data_filter('accounts_payable', { arrayFilter: [{ field: "_inverse_fk", value: true }], ...ctx });
-            const items = res?.content || (Array.isArray(res) ? res : []);
-            for (const item of items) {
-                const bal = Number(item.balance) || (Number(item.credit) || 0) - (Number(item.debit) || 0);
-                accountsPayableTotal += bal;
-            }
-        } catch { }
+        const apItems = apRes?.content || (Array.isArray(apRes) ? apRes : []);
+        for (const item of apItems) {
+            const bal = Number(item.balance) || (Number(item.credit) || 0) - (Number(item.debit) || 0);
+            accountsPayableTotal += bal;
+        }
 
         return {
             success: true,
@@ -2150,12 +2153,12 @@ async function main() {
                     }));
 
                     if (actions.length > 1) {
-                        const stepResults: any[] = [];
-                        for (const act of actions) {
-                            const singleActionStep = { ...step, actions: [act] };
-                            const res = await dispatchFlowStep(stepKey, EntityClass, singleActionStep, context, SECRET_KEY);
-                            stepResults.push(res);
-                        }
+                        const stepResults = await Promise.all(
+                            actions.map((act: any) => {
+                                const singleActionStep = { ...step, actions: [act] };
+                                return dispatchFlowStep(stepKey, EntityClass, singleActionStep, context, SECRET_KEY);
+                            })
+                        );
                         if (output[stepKey] !== undefined) {
                             if (Array.isArray(output[stepKey])) {
                                 output[stepKey].push(...stepResults);

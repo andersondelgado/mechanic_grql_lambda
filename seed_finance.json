@@ -5473,29 +5473,6 @@
                 "params": {
                   "body": {
                     "month": "feb26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
                     "transaction_date": "2026-02-12 00:00:00",
                     "description": "COROLLA  MAP99W",
                     "minor_rep_income": 180.0,
@@ -5503,12 +5480,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 180.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5526,12 +5503,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 300.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5549,12 +5526,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 400.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5572,12 +5549,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 600.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5595,12 +5572,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 50.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5618,12 +5595,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5641,12 +5618,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5664,12 +5641,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5687,12 +5664,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 120.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5710,12 +5687,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 60.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5731,14 +5708,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 500.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 500.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 500.0,
+                    "total_amount": 500.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5754,14 +5731,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 80.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 80.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 14.02
+                    "total_expenses": 80.0,
+                    "total_amount": 80.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5777,14 +5754,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 360.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 360.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 360.0,
+                    "total_amount": 360.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5800,14 +5777,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 100.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 100.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 100.0,
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5823,14 +5800,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 43.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 43.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 43.0,
+                    "total_amount": 43.0,
+                    "exchange_rate": 465.12
                   }
                 }
               },
@@ -5848,12 +5825,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "28.42",
+                    "supplies_expense": 28.42,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 28.42,
+                    "total_amount": 28.42,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5864,19 +5841,19 @@
                 "params": {
                   "body": {
                     "month": "feb26",
-                    "transaction_date": "31-02-2026",
+                    "transaction_date": "2026-02-28 00:00:00",
                     "description": "ALQUILER MES DE FEBRERO",
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
                     "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "",
+                    "rent_expense": 500.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 31.0
+                    "total_expenses": 500.0,
+                    "total_amount": 500.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5894,12 +5871,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 100.0,
+                    "exchange_rate": 566.72
                   }
                 }
               },
@@ -5917,12 +5894,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 160.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 160.0,
+                    "other_expenses": 0.0,
+                    "total_expenses": 160.0,
+                    "total_amount": 160.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5938,14 +5915,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 80.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 80.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 80.0,
+                    "total_amount": 80.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5961,14 +5938,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 100.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 100.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 100.0,
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -5984,14 +5961,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 50.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 50.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 50.0,
+                    "total_amount": 50.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6009,12 +5986,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "6",
+                    "supplies_expense": 6.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 6.0,
+                    "total_amount": 6.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6032,12 +6009,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6053,14 +6030,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 50.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 50.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 50.0,
+                    "total_amount": 50.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6076,14 +6053,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 140.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 140.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 140.0,
+                    "total_amount": 140.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6099,14 +6076,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 25.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 25.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 25.0,
+                    "total_amount": 25.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6124,12 +6101,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 300.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6140,19 +6117,19 @@
                 "params": {
                   "body": {
                     "month": "feb26",
-                    "transaction_date": "2026-08-26 00:00:00",
+                    "transaction_date": "2026-02-26 00:00:00",
                     "description": "COMPRA DE EMPACADURA FIAT SIENA",
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 17.08,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 17.08,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 17.08,
+                    "total_amount": 17.08,
+                    "exchange_rate": 430.08
                   }
                 }
               },
@@ -6163,19 +6140,19 @@
                 "params": {
                   "body": {
                     "month": "feb26",
-                    "transaction_date": "2026-08-26 00:00:00",
+                    "transaction_date": "2026-02-26 00:00:00",
                     "description": "COMPRA SELLO MOTOR",
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 5.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 5.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 5.0,
+                    "total_amount": 5.0,
+                    "exchange_rate": 430.08
                   }
                 }
               },
@@ -6186,19 +6163,19 @@
                 "params": {
                   "body": {
                     "month": "feb26",
-                    "transaction_date": "2026-08-26 00:00:00",
+                    "transaction_date": "2026-02-26 00:00:00",
                     "description": "COMPRA VALVULA FIAT",
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 9.5,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 9.5,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 9.5,
+                    "total_amount": 9.5,
+                    "exchange_rate": 430.08
                   }
                 }
               },
@@ -6214,14 +6191,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 34.14,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 34.14,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 34.14,
+                    "total_amount": 34.14,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6237,14 +6214,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 1.2,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 1.2,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 1.2,
+                    "total_amount": 1.2,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6262,12 +6239,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 10.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 10.0,
+                    "other_expenses": 0.0,
+                    "total_expenses": 10.0,
+                    "total_amount": 10.0,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6285,12 +6262,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 25.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 25.0,
+                    "other_expenses": 0.0,
+                    "total_expenses": 25.0,
+                    "total_amount": 25.0,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6308,12 +6285,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 13.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 13.0,
+                    "other_expenses": 0.0,
+                    "total_expenses": 13.0,
+                    "total_amount": 13.0,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6331,12 +6308,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
+                    "other_expenses": 7.0,
                     "total_expenses": 7.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 7.0,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6354,12 +6331,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 20.0,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6377,12 +6354,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 25.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 25.0,
+                    "other_expenses": 0.0,
+                    "total_expenses": 25.0,
+                    "total_amount": 25.0,
+                    "exchange_rate": 483.91
                   }
                 }
               },
@@ -6398,14 +6375,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 80.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 80.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_expenses": 80.0,
+                    "total_amount": 80.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6421,14 +6398,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 100.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 100.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
+                    "total_expenses": 100.0,
+                    "total_amount": 100.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6444,14 +6421,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 50.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "salary_expense": 50.0,
+                    "rent_expense": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
+                    "total_expenses": 50.0,
+                    "total_amount": 50.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6467,267 +6444,14 @@
                     "minor_rep_income": 0.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 120.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 1230.0,
-                    "major_rep_income": 1300.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 1944.92,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "34.42",
-                    "other_expenses": 233.0,
-                    "total_expenses": 7.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "TOTAL INGRESOS DEL MES$",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 2530.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
+                    "salary_expense": 120.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "TOTAL GASTOS DEL MES$",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 2719.34,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -189.34000000000015,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 2530.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 1081.42,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 1448.58,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 2719.34,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 2652.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "feb26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 67.34000000000015,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
+                    "total_expenses": 120.0,
+                    "total_amount": 120.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -6745,12 +6469,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
+                    "other_expenses": 189.34,
                     "total_expenses": 189.34,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "total_amount": 189.34,
+                    "exchange_rate": 420.0
                   }
                 }
               },
@@ -6761,272 +6485,19 @@
                 "params": {
                   "body": {
                     "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
+                    "transaction_date": "2026-03-01 00:00:00",
                     "description": "KIA SPORTAGE PLACAS AC541BK",
                     "minor_rep_income": 20.0,
                     "major_rep_income": 0.0,
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
                     "other_expenses": 0.0,
                     "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 20.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "0",
-                    "tools_equipment_expense": "0",
-                    "other_expenses": 0.0,
-                    "total_expenses": 189.34,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "TOTAL INGRESOS DEL MES$",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 20.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "TOTAL GASTOS DEL MES$",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 189.34,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -169.34,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 1081.42,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": -1061.42,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 189.34,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 2625.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "marz 26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": -2435.66,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "ABRIL26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
+                    "total_amount": 20.0,
+                    "exchange_rate": 380.0
                   }
                 }
               },
@@ -7044,12 +6515,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 5.7985454545454544,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
+                    "other_expenses": 5.8,
+                    "total_expenses": 5.8,
+                    "total_amount": 5.8,
+                    "exchange_rate": 385.0
                   }
                 }
               },
@@ -7067,12 +6538,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 9.61038961038961,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
+                    "other_expenses": 9.61,
+                    "total_expenses": 9.61,
+                    "total_amount": 9.61,
+                    "exchange_rate": 385.0
                   }
                 }
               },
@@ -7090,12 +6561,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 7.012987012987013,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
+                    "other_expenses": 7.01,
+                    "total_expenses": 7.01,
+                    "total_amount": 7.01,
+                    "exchange_rate": 385.0
                   }
                 }
               },
@@ -7113,12 +6584,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 10.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 10.0,
+                    "other_expenses": 0.0,
+                    "total_expenses": 10.0,
+                    "total_amount": 10.0,
+                    "exchange_rate": 382.0
                   }
                 }
               },
@@ -7136,1921 +6607,12 @@
                     "other_income": 0.0,
                     "salary_expense": 0.0,
                     "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
+                    "supplies_expense": 0.0,
+                    "tools_equipment_expense": 0.0,
+                    "other_expenses": 6.0,
                     "total_expenses": 6.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "ABRIL26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "0",
-                    "tools_equipment_expense": "0",
-                    "other_expenses": 10.0,
-                    "total_expenses": 28.421922077922076,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "ABRIL26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 38.421922077922076,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "ABRIL26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -38.421922077922076,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "MAYO26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O JUNIO26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "JULIO26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "AGOST26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 80.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 110.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 317.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "O SEPT26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -485.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "OCTUBRE26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "NOVIEM26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "FECHA",
-                    "description": "MOVIMIENTO",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "G ALQUILER",
-                    "tools_equipment_expense": "CONSUMIBLE",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "2026-02-10 00:00:00",
-                    "description": "SUEL DOS DSFDKJGFRKDSMKFDE",
-                    "minor_rep_income": 60.0,
-                    "major_rep_income": 20.0,
-                    "other_income": 30.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "50",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "2026-02-12 00:00:00",
-                    "description": "FACT",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "2026-03-12 00:00:00",
-                    "description": "ING POR ALQUILER",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 2026.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 30.0,
-                    "major_rep_income": 67.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "2026-02-15 00:00:00",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 0.0,
-                    "major_rep_income": 45.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 0.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "TOTAL DEL MES",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 90.0,
-                    "major_rep_income": 132.0,
-                    "other_income": 75.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 60.0,
-                    "supplies_expense": "500",
-                    "tools_equipment_expense": "162",
-                    "other_expenses": 60.0,
-                    "total_expenses": 20.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "TOTAL INGRESOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 297.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "TOTAL GASTOS $",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": 802.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
-                  }
-                }
-              },
-              {
-                "name": "create",
-                "type": "api",
-                "action": "mutation",
-                "params": {
-                  "body": {
-                    "month": "DICIEM26",
-                    "transaction_date": "INGRESOS  MENOS GASTOS",
-                    "description": "Movimiento de caja / ingresos y egresos",
-                    "minor_rep_income": -505.0,
-                    "major_rep_income": 0.0,
-                    "other_income": 0.0,
-                    "salary_expense": 0.0,
-                    "rent_expense": 0.0,
-                    "supplies_expense": "",
-                    "tools_equipment_expense": "",
-                    "other_expenses": 0.0,
-                    "total_expenses": 0.0,
-                    "total_amount": 0.0,
-                    "exchange_rate": 650.0
+                    "total_amount": 6.0,
+                    "exchange_rate": 385.0
                   }
                 }
               }

@@ -24,7 +24,8 @@
                     "balance": 0.0,
                     "tax_id": "V-13952266",
                     "client_name": "ARGENIS CASTRO",
-                    "license_plate": "MAP99W"
+                    "license_plate": "MAP99W",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -39,7 +40,10 @@
                     "description": "RENAULT SYMBOL",
                     "debit": 350.0,
                     "credit": 350.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -55,9 +59,10 @@
                     "debit": 543.0,
                     "credit": 540.0,
                     "balance": 3.0,
-                    "tax_id": "V-13952268",
+                    "tax_id": "V-13952266",
                     "client_name": "ARGENIS CASTRO",
-                    "license_plate": "AFY42Z"
+                    "license_plate": "AFY42Z",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -75,7 +80,8 @@
                     "balance": 3.0,
                     "tax_id": "V-15587695",
                     "client_name": "LUIS DIAZ",
-                    "license_plate": "A76AD8H"
+                    "license_plate": "A76AD8H",
+                    "clients_fk_id": "632efdc3-4416-44ef-81c7-d65ee5d796b6"
                   }
                 }
               },
@@ -90,7 +96,10 @@
                     "description": "FIAT SIENNA AA123WR",
                     "debit": 90.0,
                     "credit": 90.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "client_name": "TRINA TORTOZAS",
+                    "tax_id": "V-19203081",
+                    "clients_fk_id": "27c1a7bf-4e56-4647-a1d6-883746d4c200"
                   }
                 }
               },
@@ -105,7 +114,10 @@
                     "description": "AUDI A6492A",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -120,7 +132,10 @@
                     "description": "S  ARRENDAMIENTO MARWIN",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -135,7 +150,10 @@
                     "description": "S ARRENDAMIENTO PINTOR",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 3.0
+                    "balance": 3.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -151,9 +169,10 @@
                     "debit": 120.0,
                     "credit": 120.0,
                     "balance": 3.0,
-                    "tax_id": "V-16910243",
+                    "tax_id": "V-16910234",
                     "client_name": "MICHELL MOROS",
-                    "license_plate": "AC034RD"
+                    "license_plate": "AC034RD",
+                    "clients_fk_id": "70e9cac4-be15-4df3-9772-bfb12530fe8a"
                   }
                 }
               },
@@ -169,9 +188,10 @@
                     "debit": 60.0,
                     "credit": 60.0,
                     "balance": 3.0,
-                    "tax_id": "V-13952269",
+                    "tax_id": "V-13952266",
                     "client_name": "ARGENIS CASTRO",
-                    "license_plate": "MED84X"
+                    "license_plate": "MED84X",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -189,7 +209,8 @@
                     "balance": -3.0,
                     "tax_id": "V-18625797",
                     "client_name": "CUÑADA DE YEISON",
-                    "license_plate": "AF479W"
+                    "license_plate": "AF479W",
+                    "clients_fk_id": "508ee283-4a25-48b3-8465-d661ab10c193"
                   }
                 }
               },
@@ -205,9 +226,10 @@
                     "debit": 100.0,
                     "credit": 100.0,
                     "balance": 0.0,
-                    "tax_id": "V-18604765",
+                    "tax_id": "V-18604761",
                     "client_name": "DAVID MARQUEZ",
-                    "license_plate": "AF473LA"
+                    "license_plate": "AF473LA",
+                    "clients_fk_id": "89c4dbca-2500-4e71-ae8c-f2ebea273887"
                   }
                 }
               },
@@ -223,9 +245,10 @@
                     "debit": 300.0,
                     "credit": 300.0,
                     "balance": 0.0,
-                    "tax_id": "V-13119884",
+                    "tax_id": "V-13119880",
                     "client_name": "ALIEXCA ROMERO",
-                    "license_plate": "AA987CR"
+                    "license_plate": "AA987CR",
+                    "clients_fk_id": "56cf1556-d29f-4fca-bfaf-065f37d118d3"
                   }
                 }
               },
@@ -241,9 +264,10 @@
                     "debit": 95.0,
                     "credit": 95.0,
                     "balance": 0.0,
-                    "tax_id": "V-16434529",
-                    "client_name": "Cliente Taller",
-                    "license_plate": "AA172MK"
+                    "tax_id": "V-13502196",
+                    "client_name": "CLIENTE TALLER",
+                    "license_plate": "AA172MK",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -259,9 +283,10 @@
                     "debit": 20.0,
                     "credit": 20.0,
                     "balance": 0.0,
-                    "tax_id": "V-17150634",
+                    "tax_id": "V-17150630",
                     "client_name": "BEATRIZ LUGO",
-                    "license_plate": "AC541BK"
+                    "license_plate": "AC541BK",
+                    "clients_fk_id": "5604a774-0060-4f8c-8ec5-3976c1f76c48"
                   }
                 }
               },
@@ -276,7 +301,10 @@
                     "description": "alquiler marguin abril",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -291,7 +319,10 @@
                     "description": "alquiler nogli abril",
                     "debit": 103.0,
                     "credit": 103.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -306,7 +337,10 @@
                     "description": "fiesta max",
                     "debit": 40.0,
                     "credit": 40.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -322,9 +356,10 @@
                     "debit": 0.0,
                     "credit": 0.0,
                     "balance": 0.0,
-                    "tax_id": "V-17150634",
+                    "tax_id": "V-17150630",
                     "client_name": "BEATRIZ LUGO",
-                    "license_plate": "AC541BK"
+                    "license_plate": "AC541BK",
+                    "clients_fk_id": "5604a774-0060-4f8c-8ec5-3976c1f76c48"
                   }
                 }
               },
@@ -341,7 +376,8 @@
                     "credit": 0.0,
                     "balance": 0.0,
                     "tax_id": "V-18823826",
-                    "client_name": "TERIOS"
+                    "client_name": "TERIOS",
+                    "clients_fk_id": "98506112-c78e-40ab-be5f-68f9845aaad8"
                   }
                 }
               },
@@ -356,7 +392,10 @@
                     "description": "RENAULT MEGAN",
                     "debit": 40.0,
                     "credit": 40.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CIRA BARRETO",
+                    "tax_id": "V-16059624",
+                    "clients_fk_id": "217fafbd-cd3d-4ee9-806c-67a3371130a2"
                   }
                 }
               },
@@ -372,9 +411,10 @@
                     "debit": 0.0,
                     "credit": 0.0,
                     "balance": 0.0,
-                    "tax_id": "V-17027966",
+                    "tax_id": "V-17027958",
                     "client_name": "BRAND MOREJON",
-                    "license_plate": "MEB32F"
+                    "license_plate": "MEB32F",
+                    "clients_fk_id": "6f296eaa-25b1-48a7-a444-0a4da92d6f7d"
                   }
                 }
               },
@@ -392,7 +432,8 @@
                     "balance": 0.0,
                     "tax_id": "V-19203081",
                     "client_name": "TRINA TORTOZAS",
-                    "license_plate": "MEC83I"
+                    "license_plate": "MEC83I",
+                    "clients_fk_id": "27c1a7bf-4e56-4647-a1d6-883746d4c200"
                   }
                 }
               },
@@ -408,9 +449,10 @@
                     "debit": 1330.0,
                     "credit": 1330.0,
                     "balance": 0.0,
-                    "tax_id": "V-15172069",
+                    "tax_id": "V-15172065",
                     "client_name": "EMBAJADA DE BOLIVIA",
-                    "license_plate": "1001"
+                    "license_plate": "1001",
+                    "clients_fk_id": "8d405e4b-6f62-4fae-a3ed-74f6d63705a1"
                   }
                 }
               },
@@ -425,7 +467,10 @@
                     "description": "TOYOTA",
                     "debit": 520.0,
                     "credit": 520.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -440,7 +485,10 @@
                     "description": "Servicio taller cliente",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -456,9 +504,10 @@
                     "debit": 150.0,
                     "credit": 150.0,
                     "balance": 0.0,
-                    "tax_id": "V-18436232",
+                    "tax_id": "V-18436228",
                     "client_name": "LILIAN MOYETONES",
-                    "license_plate": "AA572BV"
+                    "license_plate": "AA572BV",
+                    "clients_fk_id": "0954b9e0-4152-4ba7-951b-8faaa6f212e4"
                   }
                 }
               },
@@ -474,9 +523,10 @@
                     "debit": 110.0,
                     "credit": 110.0,
                     "balance": 0.0,
-                    "tax_id": "V-12202025",
+                    "tax_id": "V-12202021",
                     "client_name": "CHEVROLET OPTRA AA84VG",
-                    "license_plate": "AA841VG"
+                    "license_plate": "AA841VG",
+                    "clients_fk_id": "6e8241da-9417-44e9-9ae6-94e4e37c9c4c"
                   }
                 }
               },
@@ -491,7 +541,10 @@
                     "description": "HIUNDAY GETS",
                     "debit": 60.0,
                     "credit": 60.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -506,7 +559,10 @@
                     "description": "LUDYMAX A63A020J",
                     "debit": 55.0,
                     "credit": 55.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -521,7 +577,10 @@
                     "description": "RENAULT TWINGO PLACA AA076WS",
                     "debit": 90.0,
                     "credit": 90.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "MICHELL MOROS",
+                    "tax_id": "V-16910234",
+                    "clients_fk_id": "70e9cac4-be15-4df3-9772-bfb12530fe8a"
                   }
                 }
               },
@@ -537,9 +596,10 @@
                     "debit": 90.0,
                     "credit": 90.0,
                     "balance": 0.0,
-                    "tax_id": "V-10317039",
-                    "client_name": "Cliente Taller",
-                    "license_plate": "AG877HG"
+                    "tax_id": "V-13502196",
+                    "client_name": "CLIENTE TALLER",
+                    "license_plate": "AG877HG",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -555,9 +615,10 @@
                     "debit": 150.0,
                     "credit": 150.0,
                     "balance": 0.0,
-                    "tax_id": "V-17150634",
+                    "tax_id": "V-17150630",
                     "client_name": "BEATRIZ LUGO",
-                    "license_plate": "AC541BK"
+                    "license_plate": "AC541BK",
+                    "clients_fk_id": "5604a774-0060-4f8c-8ec5-3976c1f76c48"
                   }
                 }
               },
@@ -572,7 +633,10 @@
                     "description": "comision por pintura de carro",
                     "debit": 20.0,
                     "credit": 20.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -587,7 +651,10 @@
                     "description": "RENAULT TWINGO",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "MICHELL MOROS",
+                    "tax_id": "V-16910234",
+                    "clients_fk_id": "70e9cac4-be15-4df3-9772-bfb12530fe8a"
                   }
                 }
               },
@@ -602,7 +669,10 @@
                     "description": "alquiler marguin abril",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -617,7 +687,10 @@
                     "description": "alquiler nogli abril",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -633,9 +706,10 @@
                     "debit": 60.0,
                     "credit": 60.0,
                     "balance": 0.0,
-                    "tax_id": "V-17150634",
+                    "tax_id": "V-17150630",
                     "client_name": "BEATRIZ LUGO",
-                    "license_plate": "AC541BK"
+                    "license_plate": "AC541BK",
+                    "clients_fk_id": "5604a774-0060-4f8c-8ec5-3976c1f76c48"
                   }
                 }
               },
@@ -650,7 +724,10 @@
                     "description": "renault clio placas",
                     "debit": 70.0,
                     "credit": 70.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -665,7 +742,10 @@
                     "description": "camioneta seat",
                     "debit": 30.0,
                     "credit": 30.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "LUIS DIAZ",
+                    "tax_id": "V-15587695",
+                    "clients_fk_id": "632efdc3-4416-44ef-81c7-d65ee5d796b6"
                   }
                 }
               },
@@ -683,7 +763,8 @@
                     "balance": 0.0,
                     "tax_id": "V-19203081",
                     "client_name": "TRINA TORTOZAS",
-                    "license_plate": "MEC83I"
+                    "license_plate": "MEC83I",
+                    "clients_fk_id": "27c1a7bf-4e56-4647-a1d6-883746d4c200"
                   }
                 }
               },
@@ -698,7 +779,10 @@
                     "description": "MITSUBICHI LANCER",
                     "debit": 35.0,
                     "credit": 35.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -714,9 +798,10 @@
                     "debit": 340.0,
                     "credit": 340.0,
                     "balance": 0.0,
-                    "tax_id": "V-17179348",
+                    "tax_id": "V-17179342",
                     "client_name": "MARIA LUGO",
-                    "license_plate": "EXPLORE"
+                    "license_plate": "EXPLORE",
+                    "clients_fk_id": "4c1c5972-af6e-4f27-94da-9a0a2477dce3"
                   }
                 }
               },
@@ -731,7 +816,10 @@
                     "description": "fiat roja",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "TRINA TORTOZAS",
+                    "tax_id": "V-19203081",
+                    "clients_fk_id": "27c1a7bf-4e56-4647-a1d6-883746d4c200"
                   }
                 }
               },
@@ -746,7 +834,10 @@
                     "description": "palio wekene",
                     "debit": 60.0,
                     "credit": 60.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "TRINA TORTOZAS",
+                    "tax_id": "V-19203081",
+                    "clients_fk_id": "27c1a7bf-4e56-4647-a1d6-883746d4c200"
                   }
                 }
               },
@@ -761,7 +852,10 @@
                     "description": "aveo fenos san bernandino",
                     "debit": 70.0,
                     "credit": 70.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -776,7 +870,10 @@
                     "description": "CAMIONETA KK CAMBIO DE EMPANCADURAS",
                     "debit": 110.0,
                     "credit": 110.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -792,9 +889,10 @@
                     "debit": 600.0,
                     "credit": 600.0,
                     "balance": 0.0,
-                    "tax_id": "V-17851827",
+                    "tax_id": "V-424251830",
                     "client_name": "DANNY CONTRERA",
-                    "license_plate": "AC152LV"
+                    "license_plate": "AC152LV",
+                    "clients_fk_id": "e61632ef-3189-4fce-8d40-1fe48a9c4680"
                   }
                 }
               },
@@ -809,7 +907,10 @@
                     "description": "GRAND TIWER",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "LUIS DIAZ",
+                    "tax_id": "V-15587695",
+                    "clients_fk_id": "632efdc3-4416-44ef-81c7-d65ee5d796b6"
                   }
                 }
               },
@@ -825,9 +926,10 @@
                     "debit": 50.0,
                     "credit": 50.0,
                     "balance": 0.0,
-                    "tax_id": "V-17179348",
+                    "tax_id": "V-17179342",
                     "client_name": "MARIA LUGO",
-                    "license_plate": "EXPLORE"
+                    "license_plate": "EXPLORE",
+                    "clients_fk_id": "4c1c5972-af6e-4f27-94da-9a0a2477dce3"
                   }
                 }
               },
@@ -842,7 +944,10 @@
                     "description": "alquiler marguin abril",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -858,9 +963,10 @@
                     "debit": 150.0,
                     "credit": 150.0,
                     "balance": 0.0,
-                    "tax_id": "V-17179348",
+                    "tax_id": "V-17179342",
                     "client_name": "MARIA LUGO",
-                    "license_plate": "EXPLORE"
+                    "license_plate": "EXPLORE",
+                    "clients_fk_id": "4c1c5972-af6e-4f27-94da-9a0a2477dce3"
                   }
                 }
               },
@@ -875,7 +981,10 @@
                     "description": "camioneta fiat roja",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "TRINA TORTOZAS",
+                    "tax_id": "V-19203081",
+                    "clients_fk_id": "27c1a7bf-4e56-4647-a1d6-883746d4c200"
                   }
                 }
               },
@@ -890,7 +999,10 @@
                     "description": "renault clio placas       convenio114547bs 79497 ref",
                     "debit": 192.5,
                     "credit": 192.5,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -905,7 +1017,10 @@
                     "description": "renault clio placas       convenio de pago 50/25/25",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -920,7 +1035,10 @@
                     "description": "renault clio placas       convenio de pago 50/25/25",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -935,7 +1053,10 @@
                     "description": "toyota corolla 2020",
                     "debit": 20.0,
                     "credit": 20.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -950,7 +1071,10 @@
                     "description": "toyota corolla blanco reparacion de frenos",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -965,7 +1089,10 @@
                     "description": "CAMIONETA ZUSUKI GRAND VITARA",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "ANGELICA ROSALES",
+                    "tax_id": "V-13963828",
+                    "clients_fk_id": "932dacd1-8e1a-45ee-88a9-b8c0288f2a58"
                   }
                 }
               },
@@ -995,7 +1122,10 @@
                     "description": "toyota gris ac111br rep frenos",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 0.0
+                    "balance": 0.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -1010,7 +1140,10 @@
                     "description": "GRAND TIWER",
                     "debit": 600.0,
                     "credit": 0.0,
-                    "balance": 600.0
+                    "balance": 600.0,
+                    "client_name": "LUIS DIAZ",
+                    "tax_id": "V-15587695",
+                    "clients_fk_id": "632efdc3-4416-44ef-81c7-d65ee5d796b6"
                   }
                 }
               },
@@ -1025,7 +1158,10 @@
                     "description": "alquiler marguin abril",
                     "debit": 100.0,
                     "credit": 100.0,
-                    "balance": 600.0
+                    "balance": 600.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -1040,7 +1176,10 @@
                     "description": "renault clio placas       convenio de pago 50/25/25",
                     "debit": 96.25,
                     "credit": 96.25,
-                    "balance": 600.0
+                    "balance": 600.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -1055,7 +1194,10 @@
                     "description": "renault clio placas       convenio de pago 50/25/25",
                     "debit": 96.25,
                     "credit": 96.25,
-                    "balance": 600.0
+                    "balance": 600.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -1070,7 +1212,10 @@
                     "description": "toyota corolla blanco reparacion de frenos",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 600.0
+                    "balance": 600.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -1085,7 +1230,10 @@
                     "description": "CAMIONETA SUZUKI GRAND VITARA",
                     "debit": 250.0,
                     "credit": 140.0,
-                    "balance": 710.0
+                    "balance": 710.0,
+                    "client_name": "ANGELICA ROSALES",
+                    "tax_id": "V-13963828",
+                    "clients_fk_id": "932dacd1-8e1a-45ee-88a9-b8c0288f2a58"
                   }
                 }
               },
@@ -1115,7 +1263,10 @@
                     "description": "toyota gris ac111br rep AMORTIGUADORES",
                     "debit": 50.0,
                     "credit": 50.0,
-                    "balance": 710.0
+                    "balance": 710.0,
+                    "client_name": "ARGENIS CASTRO",
+                    "tax_id": "V-13952266",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -1131,9 +1282,10 @@
                     "debit": 200.0,
                     "credit": 200.0,
                     "balance": 710.0,
-                    "tax_id": "V-12352946",
+                    "tax_id": "V-12352941",
                     "client_name": "MONICA CARDENAS",
-                    "license_plate": "MEA68B"
+                    "license_plate": "MEA68B",
+                    "clients_fk_id": "9cf2feb9-5076-428a-895b-29c7e8a8c3d1"
                   }
                 }
               },
@@ -1149,9 +1301,10 @@
                     "debit": 100.0,
                     "credit": 100.0,
                     "balance": 710.0,
-                    "tax_id": "V-17150634",
+                    "tax_id": "V-17150630",
                     "client_name": "BEATRIZ LUGO",
-                    "license_plate": "AC541BK"
+                    "license_plate": "AC541BK",
+                    "clients_fk_id": "5604a774-0060-4f8c-8ec5-3976c1f76c48"
                   }
                 }
               },
@@ -1167,9 +1320,10 @@
                     "debit": 350.0,
                     "credit": 150.0,
                     "balance": 910.0,
-                    "tax_id": "V-13420739",
+                    "tax_id": "V-13420735",
                     "client_name": "RAMIRO VARGAS",
-                    "license_plate": "AD805PK"
+                    "license_plate": "AD805PK",
+                    "clients_fk_id": "f6b996bb-b30a-4d71-8b69-1d59b2a67157"
                   }
                 }
               },
@@ -1184,7 +1338,10 @@
                     "description": "CAMIONETA SUZUKI GRAND VITARA TRANSMISION",
                     "debit": 250.0,
                     "credit": 0.0,
-                    "balance": 1160.0
+                    "balance": 1160.0,
+                    "client_name": "ANGELICA ROSALES",
+                    "tax_id": "V-13963828",
+                    "clients_fk_id": "932dacd1-8e1a-45ee-88a9-b8c0288f2a58"
                   }
                 }
               },
@@ -1199,7 +1356,10 @@
                     "description": "CAMIONETA SUZUKI GRAND VITARA SERV CAMARA",
                     "debit": 400.0,
                     "credit": 0.0,
-                    "balance": 1560.0
+                    "balance": 1560.0,
+                    "client_name": "ANGELICA ROSALES",
+                    "tax_id": "V-13963828",
+                    "clients_fk_id": "932dacd1-8e1a-45ee-88a9-b8c0288f2a58"
                   }
                 }
               },
@@ -1214,7 +1374,10 @@
                     "description": "CAMION TRITON Y CARRO",
                     "debit": 120.0,
                     "credit": 120.0,
-                    "balance": 1560.0
+                    "balance": 1560.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -1229,7 +1392,10 @@
                     "description": "CENTAURO",
                     "debit": 150.0,
                     "credit": 150.0,
-                    "balance": 1560.0
+                    "balance": 1560.0,
+                    "client_name": "BRAND MOREJON",
+                    "tax_id": "V-17027958",
+                    "clients_fk_id": "6f296eaa-25b1-48a7-a444-0a4da92d6f7d"
                   }
                 }
               },
@@ -1244,7 +1410,10 @@
                     "description": "renault clio placas       convenio de pago 50/25/25",
                     "debit": 100.0,
                     "credit": 0.0,
-                    "balance": 1660.0
+                    "balance": 1660.0,
+                    "client_name": "OMAR AQUINO",
+                    "tax_id": "V-14093605",
+                    "clients_fk_id": "65fe5462-6901-4f7e-96dd-1c4cf8fa1938"
                   }
                 }
               },
@@ -1259,7 +1428,10 @@
                     "description": "revision de carro castigado alquiler de enero",
                     "debit": 30.0,
                     "credit": 30.0,
-                    "balance": 1660.0
+                    "balance": 1660.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -1275,9 +1447,10 @@
                     "debit": 15.0,
                     "credit": 15.0,
                     "balance": 1660.0,
-                    "tax_id": "V-13671361",
-                    "client_name": "RADAME PEREIRA",
-                    "license_plate": "CHEVROL"
+                    "tax_id": "V-13502196",
+                    "client_name": "CLIENTE TALLER",
+                    "license_plate": "CHEVROL",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -1292,7 +1465,10 @@
                     "description": "CARRO EN VISITA",
                     "debit": 0.0,
                     "credit": 0.0,
-                    "balance": 1660.0
+                    "balance": 1660.0,
+                    "client_name": "CLIENTE TALLER",
+                    "tax_id": "V-13502196",
+                    "clients_fk_id": "a1713e89-664d-466a-b608-721ea25947eb"
                   }
                 }
               },
@@ -1308,9 +1484,10 @@
                     "debit": 70.0,
                     "credit": 70.0,
                     "balance": 1660.0,
-                    "tax_id": "V-13952267",
+                    "tax_id": "V-13952266",
                     "client_name": "ARGENIS CASTRO",
-                    "license_plate": "AE486XK"
+                    "license_plate": "AE486XK",
+                    "clients_fk_id": "f26159cf-6c37-4a10-876f-fbbce91b066f"
                   }
                 }
               },
@@ -1326,9 +1503,10 @@
                     "debit": 20.0,
                     "credit": 20.0,
                     "balance": 1660.0,
-                    "tax_id": "V-17150634",
+                    "tax_id": "V-17150630",
                     "client_name": "BEATRIZ LUGO",
-                    "license_plate": "AC541BK"
+                    "license_plate": "AC541BK",
+                    "clients_fk_id": "5604a774-0060-4f8c-8ec5-3976c1f76c48"
                   }
                 }
               }

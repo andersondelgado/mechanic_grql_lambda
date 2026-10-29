@@ -2167,6 +2167,10 @@ export const ENTITY_REGISTRY: Record<string, any> = {
     'currencies': GestionTallerProdCatalogState,
     'GestionTallerProd_currencies': GestionTallerProdCatalogState,
     'currency_settings': GestionTallerProdCatalogState,
+    'exchange_rate_history': GestionTallerProdCatalogState,
+    'company_settings': GestionTallerProdCatalogState,
+    'GestionTallerProd_company_settings': GestionTallerProdCatalogState,
+    'companySettings': GestionTallerProdCatalogState,
     'GestionTallerProd_stats': GestionTallerProdStats,
     'stats': GestionTallerProdStats
 };
